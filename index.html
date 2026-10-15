@@ -1,0 +1,4272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes">
+<meta name="theme-color" id="themeColorMeta" content="#2B2C25">
+<style>html{background:#2B2C25}</style>
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Paranchi Docs">
+  <link rel="apple-touch-startup-image" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash-1320x2868.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash-1290x2796.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash-1206x2622.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash-1179x2556.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash-1284x2778.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash-1170x2532.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash-1125x2436.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash-1242x2688.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash-828x1792.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash-1242x2208.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash-750x1334.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash-640x1136.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash-2048x2732.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash-1668x2388.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash-1668x2224.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash-1640x2360.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash-1620x2160.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash-1536x2048.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash-1488x2266.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192x192.png">
+  <link rel="shortcut icon" href="favicon.ico">
+<title>Paranchi's Documents</title>
+<style>
+
+/* ══════════════════════════════
+   DARK THEME — Electric Blue Neon / Deep Space
+══════════════════════════════ */
+:root{
+  --bg:#050B08;
+  --bg2:#070F0A;
+  --surface:#0A150E;
+  --card:#0D1811;
+  --card2:#101F16;
+  --navy:#030810;
+  --accent:#22C55E;
+  --accent2:#0EA968;
+  --gold:#FFB700;
+  --gold2:#FFD040;
+  --glow1:rgba(var(--ar),.22);
+  --glow2:rgba(var(--ar),.18);
+  --glow3:rgba(var(--ar),.14);
+  --border:rgba(var(--ar),.13);
+  --border2:rgba(var(--ar),.1);
+  --text:#B8DEFF;
+  --text2:#E0F4FF;
+  --sub:#3A6888;
+  --hint:#1A3A54;
+  --red:#FF3860;
+  --inset:env(safe-area-inset-top,0px);
+  --binset:env(safe-area-inset-bottom,0px);
+  --splash-bg1:#010E24;
+  --splash-bg2:#050B08;
+  --topbar-bg:rgba(15,17,20,.97);
+  --vbar-bg:#030810;
+  --pdf-bg:#090E18;
+  --modal-bg:linear-gradient(160deg,#060F22 0%,#030A18 100%);
+  --cm-bg:linear-gradient(160deg,#060F22,#030A18);
+  --footer-bg:rgba(15,17,20,.75);
+  --sbox-bg:rgba(26,29,35,.92);
+  --toast-bg:linear-gradient(135deg,rgba(26,29,35,.98),rgba(30,33,39,.98));
+  --inp-bg:rgba(20,22,27,.92);
+}
+
+/* ══════════════════════════════
+   LIGHT THEME — Pale White + Dark Maroon / Warm Gold
+══════════════════════════════ */
+body.light{
+  --ar:92,0,24;
+  --bg:#FDF8F8;
+  --bg2:#F8F0F0;
+  --surface:#FFFAFA;
+  --card:#FFFFFF;
+  --card2:#FDF2F2;
+  --navy:#F0E0E2;
+  --accent:var(--accent);
+  --accent2:var(--accent2);
+  --gold:var(--accent2);
+  --gold2:var(--accent2);
+  --glow1:rgba(var(--ar),.13);
+  --glow2:rgba(var(--ar),.09);
+  --glow3:rgba(var(--ar),.09);
+  --border:rgba(var(--ar),.16);
+  --border2:rgba(var(--ar),.10);
+  --text:#2A0008;
+  --text2:#1A0005;
+  --sub:#7A2030;
+  --hint:#DDB0B8;
+  --red:#CC1A3A;
+  --splash-bg1:#F8ECEC;
+  --splash-bg2:#FDF8F8;
+  --topbar-bg:rgba(253,248,248,.97);
+  --vbar-bg:#FFFAFA;
+  --pdf-bg:#F5EDED;
+  --modal-bg:linear-gradient(160deg,#FFFFFF 0%,#FDF5F5 100%);
+  --cm-bg:linear-gradient(160deg,#FFFFFF,#FDF5F5);
+  --footer-bg:rgba(253,248,248,.88);
+  --sbox-bg:rgba(255,255,255,.96);
+  --toast-bg:linear-gradient(135deg,rgba(255,255,255,.98),rgba(253,240,242,.98));
+  --inp-bg:rgba(255,255,255,.97);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;-webkit-user-select:none;}
+html,body{width:100%;height:100%;overflow:hidden;
+  background:var(--bg);color:var(--text);
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  transition:background .18s,color .18s;}
+
+/* ── Futuristic BG Atmosphere ── */
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 5%,rgba(var(--ar),.07) 0%,transparent 60%),
+    radial-gradient(ellipse 60% 45% at 90% 90%,rgba(var(--ar),.06) 0%,transparent 55%),
+    radial-gradient(ellipse 50% 60% at 50% 50%,rgba(14,90,55,.04) 0%,transparent 70%),
+    radial-gradient(ellipse 30% 30% at 80% 15%,rgba(var(--ar),.04) 0%,transparent 50%);
+  transition:opacity .3s;
+}
+body.light::before{
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 5%,rgba(var(--ar),.07) 0%,transparent 60%),
+    radial-gradient(ellipse 60% 45% at 90% 90%,rgba(var(--ar),.05) 0%,transparent 55%),
+    radial-gradient(ellipse 50% 60% at 50% 50%,rgba(var(--ar),.03) 0%,transparent 70%);
+}
+
+/* ── Stars canvas ── */
+
+/* ── App shell ── */
+#app{position:relative;width:100%;height:100dvh;overflow:hidden;z-index:1;}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;
+  opacity:0;pointer-events:none;transition:opacity .22s ease;overflow:hidden;}
+.screen.active{opacity:1;pointer-events:all;}
+.scroll{flex:1;overflow-y:auto;overflow-x:hidden;
+  -webkit-overflow-scrolling:touch;overscroll-behavior:contain;}
+.scroll::-webkit-scrollbar{display:none;}
+
+/* ══════════════════════════════
+   THEME TOGGLE BUTTON
+══════════════════════════════ */
+/* ══════════════════════════════
+   TORCH SLIDE THEME TOGGLE
+══════════════════════════════ */
+#themeToggle{
+  position:relative;width:72px;height:30px;
+  border-radius:100px;border:1.5px solid rgba(var(--ar),.28);
+  background:rgba(var(--ar),.07);
+  cursor:pointer;padding:0;overflow:visible;
+  display:flex;align-items:center;flex-shrink:0;
+  box-shadow:0 0 16px rgba(var(--ar),.14),inset 0 1px 0 rgba(255,255,255,.05);
+  transition:border-color .3s,background .3s,box-shadow .3s,transform .1s;
+}
+body.light #themeToggle{
+  border-color:rgba(var(--ar),.25);
+  background:rgba(var(--ar),.06);
+  box-shadow:0 2px 14px rgba(var(--ar),.12);
+}
+#themeToggle:active{transform:scale(.93);}
+/* Track labels — moon & sun */
+.ts-moon,.ts-sun{
+  position:absolute;font-size:12px;pointer-events:none;
+  line-height:1;transition:opacity .3s,transform .3s;z-index:0;
+}
+.ts-moon{left:7px;opacity:1;transform:scale(1);}
+.ts-sun{right:7px;opacity:.3;transform:scale(.75);}
+body.light .ts-moon{opacity:.3;transform:scale(.75);}
+body.light .ts-sun{opacity:1;transform:scale(1);}
+/* Sliding torch thumb */
+.ts-thumb{
+  position:absolute;left:3px;
+  width:24px;height:24px;border-radius:100px;
+  background:linear-gradient(150deg,#33D6FF 0%,#22C55E 45%,#007BDB 100%);
+  box-shadow:0 2px 10px rgba(var(--ar),.55),0 0 8px rgba(var(--ar),.3),
+             inset 0 1px 0 rgba(255,255,255,.28);
+  transition:left .28s cubic-bezier(.34,1.56,.64,1),
+             background .3s,box-shadow .3s;
+  overflow:hidden;z-index:2;
+}
+/* Torch ribs texture */
+.ts-thumb::before{
+  content:'';position:absolute;inset:0;border-radius:100px;
+  background:repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0px,rgba(255,255,255,0) 2.5px,
+    rgba(255,255,255,.2) 2.5px,rgba(255,255,255,.2) 4px
+  );
+}
+/* Center highlight dot */
+.ts-thumb::after{
+  content:'';position:absolute;inset:5px;border-radius:100px;
+  background:rgba(255,255,255,.12);
+}
+/* Light mode: thumb slides right, maroon color */
+body.light .ts-thumb{
+  left:45px;
+  background:linear-gradient(150deg,#C41030 0%,var(--accent) 50%,var(--accent) 100%);
+  box-shadow:0 2px 10px rgba(var(--ar),.5),0 0 8px rgba(var(--ar),.28),
+             inset 0 1px 0 rgba(255,255,255,.2);
+}
+
+/* ══════════════════════════════
+   TOP BAR — Glassmorphism
+══════════════════════════════ */
+.topbar{
+  flex-shrink:0;z-index:2;
+  background:var(--topbar-bg);
+  -webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);
+  padding:calc(12px + var(--inset)) 14px 12px;
+  display:flex;align-items:center;gap:10px;
+  border-bottom:1px solid var(--border);
+  position:relative;
+  transition:background .3s,border-color .3s;
+}
+.topbar::after{
+  content:'';position:absolute;bottom:0;left:8%;right:8%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--accent),rgba(60,255,160,.6),var(--accent),transparent);
+  opacity:.5;
+  box-shadow:0 0 8px rgba(var(--ar),.4);
+}
+body.light .topbar::after{
+  background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent);
+  box-shadow:none;opacity:.4;
+}
+.tb-left{flex:1;min-width:0;}
+.eyebrow{
+  font-size:9px;letter-spacing:3px;color:var(--hint);
+  text-transform:uppercase;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+.appname{
+  font-family:Georgia,'Times New Roman',serif;font-size:17px;font-weight:700;
+  line-height:1.2;letter-spacing:.3px;
+  background:linear-gradient(135deg,#B9F5C9 0%,#22C55E 50%,#FFFFFF 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  display:inline-block;
+}
+body.light .appname{
+  background:linear-gradient(135deg,var(--accent) 0%,var(--accent) 50%,var(--accent2) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.tb-btn{
+  width:40px;height:40px;border-radius:14px;border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-size:22px;font-family:sans-serif;transition:transform .12s,opacity .12s,box-shadow .15s;
+}
+.tb-btn:active{transform:scale(.84);}
+.btn-back{
+  background:rgba(var(--ar),.08);color:var(--text);font-size:26px;
+  border:1px solid rgba(var(--ar),.18);
+  box-shadow:0 0 10px rgba(var(--ar),.05);
+}
+body.light .btn-back{
+  background:rgba(var(--ar),.08);
+  border-color:rgba(var(--ar),.18);
+  box-shadow:none;
+}
+.btn-add{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;font-size:24px;border-radius:14px;
+  box-shadow:0 0 18px var(--glow1),0 0 8px var(--glow2),inset 0 1px 0 rgba(255,255,255,.15);
+}
+body.light .btn-add{box-shadow:0 4px 16px var(--glow1);}
+/* Three-dot home menu button — theme aware */
+#homeMenuBtn{
+  background:rgba(var(--ar),.07);color:var(--text2);
+  border:1px solid rgba(var(--ar),.18);
+  box-shadow:0 0 10px rgba(var(--ar),.07);
+}
+body.light #homeMenuBtn{
+  background:rgba(var(--ar),.07);color:var(--accent);
+  border-color:rgba(var(--ar),.18);box-shadow:none;
+}
+
+/* ══════════════════════════════
+   SEARCH BOX — Glassmorphism
+══════════════════════════════ */
+.search-wrap{flex-shrink:0;padding:10px 13px 6px;}
+.sbox{
+  display:flex;align-items:center;gap:9px;
+  background:var(--sbox-bg);
+  border:1.5px solid var(--border);
+  border-radius:16px;padding:11px 14px;
+  transition:border-color .2s,background .3s,box-shadow .2s;
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  box-shadow:0 2px 16px rgba(0,0,0,.15);
+}
+.sbox:focus-within{
+  border-color:rgba(var(--ar),.45);
+  box-shadow:0 0 0 3px rgba(var(--ar),.08),0 2px 20px rgba(var(--ar),.1);
+}
+body.light .sbox:focus-within{
+  border-color:rgba(var(--ar),.45);
+  box-shadow:0 0 0 3px rgba(var(--ar),.07);
+}
+.sbox svg{flex-shrink:0;}
+.sbox input{
+  flex:1;background:none;border:none;outline:none;
+  color:var(--text2);font-size:14px;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  user-select:text;-webkit-user-select:text;
+}
+.sbox input::placeholder{color:var(--hint);}
+.sclr{background:none;border:none;color:var(--hint);font-size:20px;
+  cursor:pointer;line-height:1;display:none;padding:0 2px;}
+.sclr.on{display:block;}
+
+/* ══════════════════════════════
+   GLOBAL SEARCH RESULTS
+══════════════════════════════ */
+#gResults{display:none;padding:6px 12px 20px;}
+#gResults.on{display:block;}
+.gr-lbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--sub);padding:6px 2px 10px;}
+.gr-item{
+  display:flex;align-items:center;gap:12px;
+  background:var(--card);border:1.5px solid var(--border);
+  border-radius:14px;padding:11px 13px;margin-bottom:8px;
+  cursor:pointer;transition:transform .1s,background .3s;
+}
+.gr-item:active{transform:scale(.97);}
+.gr-th{
+  width:40px;height:40px;border-radius:10px;
+  background:var(--card2);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;overflow:hidden;
+}
+.gr-th img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
+.gr-inf{flex:1;min-width:0;}
+.gr-nm{font-size:13px;font-weight:600;color:var(--text2);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.gr-mt{font-size:11px;color:var(--hint);margin-top:2px;}
+.gr-bd{
+  font-size:9px;font-weight:700;letter-spacing:.8px;padding:2px 7px;
+  border-radius:6px;color:#fff;flex-shrink:0;
+}
+.gbd-pdf{background:rgba(232,64,96,.8);}
+.gbd-img{background:rgba(var(--ar),.8);}
+.gr-empty{text-align:center;padding:40px 20px;color:var(--hint);font-size:14px;}
+
+/* ══════════════════════════════
+   FOLDER SECTION
+══════════════════════════════ */
+.sec-lbl{
+  padding:14px 15px 8px;font-size:10px;font-weight:700;
+  letter-spacing:2.5px;text-transform:uppercase;color:var(--sub);
+}
+#folderGrid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:12px;padding:4px 12px 14px;
+}
+.fc{
+  background:rgba(6,15,31,.72);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border:1px solid rgba(var(--ar),.14);
+  border-radius:22px;padding:17px 13px 15px;cursor:pointer;
+  position:relative;animation:fadeUp .3s ease both;
+  transition:transform .12s,box-shadow .2s,border-color .2s,background .3s;
+  box-shadow:0 4px 24px rgba(0,0,0,.28),inset 0 1px 0 rgba(var(--ar),.08),
+             inset 0 -1px 0 rgba(0,0,0,.2);
+}
+body.light .fc{
+  background:rgba(255,255,255,.68);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  box-shadow:0 4px 20px rgba(var(--ar),.08),inset 0 1px 0 rgba(255,255,255,.95);
+  border-color:rgba(var(--ar),.13);
+}
+.fc:active{transform:scale(.93);}
+.fc:hover{
+  border-color:rgba(var(--ar),.28);
+  box-shadow:0 4px 24px rgba(var(--ar),.08),0 0 0 1px rgba(var(--ar),.1);
+}
+body.light .fc:hover{
+  border-color:rgba(var(--ar),.28);
+  box-shadow:0 4px 24px rgba(var(--ar),.10);
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+.fi{
+  width:50px;height:50px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;margin-bottom:11px;
+  box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+.fn{font-size:13px;font-weight:600;color:var(--text2);margin-bottom:3px;
+  line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;
+  -webkit-box-orient:vertical;overflow:hidden;}
+.fc-cnt{font-size:11px;color:var(--hint);}
+.fc-menu{
+  position:absolute;top:8px;right:8px;background:none;border:none;
+  color:var(--hint);font-size:18px;cursor:pointer;
+  padding:4px 8px;border-radius:8px;line-height:1;
+}
+.fc-menu:active{background:rgba(var(--ar),.08);}
+body.light .fc-menu:active{background:rgba(var(--ar),.07);}
+
+.btn-nf{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;
+  background:linear-gradient(135deg,rgba(var(--ar),.1) 0%,rgba(var(--ar),.07) 100%);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border:1.5px solid rgba(var(--ar),.32);
+  border-radius:20px;padding:16px;cursor:pointer;
+  color:var(--accent);font-size:14px;font-weight:600;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;transition:all .25s;
+  box-shadow:0 0 24px rgba(var(--ar),.1),0 4px 20px rgba(0,0,0,.22),
+             inset 0 1px 0 rgba(var(--ar),.14),inset 0 -1px 0 rgba(0,0,0,.1);
+  letter-spacing:.3px;
+}
+body.light .btn-nf{
+  background:linear-gradient(135deg,rgba(var(--ar),.09) 0%,rgba(var(--ar),.06) 100%);
+  border-color:rgba(var(--ar),.3);
+  color:var(--accent);
+  box-shadow:0 4px 20px rgba(var(--ar),.09),inset 0 1px 0 rgba(255,255,255,.7);
+}
+.btn-nf:active{
+  background:linear-gradient(135deg,rgba(var(--ar),.18),rgba(var(--ar),.14));
+  border-color:rgba(var(--ar),.55);
+  box-shadow:0 0 28px rgba(var(--ar),.2),0 4px 20px rgba(0,0,0,.22);
+  transform:scale(.97);
+}
+body.light .btn-nf:active{
+  background:linear-gradient(135deg,rgba(var(--ar),.15),rgba(var(--ar),.11));
+  border-color:rgba(var(--ar),.48);
+  transform:scale(.97);
+}
+
+/* ══════════════════════════════
+   EXPORT FOLDER PICKER CARDS
+══════════════════════════════ */
+.exp-fold-card{
+  display:flex;align-items:center;gap:13px;
+  padding:13px 14px;border-radius:16px;
+  background:var(--card);border:1.5px solid var(--border);
+  cursor:pointer;transition:border-color .15s,background .15s;
+  position:relative;
+}
+.exp-fold-card.sel{
+  border-color:var(--accent);background:rgba(var(--ar),.07);
+}
+body.light .exp-fold-card.sel{background:rgba(var(--ar),.07);}
+.exp-fold-card:active{opacity:.8;}
+.exp-fold-icon{
+  width:44px;height:44px;border-radius:13px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+}
+.exp-fold-info{flex:1;min-width:0;}
+.exp-fold-name{font-size:14px;font-weight:600;color:var(--text2);
+  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.exp-fold-sub{font-size:11px;color:var(--hint);margin-top:2px;}
+.exp-fold-check{
+  width:24px;height:24px;border-radius:50%;flex-shrink:0;
+  border:2px solid var(--border);display:flex;align-items:center;
+  justify-content:center;font-size:14px;transition:all .15s;
+  background:var(--card2);
+}
+.exp-fold-card.sel .exp-fold-check{
+  background:var(--accent);border-color:var(--accent);color:#fff;
+}
+
+/* Import drop zone active */
+#importDropZone.active{
+  border-color:rgba(var(--ar),.6);background:rgba(var(--ar),.08);
+}
+body.light #importDropZone{border-color:rgba(var(--ar),.18);background:rgba(var(--ar),.02);}
+body.light #importDropZone.active{border-color:rgba(var(--ar),.5);background:rgba(var(--ar),.06);}
+
+
+.doc-count{
+  flex-shrink:0;padding:2px 15px 5px;
+  font-size:11px;color:var(--hint);
+}
+
+/* ══════════════════════════════
+   DOC GRID
+══════════════════════════════ */
+#docGrid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:11px;padding:6px 11px 20px;
+}
+#docGrid .dc-wrap{
+  position:relative;overflow:hidden;
+  border-radius:20px;
+}
+#docGrid .dc-inner{
+  border-radius:20px;
+}
+#docGrid .dc{
+  border-radius:20px;
+}
+.dc{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:20px;overflow:hidden;cursor:pointer;
+  animation:fadeUp .28s ease both;
+  transition:transform .12s,background .3s,border-color .2s,box-shadow .2s;
+  box-shadow:0 3px 16px rgba(0,0,0,.2);
+}
+body.light .dc{
+  box-shadow:0 3px 16px rgba(var(--ar),.06);
+  border-color:rgba(var(--ar),.10);
+}
+.dc:active{transform:scale(.94);}
+.ct{
+  width:100%;aspect-ratio:3/4;background:var(--card2);
+  position:relative;overflow:hidden;
+}
+.ct img{width:100%;height:100%;object-fit:cover;display:block;}
+.pph{
+  width:100%;height:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:8px;
+  background:linear-gradient(150deg,var(--card2),rgba(2,10,28,.95));
+}
+body.light .pph{background:linear-gradient(150deg,var(--card2),rgba(253,235,238,.95));}
+.pph-i{font-size:34px;}
+.pph-t{font-size:9px;letter-spacing:2px;color:var(--hint);text-transform:uppercase;}
+.tb-badge{
+  position:absolute;top:7px;left:7px;padding:3px 7px;border-radius:7px;
+  font-size:9px;font-weight:700;letter-spacing:.8px;
+  text-transform:uppercase;color:#fff;
+}
+.tb-pdf{background:rgba(255,56,96,.85);}
+.tb-jpg,.tb-jpeg,.tb-png{background:rgba(var(--ar),.85);}
+
+/* Share button on card */
+.sh-btn{
+  position:absolute;top:6px;right:6px;width:30px;height:30px;
+  border-radius:50%;background:rgba(0,0,0,.78);
+  backdrop-filter:blur(8px);border:1px solid rgba(var(--ar),.2);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:transform .1s;
+}
+body.light .sh-btn{background:rgba(255,255,255,.88);border-color:rgba(var(--ar),.18);}
+.sh-btn:active{transform:scale(.84);}
+
+.di{padding:9px 10px 11px;}
+.dn{
+  font-size:13px;font-weight:600;color:var(--text2);
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;line-height:1.4;margin-bottom:5px;
+}
+.dm{font-size:10px;color:var(--hint);}
+/* Metadata row under doc name */
+.dmeta{display:flex;flex-direction:column;gap:3px;}
+.dmeta-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
+.dmeta-type{
+  font-size:9px;font-weight:700;letter-spacing:.7px;
+  padding:2px 6px;border-radius:5px;color:#fff;text-transform:uppercase;flex-shrink:0;
+}
+.dmeta-type.t-pdf{background:rgba(255,56,96,.75);}
+.dmeta-type.t-img{background:rgba(var(--ar),.75);}
+body.light .dmeta-type.t-pdf{background:rgba(var(--ar),.85);}
+body.light .dmeta-type.t-img{background:rgba(var(--ar),.85);}
+.dmeta-size{font-size:10px;color:var(--sub);font-weight:500;}
+.dmeta-dot{font-size:9px;color:var(--hint);opacity:.5;}
+.dmeta-date{font-size:10px;color:var(--hint);}
+
+/* ══════════════════════════════
+   BULK SELECT MODE
+══════════════════════════════ */
+#bulkStrip{
+  flex-shrink:0;display:none;
+  padding:8px 13px;
+  background:linear-gradient(90deg,rgba(var(--ar),.09),rgba(var(--ar),.06));
+  border-bottom:1px solid rgba(var(--ar),.14);
+  align-items:center;justify-content:space-between;
+  transition:background .3s,border-color .3s;
+}
+body.light #bulkStrip{
+  background:linear-gradient(90deg,rgba(var(--ar),.07),rgba(var(--ar),.04));
+  border-bottom-color:rgba(var(--ar),.12);
+}
+#bulkStrip.on{display:flex;}
+#bulkCountText{font-size:13px;font-weight:600;color:var(--accent);}
+.bulk-strip-btns{display:flex;gap:6px;align-items:center;}
+#bulkSelAll{
+  background:none;border:1.5px solid var(--border);
+  color:var(--sub);font-size:12px;font-weight:500;cursor:pointer;
+  padding:5px 11px;border-radius:9px;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;transition:background .15s;white-space:nowrap;
+}
+#bulkSelAll:active{background:rgba(var(--ar),.1);}
+body.light #bulkSelAll:active{background:rgba(var(--ar),.07);}
+#bulkCancel{
+  background:none;border:1.5px solid var(--border);
+  color:var(--sub);font-size:16px;font-weight:700;
+  cursor:pointer;padding:4px 9px;border-radius:9px;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1;
+}
+#bulkCancel:active{background:rgba(var(--ar),.08);}
+
+/* Hide sort bar during bulk mode */
+#folderScreen.bulk-active .sort-wrap{display:none;}
+#folderScreen.bulk-active .scroll{padding-bottom:calc(82px + var(--binset));}
+
+/* Checkbox overlay on card */
+.dc-check{
+  position:absolute;top:7px;left:7px;
+  width:22px;height:22px;border-radius:50%;
+  border:2.5px solid rgba(255,255,255,.5);
+  background:rgba(0,0,0,.55);
+  display:none;align-items:center;justify-content:center;
+  font-size:12px;color:#fff;font-weight:700;
+  pointer-events:none;
+  transition:background .15s,border-color .15s;
+}
+body.light .dc-check{
+  background:rgba(255,255,255,.75);
+  border-color:rgba(var(--ar),.38);color:var(--accent);
+}
+.sel-mode .dc-check{display:flex;}
+.dc.selected .dc-check{
+  background:var(--accent);border-color:var(--accent);color:#fff;
+}
+body.light .dc.selected .dc-check{color:#fff;}
+/* Selected card ring */
+.dc.selected{
+  border-color:var(--accent);
+  box-shadow:0 0 0 2px var(--accent),0 3px 16px rgba(var(--ar),.2);
+}
+body.light .dc.selected{
+  box-shadow:0 0 0 2px var(--accent),0 3px 16px rgba(var(--ar),.12);
+}
+.sel-mode .sh-btn{display:none;}
+
+/* Bulk action bar */
+#bulkBar{
+  position:fixed;bottom:0;left:0;right:0;z-index:700;
+  background:var(--topbar-bg);
+  border-top:1px solid var(--border);
+  padding:10px 14px calc(12px + var(--binset));
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  pointer-events:none;opacity:0;
+  transform:translateY(22px);
+  transition:opacity .25s,transform .28s cubic-bezier(.25,1,.5,1),background .3s,border-color .3s;
+}
+#bulkBar.on{opacity:1;transform:translateY(0);pointer-events:all;}
+.bulk-actions{display:flex;gap:8px;}
+.bulk-act{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  gap:5px;padding:12px 8px;border-radius:14px;
+  font-size:13px;font-weight:600;cursor:pointer;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;transition:opacity .12s;
+  letter-spacing:.1px;
+}
+.bulk-act:active{opacity:.68;}
+.bulk-act:disabled{opacity:.28;pointer-events:none;}
+.bulk-act-share{
+  background:rgba(var(--ar),.1);
+  border:1.5px solid rgba(var(--ar),.2);
+  color:var(--accent);
+}
+.bulk-act-move{
+  background:rgba(var(--ar),.09);
+  border:1.5px solid rgba(var(--ar),.18);
+  color:var(--gold2);
+}
+body.light .bulk-act-move{color:var(--gold);}
+.bulk-act-del{
+  background:rgba(255,56,96,.1);
+  border:1.5px solid rgba(255,56,96,.2);
+  color:var(--red);
+}
+
+/* ══════════════════════════════
+   FOLDER BULK SELECT MODE
+══════════════════════════════ */
+#folderBulkStrip{
+  display:none;
+  padding:8px 13px 6px;
+  background:linear-gradient(90deg,rgba(var(--ar),.09),rgba(var(--ar),.06));
+  border-bottom:1px solid rgba(var(--ar),.14);
+  align-items:center;justify-content:space-between;
+  transition:background .3s,border-color .3s;
+  flex-shrink:0;
+}
+body.light #folderBulkStrip{
+  background:linear-gradient(90deg,rgba(var(--ar),.07),rgba(var(--ar),.04));
+  border-bottom-color:rgba(var(--ar),.12);
+}
+#folderBulkStrip.on{display:flex;}
+#folderBulkCountText{font-size:13px;font-weight:600;color:var(--accent);}
+
+#homeScreen.folder-bulk-active .sort-wrap{display:none;}
+#homeScreen.folder-bulk-active .scroll{padding-bottom:calc(82px + var(--binset));}
+
+.fc.fsel-mode{cursor:pointer;}
+.fc.fselected{
+  border-color:var(--accent);
+  box-shadow:0 0 0 2px var(--accent),0 4px 24px rgba(var(--ar),.18);
+}
+body.light .fc.fselected{
+  box-shadow:0 0 0 2px var(--accent),0 4px 24px rgba(var(--ar),.12);
+}
+.fc-check{
+  position:absolute;top:8px;left:8px;
+  width:22px;height:22px;border-radius:50%;
+  border:2.5px solid rgba(255,255,255,.5);
+  background:rgba(0,0,0,.55);
+  display:none;align-items:center;justify-content:center;
+  font-size:12px;color:#fff;font-weight:700;
+  pointer-events:none;
+  transition:background .15s,border-color .15s;
+  z-index:2;
+}
+body.light .fc-check{background:rgba(255,255,255,.75);border-color:rgba(var(--ar),.38);color:var(--accent);}
+.fsel-mode .fc-check{display:flex;}
+.fc.fselected .fc-check{background:var(--accent);border-color:var(--accent);color:#fff;}
+body.light .fc.fselected .fc-check{color:#fff;}
+.fsel-mode .fc-menu{display:none;}
+
+#folderBulkBar{
+  position:fixed;bottom:0;left:0;right:0;z-index:700;
+  background:var(--topbar-bg);
+  border-top:1px solid var(--border);
+  padding:10px 14px calc(12px + var(--binset));
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  pointer-events:none;opacity:0;
+  transform:translateY(22px);
+  transition:opacity .25s,transform .28s cubic-bezier(.25,1,.5,1),background .3s,border-color .3s;
+}
+#folderBulkBar.on{opacity:1;transform:translateY(0);pointer-events:all;}
+.folder-bulk-act{
+  width:100%;display:flex;align-items:center;justify-content:center;
+  gap:6px;padding:13px 8px;border-radius:14px;
+  font-size:14px;font-weight:600;cursor:pointer;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;transition:opacity .12s;
+  letter-spacing:.1px;
+  background:rgba(255,56,96,.1);
+  border:1.5px solid rgba(255,56,96,.2);
+  color:var(--red);
+}
+.folder-bulk-act:active{opacity:.68;}
+.folder-bulk-act:disabled{opacity:.28;pointer-events:none;}
+
+/* ══════════════════════════════
+   EMPTY STATE
+══════════════════════════════ */
+.emp{
+  display:none;flex-direction:column;align-items:center;
+  justify-content:center;padding:60px 24px;gap:16px;text-align:center;
+}
+.emp.on{display:flex;}
+.emp-t{font-size:17px;font-weight:700;color:var(--sub);}
+.emp-s{font-size:13px;color:var(--hint);line-height:1.65;max-width:200px;}
+
+/* ── Empty state icon — static, no motion ── */
+.emp-scene{
+  position:relative;width:130px;height:130px;
+  display:flex;align-items:center;justify-content:center;
+}
+.emp-folder{
+  font-size:54px;
+  filter:drop-shadow(0 0 14px rgba(var(--ar),.35));
+}
+body.light .emp-folder{filter:drop-shadow(0 0 14px rgba(var(--ar),.28));}
+
+/* ══════════════════════════════
+   HOME BOTTOM BAR — Sticky
+══════════════════════════════ */
+#homeBottomBar{
+  flex-shrink:0;
+  padding:10px 13px calc(10px + var(--binset));
+  background:var(--footer-bg);
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  border-top:1px solid var(--border);
+  transition:background .3s,border-color .3s;
+}
+body.light #homeBottomBar{border-top-color:rgba(var(--ar),.1);}
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
+.footer{
+  flex-shrink:0;text-align:center;
+  padding:7px 14px 2px;
+  font-size:11px;color:var(--hint);letter-spacing:.5px;
+  transition:color .3s;
+}
+.footer span{
+  background:linear-gradient(90deg,var(--accent),#8CF7C0);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  font-weight:600;
+}
+body.light .footer span{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+
+/* ══════════════════════════════
+   PDF VIEWER
+══════════════════════════════ */
+#pdfScreen{background:#111418;}
+body.light #pdfScreen{background:#EDE8E8;}
+.vbar{
+  flex-shrink:0;display:flex;align-items:center;gap:8px;
+  padding:calc(10px + var(--inset)) 8px 10px;
+  background:var(--vbar-bg);border-bottom:1px solid rgba(var(--ar),.08);
+  transition:background .3s;
+}
+body.light .vbar{border-bottom:1px solid rgba(var(--ar),.12);}
+.vt{
+  flex:1;color:var(--text2);font-size:14px;font-weight:600;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+.v-info{font-size:11px;color:var(--hint);white-space:nowrap;}
+.v-share{
+  background:rgba(var(--ar),.12);border:1px solid rgba(var(--ar),.22);
+  color:var(--accent);font-size:12px;cursor:pointer;
+  padding:7px 12px;border-radius:10px;white-space:nowrap;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;display:flex;align-items:center;gap:5px;
+}
+body.light .v-share{background:rgba(var(--ar),.10);border-color:rgba(var(--ar),.2);}
+.v-share:active{background:rgba(var(--ar),.22);}
+
+/* PDF scroll area — key fix for pinch zoom centering */
+#pdfWrap{
+  flex:1;overflow:auto;-webkit-overflow-scrolling:touch;
+  background:var(--pdf-bg);position:relative;
+  touch-action:pan-x pan-y;
+  transition:background .3s;
+}
+#pdfWrap::-webkit-scrollbar{display:none;}
+#pdfSizer{position:relative;width:100%;height:100%;}
+#pdfPages{position:absolute;top:0;left:0;transform-origin:0 0;padding:4px 0 80px;box-sizing:border-box;}
+#pdfPages.zm{will-change:transform!important;}
+.pgbox{position:relative;background:#fff;margin:0 0 3px;box-shadow:0 2px 10px rgba(0,0,0,.35);contain:strict;}
+.pgbox canvas{position:absolute;left:0;top:0;width:100%;height:100%;display:block;}
+#pdfLoader{position:absolute;left:0;right:0;top:calc(58px + var(--inset));bottom:0;z-index:5;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px;
+  color:var(--hint);font-size:14px;pointer-events:none;}
+#pdfLoader .perr{pointer-events:auto;}
+.perr{
+  color:#FF8A9B;text-align:center;padding:28px 20px;font-size:14px;
+  line-height:1.8;background:rgba(255,56,96,.06);margin:14px;
+  border-radius:14px;border:1px solid rgba(255,56,96,.12);
+}
+#pdfZH{
+  position:fixed;bottom:70px;left:50%;transform:translateX(-50%);
+  background:rgba(0,0,0,.65);color:rgba(255,255,255,.45);
+  font-size:11px;padding:6px 14px;border-radius:18px;
+  pointer-events:none;transition:opacity .3s;white-space:nowrap;z-index:50;
+}
+body.light #pdfZH{background:rgba(255,255,255,.85);color:rgba(60,0,12,.4);}
+#pdfZH.gone{opacity:0;}
+
+/* ══════════════════════════════
+   IMAGE VIEWER
+══════════════════════════════ */
+#imgScreen{background:#000;}
+body.light #imgScreen{background:#111;}
+.ibar{
+  position:absolute;top:0;left:0;right:0;z-index:10;
+  background:linear-gradient(180deg,rgba(0,0,0,.78),transparent);
+  padding:calc(12px + var(--inset)) 8px 22px;
+  display:flex;align-items:center;gap:8px;transition:opacity .25s;
+}
+body.light .ibar{background:linear-gradient(180deg,rgba(0,0,0,.7),transparent);}
+.ihint{
+  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
+  background:rgba(0,0,0,.5);color:rgba(255,255,255,.45);
+  font-size:11px;padding:6px 14px;border-radius:18px;
+  pointer-events:none;transition:opacity .3s;white-space:nowrap;
+  z-index:5;
+}
+.ihint.gone{opacity:0;}
+/* Image viewport — full screen, centered */
+.ivp{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;touch-action:none;
+}
+#vimg{
+  max-width:100%;max-height:100%;
+  object-fit:contain;
+  display:block;
+  transform-origin:center center;
+  will-change:transform;
+  pointer-events:none;
+  user-select:none;-webkit-user-select:none;
+}
+
+/* ══════════════════════════════
+   MODALS — Glassmorphism
+══════════════════════════════ */
+.ov{
+  position:fixed;inset:0;z-index:800;
+  background:rgba(0,0,0,.82);backdrop-filter:blur(14px);
+  display:flex;align-items:flex-end;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .2s;
+}
+body.light .ov{background:rgba(210,230,250,.55);}
+.ov.on{opacity:1;pointer-events:all;}
+.sh{
+  width:100%;max-width:480px;
+  background:var(--modal-bg);
+  border-radius:28px 28px 0 0;
+  border:1px solid var(--border);border-bottom:none;
+  padding:16px 20px calc(44px + var(--binset));
+  transform:translateY(100%);
+  transition:transform .28s cubic-bezier(.25,1,.5,1),background .3s;
+  box-shadow:0 -8px 40px rgba(0,0,0,.5),0 -1px 0 rgba(var(--ar),.1);
+}
+body.light .sh{box-shadow:0 -8px 40px rgba(var(--ar),.10),0 -1px 0 rgba(var(--ar),.12);}
+.ov.on .sh{transform:translateY(0);}
+.hdl{width:40px;height:4px;border-radius:2px;
+  background:rgba(var(--ar),.2);margin:0 auto 18px;}
+body.light .hdl{background:rgba(var(--ar),.15);}
+.mt{font-size:17px;font-weight:700;color:var(--text2);
+  margin-bottom:5px;font-family:Georgia,'Times New Roman',serif;letter-spacing:.3px;}
+.ms{font-size:13px;color:var(--sub);margin-bottom:15px;line-height:1.55;}
+.inp{
+  width:100%;background:var(--inp-bg);
+  border:1.5px solid var(--border);border-radius:14px;
+  padding:13px 14px;color:var(--text2);font-size:15px;outline:none;
+  transition:border-color .2s,background .3s,box-shadow .2s;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  user-select:text;-webkit-user-select:text;
+}
+.inp:focus{
+  border-color:rgba(var(--ar),.5);
+  box-shadow:0 0 0 3px rgba(var(--ar),.08);
+}
+body.light .inp:focus{
+  border-color:rgba(var(--ar),.5);
+  box-shadow:0 0 0 3px rgba(var(--ar),.07);
+}
+.inp::placeholder{color:var(--hint);}
+.lbl{
+  font-size:10px;font-weight:700;color:var(--sub);
+  margin:13px 0 8px;letter-spacing:1.5px;text-transform:uppercase;
+}
+.igrid{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;margin-bottom:4px;max-height:200px;overflow-y:auto;}
+.igrid::-webkit-scrollbar{display:none;}
+.ico{
+  width:100%;aspect-ratio:1;border-radius:12px;
+  border:1.5px solid rgba(var(--ar),.12);background:rgba(6,35,22,.7);
+  font-size:19px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .1s;
+}
+body.light .ico{background:rgba(253,240,242,.9);border-color:rgba(var(--ar),.12);}
+.ico.sel{border-color:var(--accent);background:rgba(var(--ar),.15);box-shadow:0 0 8px rgba(var(--ar),.2);}
+body.light .ico.sel{background:rgba(var(--ar),.10);box-shadow:none;}
+.ico:active{transform:scale(.84);}
+.crow{display:flex;gap:7px;margin-bottom:14px;flex-wrap:wrap;}
+.col{width:27px;height:27px;border-radius:50%;border:3px solid transparent;cursor:pointer;transition:transform .1s;}
+.col.sel{box-shadow:0 0 0 2.5px var(--accent);transform:scale(1.22);}
+.brow{display:flex;gap:10px;margin-top:13px;}
+.bpri{
+  flex:1;padding:14px;border-radius:14px;border:none;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;font-size:15px;font-weight:600;cursor:pointer;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  box-shadow:0 4px 20px var(--glow1),inset 0 1px 0 rgba(255,255,255,.2);
+  transition:opacity .12s,box-shadow .15s;
+}
+.bpri:active{opacity:.8;}
+.bpri:disabled{opacity:.28;box-shadow:none;}
+.bsec{
+  padding:14px 17px;border-radius:14px;
+  border:1.5px solid var(--border);background:rgba(var(--ar),.04);
+  color:var(--sub);font-size:15px;cursor:pointer;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;transition:background .15s;
+}
+body.light .bsec{background:rgba(var(--ar),.04);}
+.bsec:active{background:rgba(var(--ar),.1);}
+body.light .bsec:active{background:rgba(var(--ar),.08);}
+.bdel{
+  flex:1;padding:14px;border-radius:14px;border:none;
+  background:linear-gradient(135deg,#B01030,#FF3860);
+  color:#fff;font-size:15px;font-weight:600;cursor:pointer;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  box-shadow:0 4px 16px rgba(255,56,96,.25);
+}
+.bdel:active{opacity:.8;}
+
+/* Context Menu */
+.cm{
+  position:fixed;inset:0;z-index:750;
+  background:rgba(0,0,0,.72);backdrop-filter:blur(10px);
+  display:flex;align-items:flex-end;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .18s;
+}
+body.light .cm{background:rgba(210,230,250,.5);}
+.cm.on{opacity:1;pointer-events:all;}
+.cmb{
+  width:100%;max-width:480px;
+  background:var(--cm-bg);
+  border-radius:26px 26px 0 0;padding:13px 18px calc(46px + var(--binset));
+  border-top:1px solid var(--border);
+  transform:translateY(100%);transition:transform .24s cubic-bezier(.25,1,.5,1),background .3s;
+  box-shadow:0 -4px 30px rgba(0,0,0,.4);
+}
+.cm.on .cmb{transform:translateY(0);}
+.mi{
+  display:flex;align-items:center;gap:13px;padding:14px 0;
+  border-bottom:1px solid rgba(var(--ar),.06);cursor:pointer;
+  font-size:15px;font-weight:500;color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  transition:color .3s;
+}
+body.light .mi{border-bottom:1px solid rgba(var(--ar),.07);}
+.mi:last-child{border-bottom:none;}
+.mi.danger{color:var(--red);}
+.mii{font-size:20px;width:30px;text-align:center;}
+
+
+/* ══════════════════════════════
+   SORT BAR — Glassmorphism Chips
+══════════════════════════════ */
+.sort-wrap{
+  flex-shrink:0;padding:6px 13px 10px;
+}
+.sort-scroll{
+  display:flex;gap:7px;overflow-x:auto;padding-bottom:2px;
+}
+.sort-scroll::-webkit-scrollbar{display:none;}
+.sort-chip{
+  display:flex;align-items:center;gap:5px;
+  padding:8px 16px;border-radius:50px;
+  border:1px solid var(--border);
+  background:var(--sbox-bg);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  color:var(--sub);font-size:12px;font-weight:500;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  cursor:pointer;white-space:nowrap;flex-shrink:0;
+  transition:all .22s cubic-bezier(.25,1,.5,1);
+  box-shadow:0 2px 10px rgba(0,0,0,.1);
+  -webkit-tap-highlight-color:transparent;
+}
+body.light .sort-chip{
+  background:rgba(255,255,255,.85);
+  border-color:rgba(var(--ar),.12);
+  box-shadow:0 2px 8px rgba(var(--ar),.06);
+}
+.sort-chip .sc-icon{font-size:12px;line-height:1;}
+.sort-chip.active{
+  background:linear-gradient(135deg,rgba(var(--ar),.18),rgba(var(--ar),.12));
+  border-color:rgba(var(--ar),.5);
+  color:var(--accent);
+  box-shadow:0 0 16px rgba(var(--ar),.15),0 0 0 1px rgba(var(--ar),.12);
+  transform:translateY(-1px);
+}
+body.light .sort-chip.active{
+  background:linear-gradient(135deg,rgba(var(--ar),.14),rgba(var(--ar),.08));
+  border-color:rgba(var(--ar),.5);
+  color:var(--accent);
+  box-shadow:0 4px 16px rgba(var(--ar),.15);
+}
+.sort-chip:active{transform:scale(.92) translateY(0);}
+.sort-chip.active:active{transform:scale(.92) translateY(0);}
+
+/* ══════════════════════════════
+   MOVE MODAL
+══════════════════════════════ */
+.folder-pick-list{
+  max-height:220px;overflow-y:auto;margin-bottom:14px;
+}
+.folder-pick-list::-webkit-scrollbar{display:none;}
+.fp-item{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 14px;border-radius:13px;
+  border:1.5px solid var(--border);background:var(--card);
+  margin-bottom:8px;cursor:pointer;
+  transition:all .15s cubic-bezier(.25,1,.5,1);
+}
+.fp-item:active{transform:scale(.97);}
+.fp-item.selected{
+  border-color:var(--accent);
+  background:linear-gradient(135deg,rgba(var(--ar),.1),rgba(var(--ar),.07));
+}
+body.light .fp-item.selected{
+  background:rgba(var(--ar),.08);
+}
+.fp-icon{font-size:22px;}
+.fp-name{font-size:14px;font-weight:600;color:var(--text2);}
+
+/* ── Toast ── */
+#toast{
+  position:fixed;bottom:88px;left:50%;
+  transform:translateX(-50%) translateY(18px);
+  background:var(--toast-bg);
+  color:var(--text);padding:11px 22px;border-radius:14px;
+  font-size:13px;z-index:9000;opacity:0;transition:all .25s;
+  pointer-events:none;white-space:nowrap;
+  border:1px solid rgba(var(--ar),.18);
+  box-shadow:0 4px 28px rgba(0,0,0,.5),0 0 16px rgba(var(--ar),.08);
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+body.light #toast{
+  border-color:rgba(var(--ar),.18);
+  box-shadow:0 4px 24px rgba(var(--ar),.10);
+}
+#toast.on{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ── Spinner ── */
+.spin{
+  width:30px;height:30px;border-radius:50%;
+  border:2.5px solid rgba(var(--ar),.12);border-top-color:var(--accent);
+  animation:doSpin .7s linear infinite;
+  box-shadow:0 0 10px rgba(var(--ar),.2);
+}
+body.light .spin{
+  border-color:rgba(var(--ar),.10);border-top-color:var(--accent);
+  box-shadow:none;
+}
+@keyframes doSpin{to{transform:rotate(360deg);}}
+/* GPU acceleration for screens */
+#pdfScreen,#imgScreen{will-change:opacity;}
+.ivp{will-change:transform;}
+.fc{will-change:transform;}
+.dc{will-change:transform;}
+body.light 
+/* ══════════════════════════════
+   GLASSMORPHISM UPGRADE v18
+   Deep layered frosted glass for
+   cards, topbar, modals, chips
+══════════════════════════════ */
+
+/* Folder cards — deeper glass */
+.fc{
+  background:rgba(26,29,35,.55)!important;
+  -webkit-backdrop-filter:blur(22px) saturate(160%)!important;
+  backdrop-filter:blur(22px) saturate(160%)!important;
+  border:1px solid rgba(var(--ar),.18)!important;
+  box-shadow:
+    0 4px 32px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(var(--ar),.12),
+    inset 0 -1px 0 rgba(0,0,0,.28),
+    0 0 0 0.5px rgba(var(--ar),.06)!important;
+}
+body.light .fc{
+  background:rgba(255,255,255,.60)!important;
+  -webkit-backdrop-filter:blur(22px) saturate(180%)!important;
+  backdrop-filter:blur(22px) saturate(180%)!important;
+  border:1px solid rgba(var(--ar),.16)!important;
+  box-shadow:
+    0 4px 28px rgba(var(--ar),.09),
+    inset 0 1.5px 0 rgba(255,255,255,.92),
+    inset 0 -1px 0 rgba(0,0,0,.04)!important;
+}
+
+/* Doc cards — glass with subtle noise */
+.dc{
+  background:rgba(6,14,30,.62)!important;
+  -webkit-backdrop-filter:blur(18px) saturate(140%)!important;
+  backdrop-filter:blur(18px) saturate(140%)!important;
+  border:1px solid rgba(var(--ar),.13)!important;
+  box-shadow:
+    0 3px 20px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(var(--ar),.08),
+    inset 0 -1px 0 rgba(0,0,0,.2)!important;
+}
+body.light .dc{
+  background:rgba(255,255,255,.72)!important;
+  -webkit-backdrop-filter:blur(16px) saturate(160%)!important;
+  backdrop-filter:blur(16px) saturate(160%)!important;
+  border:1px solid rgba(var(--ar),.12)!important;
+  box-shadow:
+    0 3px 16px rgba(var(--ar),.07),
+    inset 0 1px 0 rgba(255,255,255,.96)!important;
+}
+
+/* Topbar — stronger glass layer */
+.topbar{
+  -webkit-backdrop-filter:blur(32px) saturate(180%) brightness(1.08)!important;
+  backdrop-filter:blur(32px) saturate(180%) brightness(1.08)!important;
+  box-shadow:0 1px 0 rgba(var(--ar),.1),0 4px 20px rgba(0,0,0,.18)!important;
+}
+body.light .topbar{
+  -webkit-backdrop-filter:blur(32px) saturate(160%) brightness(1.06)!important;
+  backdrop-filter:blur(32px) saturate(160%) brightness(1.06)!important;
+  box-shadow:0 1px 0 rgba(var(--ar),.09),0 4px 16px rgba(var(--ar),.05)!important;
+}
+
+/* Modal sheet — premium glass */
+.sh{
+  -webkit-backdrop-filter:blur(28px) saturate(160%)!important;
+  backdrop-filter:blur(28px) saturate(160%)!important;
+  border:1px solid rgba(var(--ar),.15)!important;
+  border-bottom:none!important;
+  box-shadow:
+    0 -12px 60px rgba(0,0,0,.55),
+    0 -1px 0 rgba(var(--ar),.12),
+    inset 0 1px 0 rgba(var(--ar),.06)!important;
+}
+body.light .sh{
+  border-color:rgba(var(--ar),.14)!important;
+  box-shadow:
+    0 -12px 48px rgba(var(--ar),.12),
+    0 -1px 0 rgba(var(--ar),.10),
+    inset 0 1px 0 rgba(255,255,255,.8)!important;
+}
+
+/* Context menu — glass */
+.cmb{
+  -webkit-backdrop-filter:blur(26px) saturate(160%)!important;
+  backdrop-filter:blur(26px) saturate(160%)!important;
+  border:1px solid rgba(var(--ar),.13)!important;
+  border-bottom:none!important;
+  box-shadow:
+    0 -8px 44px rgba(0,0,0,.48),
+    inset 0 1px 0 rgba(var(--ar),.07)!important;
+}
+body.light .cmb{
+  border-color:rgba(var(--ar),.12)!important;
+  box-shadow:
+    0 -8px 36px rgba(var(--ar),.10),
+    inset 0 1px 0 rgba(255,255,255,.85)!important;
+}
+
+/* Bottom bars — glass */
+#homeBottomBar, #bulkBar, #folderBulkBar{
+  -webkit-backdrop-filter:blur(28px) saturate(160%)!important;
+  backdrop-filter:blur(28px) saturate(160%)!important;
+}
+
+/* Search results items — glass */
+.gr-item{
+  background:rgba(6,14,30,.58)!important;
+  -webkit-backdrop-filter:blur(14px)!important;
+  backdrop-filter:blur(14px)!important;
+  border:1px solid rgba(var(--ar),.14)!important;
+  box-shadow:0 2px 14px rgba(0,0,0,.2),inset 0 1px 0 rgba(var(--ar),.07)!important;
+}
+body.light .gr-item{
+  background:rgba(255,255,255,.72)!important;
+  backdrop-filter:blur(14px)!important;
+  border-color:rgba(var(--ar),.12)!important;
+  box-shadow:0 2px 12px rgba(var(--ar),.06)!important;
+}
+
+/* ══════════════════════════════
+   SKELETON LOADERS — static, no shimmer sweep
+══════════════════════════════ */
+.skel{
+  border-radius:10px;
+  background:rgba(var(--ar),.08);
+}
+body.light .skel{
+  background:rgba(var(--ar),.07);
+}
+/* Folder skeleton card */
+.fc-skel{
+  border-radius:22px;padding:17px 13px 15px;
+  height:128px;
+  background:rgba(26,29,35,.42);
+  border:1px solid rgba(var(--ar),.08);
+}
+body.light .fc-skel{
+  background:rgba(255,255,255,.45);
+  border-color:rgba(var(--ar),.08);
+}
+.fc-skel .skel-icon{width:50px;height:50px;border-radius:16px;margin-bottom:11px;}
+.fc-skel .skel-line1{width:80%;height:12px;margin-bottom:7px;}
+.fc-skel .skel-line2{width:50%;height:10px;}
+/* Doc skeleton card */
+.dc-skel{
+  border-radius:20px;overflow:hidden;
+  background:rgba(6,14,30,.5);
+  border:1px solid rgba(var(--ar),.08);
+  box-shadow:0 3px 16px rgba(0,0,0,.2);
+}
+body.light .dc-skel{
+  background:rgba(255,255,255,.55);
+  border-color:rgba(var(--ar),.08);
+}
+.dc-skel .skel-thumb{width:100%;aspect-ratio:3/4;}
+.dc-skel .skel-body{padding:9px 10px 11px;}
+.dc-skel .skel-name{width:90%;height:12px;margin-bottom:7px;}
+.dc-skel .skel-meta{width:60%;height:10px;}
+
+/* Tap feedback removed for a lighter, faster feel — plain
+   :active opacity/scale states (see .fc:active etc.) are
+   enough visual confirmation without an extra animated layer. */
+
+/* ══════════════════════════════
+   DOC CARD WRAPPER
+══════════════════════════════ */
+.dc-wrap{
+  position:relative;overflow:hidden;
+  border-radius:20px;
+  margin-bottom:0;
+}
+.dc-inner{
+  position:relative;
+  transition:transform .22s cubic-bezier(.25,1,.5,1);
+  will-change:transform;
+  border-radius:20px;
+  z-index:1;
+}
+.dc-inner.swiping{transition:none;}
+
+/* ══════════════════════════════
+   ENHANCED EMPTY STATES
+   With context-specific illustrations
+══════════════════════════════ */
+.emp-search-anim{
+  position:relative;width:110px;height:110px;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto;
+}
+.emp-search-glass{
+  font-size:48px;
+  filter:drop-shadow(0 0 14px rgba(var(--ar),.4));
+}
+body.light .emp-search-glass{filter:drop-shadow(0 0 12px rgba(var(--ar),.28));}
+
+
+/* ═══ THEMES + PERFORMANCE LAYER ═══ */
+:root{--ar:31,205,181;--navh:60px;--onacc:#07201B;
+ --bg:#17120F;--bg2:#1C1613;--surface:#1C1613;--card:#231C19;--card2:#2D2420;--navy:#120E0C;
+ --accent:#1FCDB5;--accent2:#17A692;--gold:#1FCDB5;--gold2:#17A692;
+ --glow1:rgba(31,205,181,.10);--glow2:rgba(31,205,181,.06);--glow3:rgba(31,205,181,.06);
+ --border:#3A302B;--border2:#2F2622;--text:#CFC3B8;--text2:#F4EBE2;--sub:#A3948A;--hint:#6F645B;--red:#F27A6B;
+ --topbar-bg:#1C1613;--vbar-bg:#1C1613;--pdf-bg:#120E0C;--modal-bg:#211A17;--cm-bg:#211A17;
+ --footer-bg:#1C1613;--sbox-bg:#231C19;--toast-bg:#2D2420;--inp-bg:#17120F}
+body.light{--ar:15,155,140;--onacc:#fff;
+ --bg:#EFEBE2;--bg2:#EFEBE2;--surface:#FDFCF8;--card:#FDFCF8;--card2:#EAE2D2;--navy:#E6DFCF;
+ --accent:#0F9B8C;--accent2:#0B7F73;--gold:#0F9B8C;--gold2:#0B7F73;
+ --glow1:rgba(15,155,140,.10);--glow2:rgba(15,155,140,.06);--glow3:rgba(15,155,140,.06);
+ --border:#E0D8C6;--border2:#ECE5D5;--text:#3B3426;--text2:#1E1A12;--sub:#7A705D;--hint:#A89E88;--red:#C2412D;
+ --topbar-bg:#FDFCF8;--vbar-bg:#FDFCF8;--pdf-bg:#E6DFCF;--modal-bg:#FDFCF8;--cm-bg:#FDFCF8;
+ --footer-bg:#FDFCF8;--sbox-bg:#FDFCF8;--toast-bg:#1E1A12;--inp-bg:#FDFCF8}
+body.minimal{--ar:168,67,31;--onacc:#fff;
+ --bg:#D9CFBA;--bg2:#D9CFBA;--surface:#EFE7DB;--card:#EFE7DC;--card2:#CFC1A8;--navy:#CFC1A8;
+ --accent:#A8431F;--accent2:#C9962E;--gold:#A8431F;--gold2:#C9962E;
+ --glow1:rgba(168,67,31,.10);--glow2:rgba(168,67,31,.06);--glow3:rgba(168,67,31,.06);
+ --border:#C0B196;--border2:#CDBFA4;--text:#3A2E20;--text2:#2A1F14;--sub:#7B6D5A;--hint:#A29578;--red:#B3361F;
+ --topbar-bg:#EFE7DB;--vbar-bg:#EFE7DB;--pdf-bg:#CFC1A8;--modal-bg:#EFE7DB;--cm-bg:#EFE7DB;
+ --footer-bg:#EFE7DB;--sbox-bg:#EFE7DC;--toast-bg:#3A2E20;--inp-bg:#F4EDE1}
+body::before{display:none!important}
+*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;
+ -webkit-backdrop-filter:none!important;backdrop-filter:none!important;will-change:auto!important}
+.spin{animation:doSpin .7s linear infinite!important}
+#bottomNav,#bottomNav *{pointer-events:auto}
+
+/* icons */
+.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;display:block}
+.ic.sm{display:inline-block;width:17px;height:17px;vertical-align:-3px}
+.fi{color:var(--accent)}.fi .ic{width:26px;height:26px}
+.ico .ic{width:24px;height:24px}
+.fp-icon .ic{width:22px;height:22px}
+.exp-fold-icon .ic{width:22px;height:22px}
+
+/* header (Daymark / Auto Stock style) */
+.hd{display:flex;align-items:center;gap:12px;flex-shrink:0;padding:calc(12px + var(--inset)) 16px 12px;
+ background:var(--surface);border-bottom:1px solid var(--border)}
+.appic{width:44px;height:44px;border-radius:14px;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+ background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--onacc)}
+.appic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.hdt{flex:1;min-width:0}
+.hdt h1{font-family:Georgia,'Noto Serif','Times New Roman',serif;font-size:20px;font-weight:700;color:var(--text2);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hdt p{font-size:13px;color:var(--sub);margin-top:2px}
+.tbtn{width:44px;height:44px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+ background:var(--card2);border:1.5px solid var(--border);color:var(--text2);cursor:pointer}
+.tbtn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+body .topbar{background:var(--surface)!important;border-bottom:1px solid var(--border)!important;box-shadow:none!important}
+body .topbar::after{display:none!important}
+body .appname{background:none!important;-webkit-text-fill-color:currentColor!important;color:var(--text2)!important;font-family:Georgia,'Noto Serif',serif}
+
+/* surfaces */
+body .fc,body .dc,body .dc-inner{background:var(--card)!important;border:1.5px solid var(--border)!important;box-shadow:none!important;border-radius:22px}
+body .sbox{background:var(--card)!important;border:1.5px solid var(--border)!important;box-shadow:none!important;border-radius:16px}
+body .sort-chip{background:var(--card)!important;border:1.5px solid var(--border)!important;color:var(--sub)!important;box-shadow:none!important}
+body .sort-chip.active{background:var(--accent)!important;border-color:var(--accent)!important;color:var(--onacc)!important}
+body .sec-lbl{color:var(--sub)!important;letter-spacing:.12em}
+body #homeBottomBar,body #bulkBar,body #folderBulkBar{background:var(--surface)!important;border-top:1px solid var(--border)!important;box-shadow:none!important}
+#homeBottomBar .footer{display:none}
+#homeBottomBar{padding-bottom:10px!important}
+body .btn-nf{background:var(--accent)!important;color:var(--onacc)!important;border:none!important;box-shadow:none!important;border-radius:16px!important;font-weight:700}
+body .bpri,body .btn-add{background:linear-gradient(135deg,var(--accent),var(--accent2))!important;color:var(--onacc)!important;box-shadow:none!important;border:none!important}
+body .bsec{background:var(--card2)!important;border:1.5px solid var(--border)!important;color:var(--text2)!important;box-shadow:none!important}
+body .sh{background:var(--modal-bg)!important;border:none!important;border-radius:28px 28px 0 0!important;box-shadow:none!important}
+body .cmb{background:var(--cm-bg)!important;border:none!important;box-shadow:none!important}
+body .ov,body .cm{background:rgba(0,0,0,.55)!important}
+body.light .ov,body.light .cm{background:rgba(30,26,18,.4)!important}
+body.minimal .ov,body.minimal .cm{background:rgba(58,46,32,.45)!important}
+body .inp{background:var(--inp-bg)!important;border:2px solid var(--border)!important;border-radius:16px!important;color:var(--text2)!important;box-shadow:none!important}
+body .inp:focus{border-color:var(--text2)!important}
+body .mt{color:var(--text2)!important}
+.lbl{font-size:12px!important;font-weight:500!important;letter-spacing:.12em!important;margin:16px 0 10px!important}
+.igrid{grid-template-columns:repeat(6,1fr)!important;gap:10px!important;max-height:250px!important}
+body .ico{background:var(--card2)!important;border:2px solid var(--border)!important;border-radius:14px!important;color:var(--text2)!important;box-shadow:none!important}
+body .ico.sel{background:var(--accent)!important;border-color:var(--accent)!important;color:var(--onacc)!important}
+.crow{gap:12px!important}
+body .col{width:36px!important;height:36px!important;border:none!important;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:700;transform:none!important}
+body .col.sel{box-shadow:0 0 0 2px var(--modal-bg),0 0 0 4.5px var(--text2)!important}
+.pvw{display:flex;align-items:center;gap:14px;padding:12px 14px;margin:12px 0 4px;border-radius:16px;background:var(--card2)}
+.pvi{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
+.pvi .ic{width:24px;height:24px}
+.pvw span{font-size:15px;color:var(--sub);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pvw span.has{color:var(--text2);font-weight:600}
+
+/* tabs */
+#bottomNav{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;height:calc(var(--navh) + var(--binset));
+ padding-bottom:var(--binset);background:var(--surface);border-top:1px solid var(--border)}
+body.nav-on #bottomNav{display:flex}
+body.nav-on.nonav #bottomNav{display:none}
+body.nav-on #homeScreen,body.nav-on #settingsScreen,body.nav-on #aboutScreen{bottom:calc(var(--navh) + var(--binset))}
+body.nav-on.nonav #homeScreen{bottom:0}
+.nv{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:none;border:none;
+ color:var(--sub);font-size:13px;font-weight:500;cursor:pointer;font-family:inherit}
+.nv svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nv.on{color:var(--accent)}
+
+/* settings / about */
+.pg{padding:6px 16px 28px}
+.lab{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--sub);margin:22px 4px 12px}
+.box{background:var(--card);border:1.5px solid var(--border);border-radius:24px;overflow:hidden}
+.seg{display:flex;gap:10px;padding:14px}
+.seg button{flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 4px;border-radius:16px;
+ border:1.5px solid var(--border);background:var(--card2);color:var(--text2);font-size:15px;font-weight:600;font-family:inherit;cursor:pointer}
+.seg button svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.seg button.on{background:var(--accent);border-color:var(--accent);color:var(--onacc)}
+.rw{display:flex;align-items:center;gap:16px;padding:18px 18px;cursor:pointer;border-bottom:1.5px solid var(--border)}
+.rw:last-child{border-bottom:none}
+.rw.static{cursor:default}
+.rw>div{flex:1;min-width:0;color:var(--text2);font-size:18px;font-weight:600}
+.rw small{display:block;font-size:14px;font-weight:400;color:var(--sub);margin-top:3px}
+.rw>svg{width:24px;height:24px;stroke:var(--sub);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.rw>svg.ch{width:20px;height:20px}
+.ab{text-align:center;padding:22px 18px}
+.ab .lg{width:68px;height:68px;border-radius:20px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;
+ background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--onacc)}
+.ab .lg svg{width:36px;height:36px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ab h2{font-family:Georgia,'Noto Serif',serif;font-size:22px;color:var(--text2);font-weight:700}
+.ab p{font-size:15px;color:var(--sub);margin-top:6px;line-height:1.55}
+.ft{padding:16px 18px;font-size:15px;color:var(--text);line-height:1.5;border-bottom:1.5px solid var(--border)}
+.ft:last-child{border-bottom:none}
+.ft b{color:var(--text2)}
+
+/* ═══ ICONS EVERYWHERE + COMPACT SIZING ═══ */
+*{-webkit-tap-highlight-color:transparent}
+button,.nv,.rw,.mi,.fc{touch-action:manipulation}
+:root{--navh:52px}
+.hd{padding:calc(9px + var(--inset)) 14px 9px;gap:10px}
+.appic{width:36px;height:36px;border-radius:11px}.appic svg{width:20px;height:20px}
+.hdt h1{font-size:16.5px}.hdt p{font-size:11.5px;margin-top:1px}
+.tbtn{width:36px;height:36px}.tbtn svg{width:19px;height:19px}
+.nv{font-size:11px;gap:2px}.nv svg{width:22px;height:22px}
+.search-wrap{padding:9px 14px 6px}
+body .sbox{border-radius:13px}.sbox input{font-size:14px}
+.sec-lbl{font-size:11px!important}
+body .fc{border-radius:18px;padding:13px 11px 12px}
+.fi{width:40px;height:40px;border-radius:13px;margin-bottom:9px}.fi .ic{width:22px;height:22px}
+.fn{font-size:13px}.fc-cnt{font-size:11px}
+body .btn-nf{font-size:14px;padding:12px;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:7px}
+.lab{font-size:11.5px;margin:18px 4px 9px}
+.box{border-radius:18px}
+.seg{padding:10px;gap:8px}.seg button{padding:12px 4px;font-size:13px;gap:6px;border-radius:13px}.seg button svg{width:21px;height:21px}
+.rw{padding:13px 14px;gap:13px}.rw>div{font-size:15px}.rw small{font-size:12.5px;margin-top:2px}.rw>svg{width:21px;height:21px}.rw>svg.ch{width:18px;height:18px}
+.ab{padding:18px 16px}.ab .lg{width:58px;height:58px;border-radius:17px}.ab .lg svg{width:30px;height:30px}.ab h2{font-size:19px}.ab p{font-size:13.5px}
+.ft{padding:13px 16px;font-size:13.5px}
+.igrid{grid-template-columns:repeat(7,1fr)!important;gap:7px!important;max-height:226px!important}
+body .ico{border-radius:12px!important;border-width:1.5px!important}.ico .ic{width:20px;height:20px}
+body .col{width:30px!important;height:30px!important}.crow{gap:10px!important}
+.xk{width:15px;height:15px;stroke:#fff;stroke-width:2.8}
+.pvw{padding:9px 12px;gap:12px;border-radius:14px}.pvi{width:38px;height:38px;border-radius:12px}.pvi .ic{width:21px;height:21px}.pvw span{font-size:14px}
+body .inp{font-size:15px;padding:11px 14px;border-radius:14px}
+.lbl{font-size:11px!important}
+body .bpri,body .bsec{font-size:14.5px;padding:12px;border-radius:14px}
+body .sh{border-radius:24px 24px 0 0!important}
+body .mt{font-size:16px}
+.mi{font-size:14.5px}.mii{width:26px;display:flex;align-items:center;justify-content:center}.mii .ic{width:20px;height:20px}
+.mi.danger .mii{color:var(--red)}
+.ic.hrt{color:var(--red);display:inline-block;vertical-align:-3px}
+
+/* filter / sort bar */
+.sort-wrap{padding:2px 0 8px}
+.sort-scroll{display:flex;gap:2px;padding:3px;background:var(--card2);border:1.5px solid var(--border);border-radius:14px;overflow:hidden}
+body .sort-chip{flex:1 1 0;min-width:0;flex-direction:column;justify-content:center;gap:3px;padding:7px 1px 6px;border-radius:11px;
+ border:none!important;background:transparent!important;color:var(--sub)!important;font-size:10.5px;font-weight:600;box-shadow:none!important;transform:none!important}
+body .sort-chip span{white-space:nowrap}
+body .sort-chip .ic{width:18px;height:18px}
+body .sort-chip.active{background:var(--accent)!important;color:var(--onacc)!important}
+
+/* empty states */
+.emp-scene{width:auto;height:auto;margin-bottom:4px}
+.emp-ico{width:76px;height:76px;border-radius:24px;margin:0 auto;display:flex;align-items:center;justify-content:center;
+ background:var(--card2);border:1.5px solid var(--border);color:var(--accent)}
+.emp-ico .ic{width:36px;height:36px}
+.emp-t{font-size:16px!important}.emp-s{font-size:12.5px!important}
+
+/* misc icon sizing */
+.tb-btn .ic{width:22px;height:22px}
+.fc-menu .ic{width:20px;height:20px}
+.sclr .ic{width:16px;height:16px}
+.zpi{display:flex;justify-content:center;margin:8px 0 10px;color:var(--accent)}.zpi .ic{width:38px;height:38px}
+.pph-i .ic{width:32px;height:32px;margin:0 auto}
+.gr-th .ic{width:22px;height:22px}
+.perr .ic{width:28px;height:28px;margin:0 auto 8px}
+.bulk-act .ic,.folder-bulk-act .ic{width:16px;height:16px;display:inline-block;vertical-align:-3px;margin-right:4px}
+.chk{width:13px;height:13px;stroke:#fff;stroke-width:3.2}
+#toast{display:flex;align-items:center;gap:8px;max-width:92vw;font-size:13px;padding:10px 16px}
+#toast span{overflow:hidden;text-overflow:ellipsis}
+#toast .ti{width:17px;height:17px;flex-shrink:0;color:var(--accent)}
+
+body .sort-wrap{padding:2px 14px 8px!important}
+#toast{color:#fff!important}
+.footer span{background:none!important;-webkit-text-fill-color:currentColor!important;color:var(--accent)!important}
+
+#vimg{will-change:transform!important;transform-origin:50% 50%;}
+</style>
+</head>
+<body class="dark">
+<div id="app">
+
+<!-- ═══════════ HOME ═══════════ -->
+<div class="screen active" id="homeScreen">
+  <div class="hd">
+    <div class="appic"><svg viewBox="0 0 24 24"><path d="M3.5 7a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/></svg></div>
+    <div class="hdt"><h1>Paranchi's Documents</h1><p>Offline document vault</p></div>
+    <button class="tbtn themeBtn" aria-label="Change theme"></button>
+  </div>
+  <div class="search-wrap">
+    <div class="sbox">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--hint)" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="gSI" type="text" placeholder="Search all documents…" autocomplete="off">
+      <button class="sclr" id="gSC"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+  <!-- Folder bulk select strip -->
+  <div id="folderBulkStrip">
+    <span id="folderBulkCountText">Tap folders to select</span>
+    <div class="bulk-strip-btns">
+      <button id="folderBulkSelAll" style="background:none;border:1.5px solid var(--border);color:var(--sub);font-size:12px;font-weight:500;cursor:pointer;padding:5px 11px;border-radius:9px;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;white-space:nowrap;">Select All</button>
+      <button id="folderBulkCancel" style="background:none;border:1.5px solid var(--border);color:var(--sub);font-size:16px;font-weight:700;cursor:pointer;padding:4px 9px;border-radius:9px;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+  <div class="scroll" id="homeScroll">
+    <div id="gResults"></div>
+    <div id="folderSection">
+      <div class="sec-lbl">Your Folders</div>
+      <div class="sort-wrap" style="padding:0 0 2px;">
+        <div class="sort-scroll" id="folderSortBar">
+          <button class="sort-chip active" data-fsort="date-asc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Created</span></button>
+          <button class="sort-chip" data-fsort="name-asc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16l3-8 3 8M4.2 13h3.6"/><path d="M13 8h5l-5 8h5"/></svg><span>A–Z</span></button>
+          <button class="sort-chip" data-fsort="name-desc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h5l-5 8h5"/><path d="M13 16l3-8 3 8M14.2 13h3.6"/></svg><span>Z–A</span></button>
+          <button class="sort-chip" data-fsort="count-desc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span>Most docs</span></button>
+        </div>
+      </div>
+      <div id="folderGrid"></div>
+      <!-- Empty state: shown when no folders exist -->
+      <div class="emp" id="folderEmp">
+        <div class="emp-scene">
+          <div class="emp-ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/><path d="M12 11v5M9.5 13.5h5"/></svg></div>
+        </div>
+        <div class="emp-t">No Folders Yet</div>
+        <div class="emp-s">Tap "Create New Folder" below to get started!</div>
+      </div>
+    </div>
+  </div>
+  <!-- Sticky bottom bar: always visible at bottom of home screen -->
+  <div id="homeBottomBar">
+    <button class="btn-nf" id="newFolderBtn"><svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Create New Folder</button>
+    <div class="footer">Made with <svg class="ic sm hrt" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg> by <span>Abdullah Paranchi</span></div>
+  </div>
+</div>
+
+<!-- ═══════════ SETTINGS ═══════════ -->
+<div class="screen" id="settingsScreen">
+  <div class="hd">
+    <div class="appic"><svg viewBox="0 0 24 24"><path d="M3.5 7a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/></svg></div>
+    <div class="hdt"><h1>Paranchi's Documents</h1><p>Offline document vault</p></div>
+    <button class="tbtn themeBtn" aria-label="Change theme"></button>
+  </div>
+  <div class="scroll"><div class="pg">
+    <div class="lab">Appearance</div>
+    <div class="box"><div class="seg" id="themeSeg">
+      <button data-theme="light"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg><span>Light</span></button>
+      <button data-theme="dark"><svg viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg><span>Dark</span></button>
+      <button data-theme="minimal"><svg viewBox="0 0 24 24"><path d="M12 3l9 9-9 9-9-9z"/><path d="M3 12h18"/></svg><span>Minimal</span></button>
+    </div></div>
+    <div class="lab">Data</div>
+    <div class="box">
+      <div class="rw" id="setExport"><svg viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg><div>Export Backup<small>Save folders as a ZIP file</small></div><svg viewBox="0 0 24 24" class="ch"><path d="M9 5l7 7-7 7"/></svg></div>
+      <div class="rw" id="setImport"><svg viewBox="0 0 24 24"><path d="M12 16V5M7 9l5-5 5 5M5 20h14"/></svg><div>Import Backup<small>Restore folders from a ZIP file</small></div><svg viewBox="0 0 24 24" class="ch"><path d="M9 5l7 7-7 7"/></svg></div>
+      <div class="rw static"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg><div>Storage Used<small id="storInfo">Calculating…</small></div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<div class="screen" id="aboutScreen">
+  <div class="hd">
+    <div class="appic"><svg viewBox="0 0 24 24"><path d="M3.5 7a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/></svg></div>
+    <div class="hdt"><h1>Paranchi's Documents</h1><p>Offline document vault</p></div>
+    <button class="tbtn themeBtn" aria-label="Change theme"></button>
+  </div>
+  <div class="scroll"><div class="pg">
+    <div class="lab">About</div>
+    <div class="box"><div class="ab"><div class="lg"><svg viewBox="0 0 24 24"><path d="M3.5 7a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/></svg></div><h2>Paranchi's Documents</h2>
+      <p>A useful document app to keep your important PDFs and images organised, private and always with you.</p></div></div>
+    <div class="lab">Features</div>
+    <div class="box">
+      <div class="ft"><b>Folders.</b> Sort documents into folders with your own icon and colour.</div>
+      <div class="ft"><b>PDF and image viewer.</b> Open documents right inside the app.</div>
+      <div class="ft"><b>Works offline.</b> Everything stays on your device. Nothing is uploaded.</div>
+      <div class="ft"><b>Backup.</b> Export folders to a ZIP and import them back from Settings.</div>
+    </div>
+    <div class="lab">Credits</div>
+    <div class="box"><div class="ft">Made by <b>Abdullah Paranchi</b></div><div class="ft">Version 1.0</div></div>
+  </div></div>
+</div>
+
+<nav id="bottomNav">
+  <button class="nv on" data-tab="homeScreen"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Home</button>
+  <button class="nv" data-tab="settingsScreen"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Settings</button>
+  <button class="nv" data-tab="aboutScreen"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>About</button>
+</nav>
+
+<!-- ═══════════ FOLDER ═══════════ -->
+<div class="screen" id="folderScreen">
+  <div class="topbar">
+    <button class="tb-btn btn-back" id="folderBack"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="tb-left">
+      <div class="appname" id="folderTitle" style="font-size:15px">Folder</div>
+    </div>
+    <button class="tb-btn btn-add" id="folderAddBtn" title="Add">+</button>
+  </div>
+  <div class="search-wrap">
+    <div class="sbox">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--hint)" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="dSI" type="text" placeholder="Search in this folder…" autocomplete="off">
+      <button class="sclr" id="dSC"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+  <div class="doc-count" id="docCount">0 documents</div>
+  <!-- Bulk select strip — shown only in selection mode -->
+  <div id="bulkStrip">
+    <span id="bulkCountText">Tap docs to select</span>
+    <div class="bulk-strip-btns">
+      <button id="bulkSelAll">Select All</button>
+      <button id="bulkCancel"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+  <div class="sort-wrap">
+    <div class="sort-scroll" id="sortBar">
+      <button class="sort-chip active" data-sort="date-desc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Newest</span></button>
+      <button class="sort-chip" data-sort="date-asc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.5-5.8L4 8.5M4 4v4.5h4.5M12 8v4l2.5 1.5"/></svg><span>Oldest</span></button>
+      <button class="sort-chip" data-sort="name-asc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16l3-8 3 8M4.2 13h3.6"/><path d="M13 8h5l-5 8h5"/></svg><span>A–Z</span></button>
+      <button class="sort-chip" data-sort="name-desc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h5l-5 8h5"/><path d="M13 16l3-8 3 8M14.2 13h3.6"/></svg><span>Z–A</span></button>
+      <button class="sort-chip" data-sort="size-desc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 15l6-6M10 9h5v5"/></svg><span>Largest</span></button>
+      <button class="sort-chip" data-sort="size-asc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M15 9l-6 6M9 10v5h5"/></svg><span>Smallest</span></button>
+    </div>
+  </div>
+  <div class="scroll">
+    <div class="emp" id="docEmp">
+      <div class="emp-scene">
+        <div class="emp-ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M12 12v5M9.5 14.5h5"/></svg></div>
+      </div>
+      <div class="emp-t">Empty Folder</div>
+      <div class="emp-s">Tap + above to add a document</div>
+    </div>
+    <div id="docGrid"></div>
+  </div>
+  <div class="footer">Made with <svg class="ic sm hrt" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg> by <span>Abdullah Paranchi</span></div>
+</div>
+
+<!-- ═══════════ PDF VIEWER ═══════════ -->
+<div class="screen" id="pdfScreen">
+  <div class="vbar">
+    <button class="tb-btn btn-back" id="pdfBack" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);color:var(--text2);font-size:26px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="vt" id="pdfTitle">Document</div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0;">
+      <span class="v-info" id="pdfInfo"></span>
+      <span class="v-info" id="pdfMeta" style="font-size:10px;opacity:.7;"></span>
+    </div>
+    <button class="v-share" id="pdfShareBtn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      Share
+    </button>
+  </div>
+  <div id="pdfWrap">
+    <div id="pdfSizer"><div id="pdfPages"></div></div>
+  </div>
+  <div id="pdfLoader"><div class="spin"></div><span>Loading PDF…</span></div>
+  <div id="pdfZH">Double-tap to zoom · Pinch to zoom · Drag when zoomed</div>
+</div>
+
+<!-- ═══════════ IMAGE VIEWER ═══════════ -->
+<div class="screen" id="imgScreen">
+  <div class="ibar" id="imgBar">
+    <button class="tb-btn btn-back" id="imgBack" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);color:var(--text2);font-size:26px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div style="flex:1;min-width:0;">
+      <div class="vt" id="imgTitle" style="color:var(--text2)">Photo</div>
+      <div id="imgMeta" style="font-size:10px;color:rgba(255,255,255,.45);margin-top:1px;"></div>
+    </div>
+    <button class="v-share" id="imgShareBtn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      Share
+    </button>
+  </div>
+  <div class="ivp" id="imgVp">
+    <img id="vimg" src="" alt="" draggable="false">
+    <div class="ihint" id="imgHint">Double-tap to zoom · Pinch to zoom</div>
+  </div>
+</div>
+
+<!-- ═══════════ MODALS ═══════════ -->
+
+<!-- Folder Modal -->
+<div class="ov" id="folderModal">
+  <div class="sh">
+    <div class="hdl"></div>
+    <div class="mt" id="fmT">New Folder</div>
+    <input class="inp" id="fNI" type="text" placeholder="e.g. Aadhaar Card, Medical…" maxlength="100" autocomplete="off" style="margin-top:10px">
+    <div class="pvw"><div class="pvi" id="pvI"></div><span id="pvT">Live preview</span></div>
+    <div class="lbl">Icon</div>
+    <div class="igrid" id="iconGrid"></div>
+    <div class="lbl">Colour</div>
+    <div class="crow" id="colorRow"></div>
+    <div class="brow">
+      <button class="bsec" id="fmC">Cancel</button>
+      <button class="bpri" id="fmS" disabled>Create</button>
+    </div>
+  </div>
+</div>
+
+<!-- Rename Modal -->
+<div class="ov" id="renameModal">
+  <div class="sh">
+    <div class="hdl"></div>
+    <div class="mt">Name Your Document</div>
+    <div class="ms">Give it a clear name so you can find it easily.</div>
+    <input class="inp" id="nameInp" type="text" placeholder="e.g. Aadhaar Card, PAN Card…" maxlength="150" autocomplete="off">
+    <div class="brow">
+      <button class="bsec" id="rmC">Cancel</button>
+      <button class="bpri" id="rmS" disabled>Save Document</button>
+    </div>
+  </div>
+</div>
+
+<!-- Rename Doc Modal -->
+<div class="ov" id="renameDocModal">
+  <div class="sh">
+    <div class="hdl"></div>
+    <div class="mt">Rename Document</div>
+    <div class="ms">Enter a new name for this document.</div>
+    <input class="inp" id="renameDocInp" type="text" placeholder="Document name…" maxlength="60" autocomplete="off">
+    <div class="brow">
+      <button class="bsec" id="rdC">Cancel</button>
+      <button class="bpri" id="rdS" disabled>Rename</button>
+    </div>
+  </div>
+</div>
+
+<!-- Move Doc Modal -->
+<div class="ov" id="moveDocModal">
+  <div class="sh">
+    <div class="hdl"></div>
+    <div class="mt">Move to Folder</div>
+    <div class="ms">Select a folder to move this document to.</div>
+    <div class="folder-pick-list" id="folderPickList"></div>
+    <div class="brow">
+      <button class="bsec" id="mvC">Cancel</button>
+      <button class="bpri" id="mvS" disabled>Move Here</button>
+    </div>
+  </div>
+</div>
+
+<!-- Exit Confirm Modal -->
+<!-- exitModal removed — double-back-to-exit toast used instead -->
+
+<!-- Delete Modal -->
+<div class="ov" id="deleteModal">
+  <div class="sh">
+    <div class="hdl"></div>
+    <div class="mt">Delete?</div>
+    <div class="ms" id="delMsg">This will be permanently removed.</div>
+    <div class="brow">
+      <button class="bsec" id="delC">Keep It</button>
+      <button class="bdel" id="delOk">Delete</button>
+    </div>
+  </div>
+</div>
+
+<!-- Folder Context Menu -->
+<div class="cm" id="fCM">
+  <div class="cmb">
+    <div class="hdl"></div>
+    <div class="mi" id="miEdit"><span class="mii"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9a2.1 2.1 0 0 0-3-3L5 17zM14.5 7.5l3 3"/></svg></span>Edit Folder</div>
+    <div class="mi danger" id="miDel"><span class="mii"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13M10 11v6M14 11v6"/></svg></span>Delete Folder &amp; All Contents</div>
+  </div>
+</div>
+
+<!-- Doc Context Menu -->
+<div class="cm" id="dCM">
+  <div class="cmb">
+    <div class="hdl"></div>
+    <div class="mi" id="miSelect"><span class="mii"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.5"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></span>Select / Bulk Actions</div>
+    <div class="mi" id="miRename"><span class="mii"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9a2.1 2.1 0 0 0-3-3L5 17zM14.5 7.5l3 3"/></svg></span>Rename Document</div>
+    <div class="mi" id="miMove"><span class="mii"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/><path d="M9 13h6M12.5 10.5L15 13l-2.5 2.5"/></svg></span>Move to Folder</div>
+    <div class="mi danger" id="miDocDel"><span class="mii"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13M10 11v6M14 11v6"/></svg></span>Delete Document</div>
+  </div>
+</div>
+
+
+<!-- Export Backup Modal — full screen folder picker -->
+<div class="ov" id="exportModal">
+  <div class="sh" style="max-height:88vh;overflow-y:auto;padding-bottom:calc(56px + var(--binset));">
+    <div class="hdl"></div>
+    <div class="mt">Export Backup</div>
+    <div class="ms" id="exportSubtitle">Select folders to include in your ZIP backup.</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <span id="exportSelCount" style="font-size:12px;color:var(--sub);font-weight:600;"></span>
+      <button id="exportSelAll" style="background:none;border:none;color:var(--accent);font-size:13px;font-weight:600;cursor:pointer;padding:4px 0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;">Select All</button>
+    </div>
+    <div id="exportFolderList" style="display:flex;flex-direction:column;gap:9px;margin-bottom:6px;"></div>
+    <div class="brow" style="position:sticky;bottom:0;background:var(--modal-bg);padding-top:12px;">
+      <button class="bsec" id="exportCancel">Cancel</button>
+      <button class="bpri" id="exportGo" disabled>Export ZIP</button>
+    </div>
+  </div>
+</div>
+
+<!-- ZIP Import Modal -->
+<div class="ov" id="importModal">
+  <div class="sh">
+    <div class="hdl"></div>
+    <div class="mt">Import Backup</div>
+    <div class="ms">Choose a ZIP file exported from Paranchi's Documents. Duplicate names will be imported as copies.</div>
+    <div id="importDropZone" style="
+      border:2px dashed rgba(34,197,94,.22);border-radius:16px;
+      padding:32px 16px;text-align:center;cursor:pointer;
+      background:rgba(34,197,94,.03);margin-bottom:6px;
+      transition:border-color .2s,background .2s;
+    ">
+      <div class="zpi" style="margin-bottom:8px"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V5M7 9l5-5 5 5M5 20h14"/></svg></div>
+      <div style="font-size:14px;color:var(--text2);font-weight:600;margin-bottom:4px;">Tap to choose ZIP file</div>
+      <div style="font-size:12px;color:var(--hint);">Only .zip files exported from this app</div>
+    </div>
+    <div id="importFileInfo" style="display:none;padding:10px 14px;background:rgba(34,197,94,.07);border-radius:12px;margin-bottom:6px;font-size:13px;color:var(--text);"></div>
+    <div class="brow">
+      <button class="bsec" id="importCancel">Cancel</button>
+      <button class="bpri" id="importGo" disabled>Import</button>
+    </div>
+  </div>
+</div>
+
+<!-- ZIP Progress Overlay -->
+<div class="ov" id="zipProgress" style="z-index:900;">
+  <div class="sh" style="text-align:center;">
+    <div class="hdl"></div>
+    <div class="zpi" id="zipProgressIcon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5zM3.5 7.5L12 12l8.5-4.5M12 12v9"/></svg></div>
+    <div class="mt" id="zipProgressTitle">Building ZIP…</div>
+    <div class="ms" id="zipProgressMsg">Please wait…</div>
+    <div style="background:rgba(34,197,94,.1);border-radius:20px;height:6px;overflow:hidden;margin:8px 0 4px;">
+      <div id="zipProgressBar" style="height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent),#7CF0AA);border-radius:20px;width:0%;transition:width .3s;box-shadow:0 0 8px rgba(34,197,94,.5);"></div>
+    </div>
+    <div id="zipProgressPct" style="font-size:12px;color:var(--hint);margin-top:4px;">0%</div>
+  </div>
+</div>
+
+<input type="file" id="zipFilePick" accept=".zip" style="display:none">
+
+<!-- Folder Bulk Delete Bar (fixed bottom, shown during folder selection mode) -->
+<div id="folderBulkBar">
+  <button class="folder-bulk-act" id="folderBulkActDel" disabled>
+    <svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13M10 11v6M14 11v6"/></svg> Delete Selected Folders &amp; All Contents
+  </button>
+</div>
+
+<!-- Bulk Action Bar (fixed bottom, shown during selection mode) -->
+<div id="bulkBar">
+  <div class="bulk-actions">
+    <button class="bulk-act bulk-act-share" id="bulkActShare" disabled>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      Share
+    </button>
+    <button class="bulk-act bulk-act-move" id="bulkActMove" disabled>
+      <svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/><path d="M9 13h6M12.5 10.5L15 13l-2.5 2.5"/></svg> Move
+    </button>
+    <button class="bulk-act bulk-act-del" id="bulkActDel" disabled>
+      <svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13M10 11v6M14 11v6"/></svg> Delete
+    </button>
+  </div>
+</div>
+
+<input type="file" id="filePick" accept=".pdf,.jpg,.jpeg,.png" style="display:none">
+<div id="toast"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+'use strict';
+
+/* ═══════════════════════════════
+   THEME SYSTEM
+═══════════════════════════════ */
+const THEME_KEY='paranchi_theme';
+
+const THEMES=['light','dark','minimal'];
+const THEME_META={light:'#FDFCF8',dark:'#1C1613',minimal:'#EFE7DB'};
+const THEME_ICON={
+  light:'<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/>',dark:'<path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/>',minimal:'<path d="M12 3l9 9-9 9-9-9z"/><path d="M3 12h18"/>'};
+function applyTheme(theme){
+  if(!THEME_META[theme])theme='dark';
+  document.body.classList.remove('light','dark','minimal');
+  document.body.classList.add(theme);
+  document.getElementById('themeColorMeta').content=THEME_META[theme];
+  document.querySelectorAll('.themeBtn').forEach(b=>{b.innerHTML='<svg viewBox="0 0 24 24">'+THEME_ICON[theme]+'</svg>';});
+  document.querySelectorAll('#themeSeg button').forEach(b=>b.classList.toggle('on',b.dataset.theme===theme));
+  try{localStorage.setItem(THEME_KEY,theme);}catch(e){}
+}
+(function(){
+  let saved='dark';
+  try{saved=localStorage.getItem(THEME_KEY)||'dark';}catch(e){}
+  applyTheme(saved);
+})();
+document.addEventListener('click',e=>{
+  const s=e.target.closest('#themeSeg button');
+  if(s){applyTheme(s.dataset.theme);return;}
+  if(e.target.closest('.themeBtn')){
+    const cur=THEMES.find(t=>document.body.classList.contains(t))||'dark';
+    applyTheme(THEMES[(THEMES.indexOf(cur)+1)%3]);
+  }
+});
+
+/* ═══════════════════════════════
+   PDF.JS
+═══════════════════════════════ */
+let pdfJsOk=false;
+try{
+  if(typeof pdfjsLib!=='undefined'){
+    pdfjsLib.GlobalWorkerOptions.workerSrc=
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    pdfJsOk=true;
+  }
+}catch(e){}
+
+/* ═══════════════════════════════
+   CONSTANTS
+═══════════════════════════════ */
+const ICON_DEFS=[
+['folder','Folder','<path d="M3.5 7a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/>'],
+['aadhaar','Aadhaar card','<rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2"/><path d="M5.8 16c.6-1.6 1.7-2.2 2.7-2.2s2.1.6 2.7 2.2M14 9.5h4M14 12.5h4M14 15h2.5"/>'],
+['pan','PAN card','<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 9.5h18M6.5 14h4M6.5 16.5h2.5"/><rect x="14.5" y="13" width="3.5" height="3.5" rx=".8"/>'],
+['passport','Passport','<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10.5" r="3.2"/><path d="M8.8 10.5h6.4M12 7.3c-1.3 1.8-1.3 4.6 0 6.4M12 7.3c1.3 1.8 1.3 4.6 0 6.4M9 17.5h6"/>'],
+['license','Driving licence','<rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.5" cy="12" r="3"/><path d="M5.5 12h6M8.5 12v3M14.5 9.5h4M14.5 12.5h4M14.5 15.5h2"/>'],
+['voter','Voter ID','<path d="M4 13h16v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M8.5 13V4.5h7V13M10.5 8l1.2 1.2 2.3-2.4"/>'],
+['birth','Birth certificate','<circle cx="12" cy="12" r="8.5"/><path d="M9 10.2h.01M15 10.2h.01M9.5 14.5c1.4 1.4 3.6 1.4 5 0M12 3.5c1.2-1.4 3-1 3 .8"/>'],
+['marriage','Marriage','<circle cx="9" cy="14.5" r="4.8"/><circle cx="15" cy="14.5" r="4.8"/><path d="M12 3.5l1.5 2L12 7.5 10.5 5.5z"/>'],
+['medical','Medical','<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/>'],
+['prescription','Prescription','<rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-35 12 12)"/><path d="M10.3 9.5l3.4 5"/>'],
+['insurance','Insurance','<path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/>'],
+['vaccine','Vaccine','<path d="M16.5 3.5l4 4M14 6l4 4M8 12l7-7 4 4-7 7zM8 12l-4.5 4.5M3 21l3-3"/>'],
+['lab','Lab report','<path d="M9.5 3.5h5M10.5 3.5v6L5 19a1.5 1.5 0 0 0 1.3 2.2h11.4A1.5 1.5 0 0 0 19 19l-5.5-9.5v-6M8 15h8"/>'],
+['health','Health','<path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/>'],
+['bank','Bank','<path d="M3 9.5L12 4l9 5.5M5.5 10v8M10 10v8M14 10v8M18.5 10v8M3 20.5h18"/>'],
+['passbook','Passbook','<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M5 7h14M9 12h6M9 15.5h4"/>'],
+['receipt','Receipt / invoice','<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9.5 8h5M9.5 12h5"/>'],
+['tax','Tax','<circle cx="12" cy="12" r="9"/><path d="M9 15l6-6"/><circle cx="9.3" cy="9.3" r=".9"/><circle cx="14.7" cy="14.7" r=".9"/>'],
+['cash','Cash','<rect x="3" y="6.5" width="18" height="11" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6.5 12h.01M17.5 12h.01"/>'],
+['card','Credit card','<rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h4"/>'],
+['wallet','Wallet','<path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18v3M4 7.5V17a2 2 0 0 0 2 2h13a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H6.5A2.5 2.5 0 0 1 4 7.5z"/><circle cx="16" cy="13.5" r="1"/>'],
+['invest','Investments','<path d="M3.5 19.5h17M5.5 15l4-4 3 3 6-7M15 7h3.5v3.5"/>'],
+['certificate','Certificate','<rect x="4" y="3.5" width="16" height="13" rx="2"/><path d="M8 8h8M8 11.5h4"/><circle cx="16" cy="16.5" r="2.5"/><path d="M14.8 18.8L14 21l2-1 2 1-.8-2.2"/>'],
+['degree','Degree','<path d="M2.5 9L12 4.5 21.5 9 12 13.5z"/><path d="M6.5 11v4.5c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3V11M21.5 9v5"/>'],
+['document','Document','<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9 13h6M9 16.5h6"/>'],
+['school','School','<path d="M3.5 20.5h17M5.5 20.5V10L12 6l6.5 4v10.5M10 20.5v-5h4v5M12 6V3.5h3"/>'],
+['book','Book','<path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/>'],
+['house','Home / property','<path d="M3.5 11L12 4l8.5 7M5.5 9.5V20h13V9.5M10 20v-5.5h4V20"/>'],
+['key','Key','<circle cx="8" cy="14" r="4"/><path d="M11 11l8-8M16 6l3 3M14 8l2 2"/>'],
+['contract','Agreement','<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9 17c1.2-2 2-2 2.5-.5s1.3.5 2.5-1"/>'],
+['power','Electricity bill','<path d="M13 2.5L5.5 13.5H12l-1 8 7.5-11H12z"/>'],
+['water','Water bill','<path d="M12 3.5C8.5 8 6 11 6 14.5a6 6 0 0 0 12 0C18 11 15.5 8 12 3.5z"/>'],
+['phone','Phone bill','<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/>'],
+['car','Car','<path d="M4 17v2M20 17v2M3.5 17h17v-4.5L18 7H6l-2.5 5.5zM3.5 12.5h17M7.5 14.5h.01M16.5 14.5h.01"/>'],
+['bike','Bike','<circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l3.5-7H14l4 7M9.5 9L12 16M13 6.5h2.5"/>'],
+['plane','Travel','<path d="M21 3L10.5 13.5M21 3l-6.5 18-4-7.5L3 9.5z"/>'],
+['ticket','Ticket','<path d="M3.5 7.5h17v3a1.8 1.8 0 0 0 0 3.6v2.9h-17v-2.9a1.8 1.8 0 0 0 0-3.6z"/><path d="M14.5 7.5v9"/>'],
+['pin','Location','<path d="M12 21s-6.5-5.8-6.5-11a6.5 6.5 0 0 1 13 0c0 5.2-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>'],
+['luggage','Luggage','<rect x="5" y="7.5" width="14" height="13" rx="2.5"/><path d="M9 7.5V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2.5M9.5 11.5v5M14.5 11.5v5"/>'],
+['briefcase','Work','<rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M9 7.5V6a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 6v1.5M3.5 12.5h17"/>'],
+['person','Person','<circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c.8-3.8 3.7-5.5 7-5.5s6.2 1.7 7 5.5"/>'],
+['family','Family','<circle cx="9" cy="8.5" r="3"/><circle cx="17" cy="9.5" r="2.3"/><path d="M3 19c.6-3.3 3-4.8 6-4.8s5.4 1.5 6 4.8M15.5 14.4c3-.4 5 1 5.5 4.1"/>'],
+['photo','Photos','<rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="M4 17l5-4.5 4 3.5 3-2.5 4.5 4"/>'],
+['lock','Private','<rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5M12 14.5v2.5"/>'],
+['scan','Scans','<path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16M8 12h8"/>'],
+['star','Important','<path d="M12 3.5l2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.9l6-.9z"/>'],
+['legal','Legal','<path d="M12 4v16M7 20h10M4.5 7.5h15M7 7.5l-3 7a3.3 3.3 0 0 0 6 0zM17 7.5l-3 7a3.3 3.3 0 0 0 6 0z"/>'],
+['mosque','Mosque','<path d="M4 20.5h16M6 20.5v-8h12v8M8 12.5c0-2.8 1.8-4.5 4-6.2 2.2 1.7 4 3.4 4 6.2M12 6.3V3.5M10 20.5v-3.5a2 2 0 0 1 4 0v3.5"/>'],
+['paw','Pet','<circle cx="7.5" cy="10" r="1.7"/><circle cx="11" cy="6.5" r="1.7"/><circle cx="15.5" cy="7" r="1.7"/><circle cx="18" cy="11.5" r="1.7"/><path d="M12 12.5c-3 0-5 3-5 5 0 1.8 1.7 2 3 1.5 1-.4 1.5-.5 2-.5s1 .1 2 .5c1.3.5 3 .3 3-1.5 0-2-2-5-5-5z"/>'],
+['gem','Jewellery','<path d="M6.5 4.5h11l3.5 5-9 10.5L3 9.5zM3 9.5h18M9 4.5l3 15 3-15"/>'],
+['warranty','Warranty','<circle cx="12" cy="9.5" r="5.5"/><path d="M9.5 9.5l2 2 3-3.5M8.5 14.5L7.5 21l4.5-2 4.5 2-1-6.5"/>'],
+['laptop','Electronics','<rect x="5" y="5" width="14" height="10" rx="1.5"/><path d="M3 19h18"/>']
+];
+const ICON_SVG={};ICON_DEFS.forEach(d=>ICON_SVG[d[0]]=d[2]);
+const ICONS=ICON_DEFS.map(d=>'ic:'+d[0]);
+function icoHTML(ic,cls){
+  if(typeof ic==='string'&&ic.indexOf('ic:')===0){
+    const p=ICON_SVG[ic.slice(3)]||ICON_SVG.folder;
+    return '<svg class="ic'+(cls?' '+cls:'')+'" viewBox="0 0 24 24" aria-hidden="true">'+p+'</svg>';
+  }
+  return ic||'';
+}
+
+const UI_SVG={"trash": "<path d=\"M4 7h16M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13M10 11v6M14 11v6\"/>", "edit": "<path d=\"M4 20h4L19 9a2.1 2.1 0 0 0-3-3L5 17zM14.5 7.5l3 3\"/>", "select": "<rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"3.5\"/><path d=\"M8.5 12.5l2.5 2.5 4.5-5\"/>", "move": "<path d=\"M3.5 7a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z\"/><path d=\"M9 13h6M12.5 10.5L15 13l-2.5 2.5\"/>", "share": "<circle cx=\"6\" cy=\"12\" r=\"2.5\"/><circle cx=\"17.5\" cy=\"6\" r=\"2.5\"/><circle cx=\"17.5\" cy=\"18\" r=\"2.5\"/><path d=\"M8.2 10.8l7.1-3.6M8.2 13.2l7.1 3.6\"/>", "download": "<path d=\"M12 4v11M7 11l5 5 5-5M5 20h14\"/>", "upload": "<path d=\"M12 16V5M7 9l5-5 5 5M5 20h14\"/>", "box": "<path d=\"M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5zM3.5 7.5L12 12l8.5-4.5M12 12v9\"/>", "gear": "<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M5.6 18.4l1.8-1.8M16.6 7.4l1.8-1.8\"/>", "check": "<path d=\"M5 12.5l4.5 4.5L19 7.5\"/>", "x": "<path d=\"M6 6l12 12M18 6L6 18\"/>", "alert": "<path d=\"M12 4L2.8 19.5h18.4z\"/><path d=\"M12 10v4.5M12 17.2v.01\"/>", "xcircle": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M9 9l6 6M15 9l-6 6\"/>", "checkcircle": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M8 12.5l2.7 2.7L16 9.5\"/>", "search": "<circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"M20 20l-4-4\"/>", "searchx": "<circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"M20 20l-4-4M8.5 8.5l5 5M13.5 8.5l-5 5\"/>", "foldplus": "<path d=\"M3.5 7a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z\"/><path d=\"M12 11v5M9.5 13.5h5\"/>", "docplus": "<path d=\"M6 3h8l5 5v13H6z\"/><path d=\"M14 3v5h5M12 12v5M9.5 14.5h5\"/>", "doc": "<path d=\"M6 3h8l5 5v13H6z\"/><path d=\"M14 3v5h5M9 13h6M9 16.5h6\"/>", "image": "<rect x=\"3.5\" y=\"4.5\" width=\"17\" height=\"15\" rx=\"2.5\"/><circle cx=\"9\" cy=\"10\" r=\"1.8\"/><path d=\"M4 17l5-4.5 4 3.5 3-2.5 4.5 4\"/>", "wifioff": "<path d=\"M3 3l18 18M8.5 8.8A10 10 0 0 0 3 12M21 12a10 10 0 0 0-6.4-3.3M6.5 14.5a6.5 6.5 0 0 1 3-1.6M17.5 14.5a6.5 6.5 0 0 0-2-1.2M12 19v.01\"/>", "back": "<path d=\"M15 5l-7 7 7 7\"/>", "dots": "<path stroke-width=\"3\" d=\"M12 5.5h.01M12 12h.01M12 18.5h.01\"/>", "plus": "<path d=\"M12 5v14M5 12h14\"/>", "heart": "<path d=\"M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z\"/>", "clock": "<circle cx=\"12\" cy=\"12\" r=\"8.5\"/><path d=\"M12 7.5V12l3 2\"/>", "history": "<path d=\"M4 12a8 8 0 1 0 2.5-5.8L4 8.5M4 4v4.5h4.5M12 8v4l2.5 1.5\"/>", "az": "<path d=\"M3 16l3-8 3 8M4.2 13h3.6\"/><path d=\"M13 8h5l-5 8h5\"/>", "za": "<path d=\"M3 8h5l-5 8h5\"/><path d=\"M13 16l3-8 3 8M14.2 13h3.6\"/>", "layers": "<path d=\"M12 3l9 5-9 5-9-5z\"/><path d=\"M3 13l9 5 9-5\"/>", "sizeup": "<rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"3\"/><path d=\"M9 15l6-6M10 9h5v5\"/>", "sizedown": "<rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"3\"/><path d=\"M15 9l-6 6M9 10v5h5\"/>"};
+function ui(n,c){return '<svg class="ic'+(c?' '+c:'')+'" viewBox="0 0 24 24" aria-hidden="true">'+(UI_SVG[n]||'')+'</svg>';}
+const CHK=ui('check','chk');
+const EMO={'\u26A0\uFE0F':'alert','\u274C':'xcircle','\u2705':'checkcircle','\u2713':'check','\uD83D\uDCE4':'share','\uD83D\uDCE5':'download','\uD83D\uDCBE':'download','\uD83D\uDDD1\uFE0F':'trash','\uD83D\uDCC2':'folder','\uD83D\uDCE6':'box','\u2699\uFE0F':'gear'};
+function emoToSvg(e){const n=EMO[e];return n==='folder'?icoHTML('ic:folder'):ui(n||'box');}
+
+const COLORS=[
+  '#C8794A','#3B74C4','#8A6440','#8E857A','#B84A44','#C9A227','#CC5580','#3E9444',
+  '#2FA096','#7D5AA8','#5B8466','#5E8090','#D2691E','#4F5FB8','#A0522D','#6B8E23'
+];
+const DEFAULTS=[
+  {name:'Aadhaar Card',icon:'ic:aadhaar',ci:1},
+  {name:'Documents',icon:'ic:document',ci:5},
+  {name:'Photos',icon:'ic:photo',ci:6},
+  {name:'PAN & Cards',icon:'ic:card',ci:7},
+  {name:'Certificates',icon:'ic:degree',ci:9}
+];
+
+/* ═══════════════════════════════
+   STATE
+═══════════════════════════════ */
+let DB=null;
+let allFolders=[],curFolId=null,curFolDocs=[];
+let pendFile=null,toDel=null,curDocId=null,curBlobUrl=null;
+let editFolId=null,selIcon=0,selColor=0,menuFol=null;
+let curDocForShare=null;
+let exitCnt=0,exitTmr=null;
+let curDocSort='date-desc';
+let fromSearch=false; // tracks if doc was opened from global search
+let curFolSort='date-asc';
+let menuDoc=null;
+let moveTargetFolId=null;
+let bulkMode=false;
+let selectedIds=new Set();
+let isBulkMove=false;
+let folderBulkMode=false;
+let selectedFolIds=new Set();
+// Track current screen for back button
+let screenStack=[];
+let globalSearchActive=false;
+let folderSearchActive=false;
+
+/* PDF */
+let pdfDoc=null,pdfZ=1;
+
+/* Image */
+let iS=1,iX=0,iY=0,iLastTap=0,iT=[];
+let iPD=0,iPS=1,iPX0=0,iPY0=0,iPMX=0,iPMY=0;
+let iDrag=false,iDLX=0,iDLY=0;
+
+/* ═══════════════════════════════
+   STAR CANVAS
+═══════════════════════════════ */
+
+
+/* ═══════════════════════════════
+   DB
+═══════════════════════════════ */
+function openDB(){
+  return new Promise((ok,fail)=>{
+    const r=indexedDB.open('paranchiV6',1);
+    r.onupgradeneeded=e=>{
+      const d=e.target.result;
+      if(!d.objectStoreNames.contains('folders'))
+        d.createObjectStore('folders',{keyPath:'id',autoIncrement:true});
+      if(!d.objectStoreNames.contains('documents')){
+        const s=d.createObjectStore('documents',{keyPath:'id',autoIncrement:true});
+        s.createIndex('fid','folderId',{unique:false});
+      }
+    };
+    r.onsuccess=e=>{
+      const db=e.target.result;
+      // Prevent "internal error opening backing store" on version conflicts
+      db.onversionchange=()=>{db.close();};
+      ok(db);
+    };
+    r.onerror=()=>fail(r.error);
+    // Fires if another tab/instance has the DB open at an older version
+    r.onblocked=()=>{
+      toast('⚠️ Please close other tabs of this app and reload.');
+      fail(new Error('IndexedDB blocked'));
+    };
+  });
+}
+const S=(s,m='readonly')=>DB.transaction(s,m).objectStore(s);
+const dbAll=s=>new Promise((ok,f)=>{const r=S(s).getAll();r.onsuccess=()=>ok(r.result);r.onerror=()=>f(r.error);});
+const dbGet=(s,id)=>new Promise((ok,f)=>{const r=S(s).get(id);r.onsuccess=()=>ok(r.result);r.onerror=()=>f(r.error);});
+const dbAdd=(s,v)=>new Promise((ok,f)=>{if(s==='documents')_docMeta=null;const r=S(s,'readwrite').add(v);r.onsuccess=()=>ok(r.result);r.onerror=()=>f(r.error);});
+const dbPut=(s,v)=>new Promise((ok,f)=>{if(s==='documents')_docMeta=null;const r=S(s,'readwrite').put(v);r.onsuccess=()=>ok(r.result);r.onerror=()=>f(r.error);});
+const dbDel=(s,id)=>new Promise((ok,f)=>{if(s==='documents')_docMeta=null;const r=S(s,'readwrite').delete(id);r.onsuccess=()=>ok();r.onerror=()=>f(r.error);});
+const dbCountFid=id=>new Promise(ok=>{try{const r=S('documents').index('fid').count(IDBKeyRange.only(id));r.onsuccess=()=>ok(r.result);r.onerror=()=>ok(0);}catch(e){ok(0);}});
+let _docMeta=null;
+async function getDocMeta(){
+  if(!_docMeta)_docMeta=(await dbAll('documents')).map(d=>({id:d.id,name:d.name,folderId:d.folderId,ext:d.ext,size:d.size,ts:d.ts,thumb:d.thumb}));
+  return _docMeta;
+}
+const dbIdx=(s,ix,v)=>new Promise((ok,f)=>{
+  const r=S(s).index(ix).getAll(IDBKeyRange.only(v));
+  r.onsuccess=()=>ok(r.result);r.onerror=()=>f(r.error);
+});
+
+/* ═══════════════════════════════
+   UTILS
+═══════════════════════════════ */
+const SESSION_KEY='paranchi_sess';
+const SESSION_TIMEOUT=5*60*1000; // 5 minutes
+
+const goScreen=(id,opts={})=>{
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const _tabs=['homeScreen','settingsScreen','aboutScreen'];
+  document.body.classList.toggle('nav-on',_tabs.includes(id));
+  document.querySelectorAll('#bottomNav .nv').forEach(b=>b.classList.toggle('on',b.dataset.tab===id));
+  // Track navigation stack unless told not to
+  if(!opts.silent) screenStack.push(id);
+  // Refresh the history sentinel after every screen change
+  // so hardware back always fires popstate (not leave the page)
+  if(typeof disarmExit==='function'&&_backPressedOnce) disarmExit();
+  else if(typeof keepSentinel==='function') keepSentinel();
+  // Save session for 5-min restore
+  try{
+    sessionStorage.setItem(SESSION_KEY,JSON.stringify({
+      screen:id,
+      folId:(id==='folderScreen')?curFolId:null,
+      ts:Date.now()
+    }));
+  }catch(e){}
+};
+const openM=id=>document.getElementById(id).classList.add('on');
+const closeM=id=>document.getElementById(id).classList.remove('on');
+const fmtD=ts=>new Date(ts).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+const fmtS=b=>b<1024?b+' B':b<1048576?(b/1024).toFixed(1)+' KB':(b/1048576).toFixed(1)+' MB';
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const mimeOf=ext=>ext==='pdf'?'application/pdf':ext==='png'?'image/png':'image/jpeg';
+const safeName=n=>n.replace(/[^a-zA-Z0-9_\-\. ]/g,'_');
+
+function safeCopy(d){
+  if(!d)return new Uint8Array(0);
+  if(d instanceof Uint8Array)return new Uint8Array(d.buffer.slice(0));
+  if(d instanceof ArrayBuffer)return new Uint8Array(d.slice(0));
+  return new Uint8Array(d);
+}
+
+let toastT;
+function toast(m,dur=3000){
+  const el=document.getElementById('toast');
+  m=String(m);let ic='';
+  for(const k in EMO){if(m.indexOf(k)===0){ic=emoToSvg(k);m=m.slice(k.length).trim();break;}}
+  if(!ic&&/\u2713\s*$/.test(m)){ic=ui('check');m=m.replace(/\s*\u2713\s*$/,'');}
+  el.innerHTML=(ic?ic.replace('class="ic','class="ic ti'):'')+'<span></span>';
+  el.lastChild.textContent=m;el.classList.add('on');
+  clearTimeout(toastT);
+  toastT=setTimeout(()=>el.classList.remove('on'),dur);
+}
+
+/* ═══════════════════════════════
+   SKELETON LOADERS
+═══════════════════════════════ */
+function showFolderSkeletons(n=4){
+  const g=document.getElementById('folderGrid');
+  g.innerHTML='';
+  for(let i=0;i<n;i++){
+    g.insertAdjacentHTML('beforeend',`
+      <div class="fc-skel">
+        <div class="fc-skel skel-icon skel"></div>
+        <div class="skel skel-line1"></div>
+        <div class="skel skel-line2"></div>
+      </div>`);
+  }
+}
+function showDocSkeletons(n=4){
+  const g=document.getElementById('docGrid');
+  g.innerHTML='';
+  for(let i=0;i<n;i++){
+    g.insertAdjacentHTML('beforeend',`
+      <div class="dc-skel">
+        <div class="skel skel-thumb"></div>
+        <div class="skel-body">
+          <div class="skel skel-name"></div>
+          <div class="skel skel-meta"></div>
+        </div>
+      </div>`);
+  }
+}
+
+/* ═══════════════════════════════
+   TAP FEEDBACK — intentionally removed
+   (was an extra animated layer on every tap;
+   :active CSS states give enough feedback
+   without it. Kept as no-op stubs so existing
+   call sites don't need touching.)
+═══════════════════════════════ */
+function addRipple(){}
+function hapticPulse(){}
+
+/* ═══════════════════════════════
+   SWIPE-TO-DELETE — disabled
+   (Was conflicting with the right-edge
+   back-swipe gesture, causing the delete
+   reveal to pop up during back navigation.
+   Deletion is now handled only via
+   long-press context menu + bulk-select,
+   which is more reliable on touch.)
+═══════════════════════════════ */
+
+/* ═══════════════════════════════
+   SEARCH EMPTY STATE — upgraded
+═══════════════════════════════ */
+function buildSearchEmptyHTML(q){
+  return `
+    <div class="gr-lbl">Search Results</div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:50px 24px 30px;text-align:center;">
+      <div class="emp-ico">${ui('searchx')}</div>
+      <div style="font-size:17px;font-weight:700;color:var(--sub);">Nothing found</div>
+      <div style="font-size:13px;color:var(--hint);line-height:1.65;max-width:200px;">No documents match "<strong style="color:var(--text)">${esc(q)}</strong>"</div>
+    </div>`;
+}
+
+/* ═══════════════════════════════
+   BULK SELECT MODE
+═══════════════════════════════ */
+function enterBulkMode(docId){
+  bulkMode=true;
+  selectedIds=new Set();
+  if(docId!=null)selectedIds.add(docId);
+  document.getElementById('folderScreen').classList.add('bulk-active');
+  updateBulkUI();
+  sortAndRenderDocs();
+}
+
+function exitBulkMode(){
+  bulkMode=false;
+  selectedIds=new Set();
+  isBulkMove=false;
+  document.getElementById('folderScreen').classList.remove('bulk-active');
+  document.getElementById('bulkStrip').classList.remove('on');
+  document.getElementById('bulkBar').classList.remove('on');
+  sortAndRenderDocs();
+}
+
+function toggleDocSelect(docId){
+  if(selectedIds.has(docId))selectedIds.delete(docId);
+  else selectedIds.add(docId);
+  const card=document.querySelector(`.dc[data-id="${docId}"]`);
+  if(card){
+    const sel=selectedIds.has(docId);
+    card.classList.toggle('selected',sel);
+    const chk=card.querySelector('.dc-check');
+    if(chk)chk.innerHTML=sel?CHK:'';
+  }
+  updateBulkUI();
+}
+
+function updateBulkUI(){
+  const n=selectedIds.size;
+  const strip=document.getElementById('bulkStrip');
+  const bar=document.getElementById('bulkBar');
+  strip.classList.add('on');
+  bar.classList.add('on');
+  document.getElementById('bulkCountText').textContent=
+    n===0?'Tap docs to select':`${n} selected`;
+  // Select all / deselect all text
+  const allIds=curFolDocs.map(d=>d.id);
+  const allSel=allIds.length>0&&allIds.every(id=>selectedIds.has(id));
+  document.getElementById('bulkSelAll').textContent=allSel?'Deselect All':'Select All';
+  // Enable / disable action buttons
+  const dis=n===0;
+  document.getElementById('bulkActShare').disabled=dis;
+  document.getElementById('bulkActMove').disabled=dis;
+  document.getElementById('bulkActDel').disabled=dis;
+}
+
+/* ═══════════════════════════════
+   FOLDER BULK SELECT MODE
+═══════════════════════════════ */
+function enterFolderBulkMode(folId){
+  folderBulkMode=true;
+  selectedFolIds=new Set();
+  if(folId!=null)selectedFolIds.add(folId);
+  document.getElementById('homeScreen').classList.add('folder-bulk-active');
+  document.getElementById('homeBottomBar').style.display='none';
+  document.body.classList.add('nonav');
+  // Put all folder cards into fsel-mode
+  document.querySelectorAll('.fc').forEach(c=>{
+    c.classList.add('fsel-mode');
+    const id=parseInt(c.dataset.fid);
+    if(selectedFolIds.has(id)){
+      c.classList.add('fselected');
+      const chk=c.querySelector('.fc-check');
+      if(chk)chk.innerHTML=CHK;
+    }
+  });
+  updateFolderBulkUI();
+}
+
+function exitFolderBulkMode(){
+  folderBulkMode=false;
+  selectedFolIds=new Set();
+  document.getElementById('homeScreen').classList.remove('folder-bulk-active');
+  document.getElementById('folderBulkStrip').classList.remove('on');
+  document.getElementById('folderBulkBar').classList.remove('on');
+  document.getElementById('homeBottomBar').style.display='';
+  document.body.classList.remove('nonav');
+  // Remove bulk classes from cards
+  document.querySelectorAll('.fc').forEach(c=>{
+    c.classList.remove('fsel-mode','fselected');
+    const chk=c.querySelector('.fc-check');
+    if(chk)chk.textContent='';
+  });
+}
+
+function toggleFolderSelect(folId){
+  if(selectedFolIds.has(folId))selectedFolIds.delete(folId);
+  else selectedFolIds.add(folId);
+  const card=document.querySelector(`.fc[data-fid="${folId}"]`);
+  if(card){
+    const sel=selectedFolIds.has(folId);
+    card.classList.toggle('fselected',sel);
+    const chk=card.querySelector('.fc-check');
+    if(chk)chk.innerHTML=sel?CHK:'';
+  }
+  updateFolderBulkUI();
+}
+
+function updateFolderBulkUI(){
+  const n=selectedFolIds.size;
+  document.getElementById('folderBulkStrip').classList.add('on');
+  document.getElementById('folderBulkBar').classList.add('on');
+  document.getElementById('folderBulkCountText').textContent=
+    n===0?'Tap folders to select':`${n} folder${n!==1?'s':''} selected`;
+  const total=document.querySelectorAll('.fc').length;
+  const allSel=total>0&&[...document.querySelectorAll('.fc')].every(c=>selectedFolIds.has(parseInt(c.dataset.fid)));
+  document.getElementById('folderBulkSelAll').textContent=allSel?'Deselect All':'Select All';
+  document.getElementById('folderBulkActDel').disabled=n===0;
+}
+
+
+/* ═══════════════════════════════
+   SHARE FILE
+   Sends filename+mime to Kodular via
+   WebViewString. Kodular blocks then
+   read the file from IndexedDB cache
+   via a KodularShare bridge key.
+   Strategy: store file in sessionStorage
+   keyed by a short ID, pass only the ID
+   to Kodular. Kodular JS-evaluates a
+   getter to pull the data in chunks.
+═══════════════════════════════ */
+
+// Shared store for pending share data (survives across the bridge call)
+window._shareStore = {};
+
+async function shareFile(doc){
+  toast('📤 Sharing…', 5000);
+  await new Promise(r=>setTimeout(r, 60));
+  try{
+    const raw = doc.fileData;
+    const m   = mimeOf(doc.ext);
+    const fn  = safeName(doc.name) + '.' + doc.ext;
+
+    // Build blob correctly from raw binary — no corruption
+    let blob;
+    if(raw instanceof Uint8Array) blob = new Blob([raw.buffer], {type:m});
+    else if(raw instanceof ArrayBuffer) blob = new Blob([raw], {type:m});
+    else blob = new Blob([new Uint8Array(raw).buffer], {type:m});
+
+    const file = new File([blob], fn, {type:m});
+
+    // 1. Try Web Share API with file (Chrome Android, PWA)
+    if(navigator.canShare && navigator.canShare({files:[file]})){
+      await navigator.share({files:[file], title:doc.name});
+      return;
+    }
+
+    // 2. Try basic share with URL
+    if(navigator.share){
+      const url = URL.createObjectURL(blob);
+      try{
+        await navigator.share({title:doc.name, url});
+        setTimeout(()=>URL.revokeObjectURL(url), 30000);
+        return;
+      }catch(e){
+        URL.revokeObjectURL(url);
+        if(e.name==='AbortError') return;
+      }
+    }
+
+    // 3. Last fallback — download the file
+    const url = URL.createObjectURL(blob);
+    const a   = document.createElement('a');
+    a.href=url; a.download=fn;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(url);},5000);
+    toast('📥 File saved to Downloads!');
+
+  }catch(e){
+    if(e.name==='AbortError') return;
+    toast('⚠️ Could not share file');
+  }
+}
+
+/* ═══════════════════════════════
+   THUMBNAILS
+═══════════════════════════════ */
+async function thumbPDF(data){
+  if(!pdfJsOk)return null;
+  try{
+    const copy=safeCopy(data);
+    const d=await pdfjsLib.getDocument({data:copy}).promise;
+    const pg=await d.getPage(1);
+    const vp=pg.getViewport({scale:.5});
+    const cv=document.createElement('canvas');
+    cv.width=vp.width;cv.height=vp.height;
+    await pg.render({canvasContext:cv.getContext('2d'),viewport:vp}).promise;
+    d.destroy();
+    return cv.toDataURL('image/jpeg',.7);
+  }catch{return null;}
+}
+
+async function thumbIMG(data,ext){
+  return new Promise(res=>{
+    try{
+      const u=URL.createObjectURL(new Blob([data],{type:mimeOf(ext)}));
+      const img=new Image();
+      img.onload=()=>{
+        const MAX=300,r=Math.min(MAX/img.width,MAX/img.height,1);
+        const cv=document.createElement('canvas');
+        cv.width=Math.round(img.width*r);cv.height=Math.round(img.height*r);
+        cv.getContext('2d').drawImage(img,0,0,cv.width,cv.height);
+        URL.revokeObjectURL(u);res(cv.toDataURL('image/jpeg',.75));
+      };
+      img.onerror=()=>{URL.revokeObjectURL(u);res(null);};
+      img.src=u;
+    }catch{res(null);}
+  });
+}
+
+async function bgThumb(docId,data,ext){
+  try{
+    await new Promise(r=>setTimeout(r,600));
+    const th=ext==='pdf'?await thumbPDF(data):await thumbIMG(data,ext);
+    if(!th)return;
+    const doc=await dbGet('documents',docId);
+    if(!doc)return;
+    await dbPut('documents',{...doc,thumb:th});
+    const ct=document.querySelector(`.dc[data-id="${docId}"] .ct`);
+    if(ct){
+      const ph=ct.querySelector('.pph');
+      if(ph){
+        const img=document.createElement('img');
+        img.src=th;img.loading='lazy';
+        ph.replaceWith(img);
+      }
+    }
+  }catch(e){}
+}
+
+/* ═══════════════════════════════
+   FOLDERS
+═══════════════════════════════ */
+function sortFolders(folders,all,sort){
+  const f=[...folders];
+  if(sort==='date-asc')f.sort((a,b)=>(a.ts||0)-(b.ts||0));
+  else if(sort==='name-asc')f.sort((a,b)=>a.name.localeCompare(b.name));
+  else if(sort==='name-desc')f.sort((a,b)=>b.name.localeCompare(a.name));
+  else if(sort==='count-desc'){
+    f.sort((a,b)=>{
+      return (all[b.id]||0)-(all[a.id]||0);
+    });
+  }
+  return f;
+}
+
+async function loadFolders(){
+  allFolders=await dbAll('folders');
+  const counts={};
+  await Promise.all(allFolders.map(async f=>{counts[f.id]=await dbCountFid(f.id);}));
+  const g=document.getElementById('folderGrid');
+  g.innerHTML='';
+  const sorted=sortFolders(allFolders,counts,curFolSort);
+  // Show/hide empty state
+  const folEmp=document.getElementById('folderEmp');
+  if(folEmp)folEmp.classList.toggle('on',sorted.length===0);
+  sorted.forEach((f,i)=>{
+    const cnt=counts[f.id]||0;
+    const bg=COLORS[f.ci]||COLORS[0];
+    const c=document.createElement('div');
+    c.className='fc';
+    c.dataset.fid=f.id;
+    c.style.animationDelay=`${i*.05}s`;
+    if(folderBulkMode){
+      c.classList.add('fsel-mode');
+      if(selectedFolIds.has(f.id))c.classList.add('fselected');
+    }
+    c.innerHTML=`
+      <div class="fc-check">${folderBulkMode&&selectedFolIds.has(f.id)?CHK:''}</div>
+      <button class="fc-menu" data-id="${f.id}">${ui('dots')}</button>
+      <div class="fi" style="background:${bg}22;color:${bg}">${icoHTML(f.icon)}</div>
+      <div class="fn">${esc(f.name)}</div>
+      <div class="fc-cnt">${cnt} item${cnt!==1?'s':''}</div>`;
+    // Long press to enter folder bulk mode
+    let lp;
+    c.addEventListener('touchstart',(e)=>{
+      if(!folderBulkMode)addRipple(c,e);
+      if(folderBulkMode)return;
+      lp=setTimeout(()=>{
+        if(navigator.vibrate)navigator.vibrate(55);
+        enterFolderBulkMode(f.id);
+      },620);
+    },{passive:true});
+    c.addEventListener('touchend',()=>clearTimeout(lp));
+    c.addEventListener('touchmove',()=>clearTimeout(lp));
+    c.addEventListener('click',e=>{
+      if(e.target.closest('.fc-menu'))return;
+      clearTimeout(lp);
+      if(folderBulkMode){toggleFolderSelect(f.id);return;}
+      openFolder(f);
+    });
+    c.querySelector('.fc-menu').addEventListener('click',e=>{
+      e.stopPropagation();
+      if(folderBulkMode)return;
+      menuFol=f;openM('fCM');
+    });
+    g.appendChild(c);
+  });
+}
+
+function openFolder(f){
+  curFolId=f.id;
+  document.getElementById('folderTitle').innerHTML=icoHTML(f.icon,'sm')+' '+esc(f.name);
+  document.getElementById('dSI').value='';
+  document.getElementById('dSC').classList.remove('on');
+  folderSearchActive=false;
+  loadFolderDocs();
+  goScreen('folderScreen');
+}
+
+/* ═══════════════════════════════
+   DOCUMENTS
+═══════════════════════════════ */
+async function loadFolderDocs(){
+  curFolDocs=await dbIdx('documents','fid',curFolId);
+  sortAndRenderDocs();
+}
+
+function sortDocs(docs,sort){
+  const d=[...docs];
+  if(sort==='date-desc')d.sort((a,b)=>b.ts-a.ts);
+  else if(sort==='date-asc')d.sort((a,b)=>a.ts-b.ts);
+  else if(sort==='name-asc')d.sort((a,b)=>a.name.localeCompare(b.name));
+  else if(sort==='name-desc')d.sort((a,b)=>b.name.localeCompare(a.name));
+  else if(sort==='size-desc')d.sort((a,b)=>b.size-a.size);
+  else if(sort==='size-asc')d.sort((a,b)=>a.size-b.size);
+  return d;
+}
+
+function sortAndRenderDocs(){
+  const q=document.getElementById('dSI').value.trim().toLowerCase();
+  const base=q?curFolDocs.filter(d=>d.name.toLowerCase().includes(q)):curFolDocs;
+  renderDocs(sortDocs(base,curDocSort));
+}
+
+function renderDocs(docs){
+  const g=document.getElementById('docGrid');
+  const emp=document.getElementById('docEmp');
+  const cnt=document.getElementById('docCount');
+  g.innerHTML='';
+  cnt.textContent=`${docs.length} document${docs.length!==1?'s':''}`;
+  if(!docs.length){emp.classList.add('on');return;}
+  emp.classList.remove('on');
+  docs.forEach((doc,i)=>{
+    const wrap=document.createElement('div');
+    wrap.className='dc-wrap';
+    const c=document.createElement('div');
+    c.className='dc-inner';
+    const card=document.createElement('div');
+    card.className='dc'+(bulkMode?' sel-mode':'');
+    if(bulkMode&&selectedIds.has(doc.id))card.classList.add('selected');
+    card.dataset.id=doc.id;
+    card.style.animationDelay=`${i*.04}s`;
+    const th=doc.thumb
+      ?`<img src="${doc.thumb}" loading="lazy" alt="${esc(doc.name)}">`
+      :`<div class="pph"><div class="pph-i">${ui(doc.ext==='pdf'?'doc':'image')}</div><div class="pph-t">${doc.ext.toUpperCase()}</div></div>`;
+    // Share icon SVG
+    const shareIconColor=doc.ext==='pdf'?'#FF8A9B':'#8AADFF';
+    const checkMark=bulkMode&&selectedIds.has(doc.id)?CHK:'';
+    card.innerHTML=`
+      <div class="ct">${th}
+        <span class="tb-badge tb-${doc.ext}">${doc.ext.toUpperCase()}</span>
+        <div class="dc-check">${checkMark}</div>
+        <button class="sh-btn" aria-label="Share">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+            stroke="${shareIconColor}" stroke-width="2.5">
+            <circle cx="18" cy="5" r="3"/>
+            <circle cx="6" cy="12" r="3"/>
+            <circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+        </button>
+      </div>
+      <div class="di">
+        <div class="dn">${esc(doc.name)}</div>
+        <div class="dmeta">
+          <div class="dmeta-row">
+            <span class="dmeta-type ${doc.ext==='pdf'?'t-pdf':'t-img'}">${doc.ext.toUpperCase()}</span>
+            <span class="dmeta-size">${fmtS(doc.size)}</span>
+          </div>
+          <div class="dmeta-date">${fmtD(doc.ts)}</div>
+        </div>
+      </div>`;
+    let lp;
+    card.addEventListener('touchstart',()=>{
+      if(bulkMode)return;
+      lp=setTimeout(()=>{
+        if(navigator.vibrate)navigator.vibrate(55);
+        menuDoc=doc;
+        openM('dCM');
+      },620);
+    },{passive:true});
+    card.addEventListener('touchend',()=>clearTimeout(lp));
+    card.addEventListener('touchmove',()=>clearTimeout(lp));
+    card.addEventListener('click',e=>{
+      if(e.target.closest('.sh-btn'))return;
+      clearTimeout(lp);
+      if(bulkMode){toggleDocSelect(doc.id);return;}
+      openDoc(doc);
+    });
+    card.querySelector('.sh-btn').addEventListener('click',async e=>{
+      e.stopPropagation();
+      if(bulkMode)return;
+      const d=await dbGet('documents',doc.id);
+      if(d)shareFile(d);
+    });
+    c.appendChild(card);
+    wrap.appendChild(c);
+    g.appendChild(wrap);
+  });
+}
+
+/* ═══════════════════════════════
+   GLOBAL SEARCH
+═══════════════════════════════ */
+document.getElementById('gSI').addEventListener('input',async e=>{
+  const q=e.target.value.trim().toLowerCase();
+  const gr=document.getElementById('gResults');
+  const fs=document.getElementById('folderSection');
+  document.getElementById('gSC').classList.toggle('on',q.length>0);
+  globalSearchActive=q.length>0;
+  if(!q){
+    gr.classList.remove('on');gr.innerHTML='';
+    fs.style.display='';
+    document.getElementById('homeBottomBar').style.display='';
+    return;
+  }
+  fs.style.display='none';gr.classList.add('on');
+  document.getElementById('homeBottomBar').style.display='none';
+  const all=await getDocMeta();
+  const res=all.filter(d=>d.name.toLowerCase().includes(q));
+  const folMap={};allFolders.forEach(f=>folMap[f.id]=f);
+  if(!res.length){
+    gr.innerHTML=buildSearchEmptyHTML(q);
+    return;
+  }
+  gr.innerHTML=`<div class="gr-lbl">${res.length} result${res.length!==1?'s':''}</div>`;
+  res.forEach(doc=>{
+    const fol=folMap[doc.folderId];
+    const isImg=doc.ext!=='pdf';
+    const item=document.createElement('div');item.className='gr-item';
+    const th=doc.thumb&&isImg?`<img src="${doc.thumb}" alt="">`:
+      `<span>${ui(isImg?'image':'doc')}</span>`;
+    item.innerHTML=`
+      <div class="gr-th">${th}</div>
+      <div class="gr-inf">
+        <div class="gr-nm">${esc(doc.name)}</div>
+        <div class="gr-mt">${fol?icoHTML(fol.icon,'sm')+' '+esc(fol.name):''} · ${fmtS(doc.size)} · ${fmtD(doc.ts)}</div>
+      </div>
+      <span class="gr-bd ${isImg?'gbd-img':'gbd-pdf'}">${doc.ext.toUpperCase()}</span>`;
+    item.addEventListener('click',async()=>{
+      curDocId=doc.id;curFolId=doc.folderId;
+      const full=await dbGet('documents',doc.id);if(full)openDoc(full,true);
+    });
+    gr.appendChild(item);
+  });
+});
+document.getElementById('gSC').addEventListener('click',()=>{
+  document.getElementById('gSI').value='';
+  document.getElementById('gSC').classList.remove('on');
+  document.getElementById('gResults').classList.remove('on');
+  document.getElementById('gResults').innerHTML='';
+  document.getElementById('folderSection').style.display='';
+  document.getElementById('homeBottomBar').style.display='';
+  globalSearchActive=false;
+});
+
+/* Folder search */
+document.getElementById('dSI').addEventListener('input',e=>{
+  const q=e.target.value.trim().toLowerCase();
+  document.getElementById('dSC').classList.toggle('on',q.length>0);
+  folderSearchActive=q.length>0;
+  sortAndRenderDocs();
+});
+document.getElementById('dSC').addEventListener('click',()=>{
+  document.getElementById('dSI').value='';
+  document.getElementById('dSC').classList.remove('on');
+  folderSearchActive=false;
+  sortAndRenderDocs();
+});
+
+/* ═══════════════════════════════
+   OPEN DOC
+═══════════════════════════════ */
+function openDoc(doc,fs){fromSearch=!!fs;curDocId=doc.id;doc.ext==='pdf'?viewPDF(doc):viewImg(doc);}
+
+/* ═══════════════════════════════
+   PDF VIEWER
+   - HD quality rendering
+   - Pinch-zoom centered on finger position (fixed)
+   - Smooth drag when zoomed
+═══════════════════════════════ */
+const pdfWrap=document.getElementById('pdfWrap');
+const pdfSizer=document.getElementById('pdfSizer');
+const pdfPages=document.getElementById('pdfPages');
+const pdfLoaderEl=document.getElementById('pdfLoader');
+
+let pdfPg=[],pdfBaseW=0,pdfNatH=0,pdfTok=0,pdfIO=null,pdfLoadTask=null;
+let pdfRenderZ=1,pdfSettleT=0,pdfAnimId=0,pdfQ=[],pdfBusy=false,pdfInfoRaf=0,pdfSizeRaf=0;
+const PDF_MAX=5;
+
+function pdfShowLoader(html){ pdfLoaderEl.innerHTML=html; pdfLoaderEl.style.display='flex'; }
+function pdfHideLoader(){ pdfLoaderEl.style.display='none'; }
+
+/* ── zoom core: keep content point (ax,ay) under viewport point (fx,fy) ── */
+function pdfApplyDims(){
+  pdfPages.style.transform='scale('+pdfZ+')';
+  pdfSizer.style.width=(pdfBaseW*pdfZ)+'px';
+  pdfSizer.style.height=(pdfNatH*pdfZ)+'px';
+}
+function pdfSetZoom(z,fx,fy,ax,ay){
+  pdfZ=z;
+  pdfApplyDims();
+  pdfWrap.scrollLeft=ax*z-fx;
+  pdfWrap.scrollTop=ay*z-fy;
+}
+function pdfBeginGesture(){ clearTimeout(pdfSettleT); pdfPages.classList.add('zm'); }
+function pdfEndGesture(){ clearTimeout(pdfSettleT); pdfSettleT=setTimeout(pdfSettle,220); }
+function pdfTween(z1,fx,fy,dur){
+  cancelAnimationFrame(pdfAnimId);
+  const z0=pdfZ, ax=(pdfWrap.scrollLeft+fx)/z0, ay=(pdfWrap.scrollTop+fy)/z0, t0=performance.now();
+  pdfBeginGesture();
+  const step=now=>{
+    const p=Math.min(1,(now-t0)/dur), e=1-Math.pow(1-p,3);
+    pdfSetZoom(z0+(z1-z0)*e,fx,fy,ax,ay);
+    if(p<1) pdfAnimId=requestAnimationFrame(step); else pdfEndGesture();
+  };
+  pdfAnimId=requestAnimationFrame(step);
+}
+/* after zooming stops: re-draw the visible pages sharply at the new zoom */
+function pdfSettle(){
+  pdfPages.classList.remove('zm');
+  pdfRenderZ=pdfZ;
+  for(const pg of pdfPg){
+    if(!pg.cv) continue;
+    if(pg.want){ if(pdfStale(pg)) pdfEnqueue(pg.i); } else pdfRelease(pg);
+  }
+}
+
+/* ── page boxes (cheap placeholders) + lazy rendering ── */
+function pdfBuildPages(total,aspect){
+  pdfPages.innerHTML=''; pdfPg=[];
+  pdfBaseW=pdfWrap.clientWidth||window.innerWidth;
+  pdfPages.style.width=pdfBaseW+'px';
+  const h=Math.round(pdfBaseW*aspect), frag=document.createDocumentFragment();
+  for(let i=0;i<total;i++){
+    const el=document.createElement('div');
+    el.className='pgbox'; el.dataset.i=i;
+    el.style.width=pdfBaseW+'px'; el.style.height=h+'px';
+    frag.appendChild(el);
+    pdfPg.push({i,el,aspect,h,rs:0,cv:null,task:null,want:false});
+  }
+  pdfPages.appendChild(frag);
+  pdfNatH=pdfPages.offsetHeight;
+  pdfZ=1; pdfRenderZ=1; pdfApplyDims();
+}
+function pdfTargetScale(pg){
+  const DPR=Math.min(window.devicePixelRatio||2,2.5);
+  const cssW=pdfBaseW, cssH=pdfBaseW*pg.aspect;
+  const want=DPR*Math.max(1,pdfRenderZ);
+  const capW=3200/cssW, capA=Math.sqrt(8e6/(cssW*cssH));
+  return Math.max(1,Math.min(want,capW,capA));
+}
+function pdfStale(pg){ const s=pdfTargetScale(pg); return pg.rs<s*0.85||pg.rs>s*1.7; }
+function pdfRelease(pg){
+  if(pg.task){ try{pg.task.cancel();}catch(e){} pg.task=null; }
+  if(pg.cv){ try{ pg.cv.width=0; pg.cv.height=0; if(pg.cv.parentNode) pg.cv.parentNode.removeChild(pg.cv); }catch(e){} pg.cv=null; }
+  pg.rs=0;
+}
+function pdfSetAspect(pg,aspect){
+  const h=Math.round(pdfBaseW*aspect), dh=h-pg.h;
+  pg.aspect=aspect;
+  if(!dh) return;
+  const above=(pg.el.offsetTop+pg.h)*pdfZ<=pdfWrap.scrollTop;   // page is entirely above what you are reading
+  pg.h=h; pg.el.style.height=h+'px';
+  pdfNatH+=dh; pdfSizer.style.height=(pdfNatH*pdfZ)+'px';
+  if(above) pdfWrap.scrollTop+=dh*pdfZ;                          // keep your place when sizes get corrected
+}
+function pdfCenterIdx(){
+  const n=pdfPg.length; if(!n) return 0;
+  const y=(pdfWrap.scrollTop+pdfWrap.clientHeight/2)/pdfZ;
+  let lo=0,hi=n-1;
+  while(lo<hi){ const m=(lo+hi+1)>>1; if(pdfPg[m].el.offsetTop<=y) lo=m; else hi=m-1; }
+  return lo;
+}
+function pdfEnqueue(i){ if(pdfQ.indexOf(i)<0) pdfQ.push(i); pdfPump(); }
+async function pdfPump(){
+  if(pdfBusy) return;
+  pdfBusy=true;
+  const tok=pdfTok;
+  try{
+    while(pdfQ.length&&pdfDoc&&tok===pdfTok){
+      const ci=pdfCenterIdx(); let bi=0,bd=1e9;
+      for(let k=0;k<pdfQ.length;k++){ const d=Math.abs(pdfQ[k]-ci); if(d<bd){bd=d;bi=k;} }   // nearest page first
+      const pg=pdfPg[pdfQ.splice(bi,1)[0]];
+      if(!pg||!pg.want) continue;
+      await pdfRenderPage(pg,tok);
+      await new Promise(r=>setTimeout(r,0));          // let touch/scroll breathe between pages
+    }
+  }catch(e){}
+  finally{ if(tok===pdfTok) pdfBusy=false; }
+}
+async function pdfRenderPage(pg,tok){
+  const page=await pdfDoc.getPage(pg.i+1);
+  if(tok!==pdfTok||!pg.want) return;
+  const vp0=page.getViewport({scale:1});
+  const aspect=vp0.height/vp0.width;
+  if(Math.abs(aspect-pg.aspect)>0.003) pdfSetAspect(pg,aspect);
+  const s=pdfTargetScale(pg);
+  const vp=page.getViewport({scale:s*pdfBaseW/vp0.width});
+  const cv=document.createElement('canvas');
+  cv.width=Math.max(1,Math.round(vp.width)); cv.height=Math.max(1,Math.round(vp.height));
+  if(pg.task){ try{pg.task.cancel();}catch(e){} }
+  const task=page.render({canvasContext:cv.getContext('2d',{alpha:false}),viewport:vp,background:'#ffffff'});
+  pg.task=task;
+  try{ await task.promise; }catch(e){ return; }       // cancelled because the page scrolled far away
+  if(pg.task===task) pg.task=null;
+  if(tok!==pdfTok||!pg.want){ cv.width=0; cv.height=0; return; }
+  if(pg.cv){ try{pg.cv.width=0;pg.cv.height=0;}catch(e){} if(pg.cv.parentNode) pg.cv.parentNode.replaceChild(cv,pg.cv); else pg.el.appendChild(cv); }
+  else pg.el.appendChild(cv);
+  pg.cv=cv; pg.rs=s;
+  if(pg.i===0) pdfHideLoader();
+}
+
+function pdfOnIntersect(entries){
+  for(const en of entries){
+    const pg=pdfPg[en.target.dataset.i|0]; if(!pg) continue;
+    if(en.isIntersecting){ pg.want=true; if(!pg.cv||pdfStale(pg)) pdfEnqueue(pg.i); }
+    else{ pg.want=false; pdfRelease(pg); }
+  }
+}
+
+async function viewPDF(doc){
+  const tok=++pdfTok;
+  closePdfViewer(true);                               // clean up any previous document (keeps the new token)
+  document.getElementById('pdfTitle').textContent=doc.name;
+  document.getElementById('pdfInfo').textContent='';
+  document.getElementById('pdfMeta').textContent=fmtS(doc.size)+' · '+fmtD(doc.ts);
+  pdfShowLoader('<div class="spin"></div><span>Loading PDF…</span>');
+  goScreen('pdfScreen');
+  const zh=document.getElementById('pdfZH');
+  zh.classList.remove('gone');
+  setTimeout(()=>zh.classList.add('gone'),3500);
+
+  if(!pdfJsOk){
+    pdfShowLoader('<div class="perr">'+ui('wifioff')+'PDF viewer needs internet once to load the PDF engine.<br><br>Connect to internet → open app → after that fully offline forever.</div>');
+    return;
+  }
+  try{
+    const task=pdfjsLib.getDocument({data:safeCopy(doc.fileData)});   // pdf.js takes ownership of this copy
+    pdfLoadTask=task;
+    const d=await task.promise;
+    if(tok!==pdfTok){ try{d.destroy();}catch(e){} return; }
+    pdfDoc=d;
+    const total=d.numPages;
+    const p1=await d.getPage(1);
+    if(tok!==pdfTok) return;
+    const v1=p1.getViewport({scale:1});
+    pdfBuildPages(total,v1.height/v1.width);
+    document.getElementById('pdfInfo').textContent=total>1?'1/'+total+' pages':'1 page';
+    pdfIO=new IntersectionObserver(pdfOnIntersect,{root:pdfWrap,rootMargin:'100% 0px 100% 0px',threshold:0});
+    pdfPg.forEach(pg=>pdfIO.observe(pg.el));
+  }catch(err){
+    if(tok===pdfTok) pdfShowLoader('<div class="perr">'+ui('xcircle')+'Could not open this PDF.<br><small style="opacity:.5">'+esc(err&&err.message||'')+'</small></div>');
+  }
+}
+
+function closePdfViewer(keepToken){
+  if(!keepToken) pdfTok++;
+  pdfQ.length=0; pdfBusy=false;
+  cancelAnimationFrame(pdfAnimId); clearTimeout(pdfSettleT);
+  if(pdfIO){ try{pdfIO.disconnect();}catch(e){} pdfIO=null; }
+  for(const pg of pdfPg){ if(pg.task){ try{pg.task.cancel();}catch(e){} } }
+  pdfPg=[];
+  if(pdfLoadTask){ try{pdfLoadTask.destroy();}catch(e){} pdfLoadTask=null; }
+  if(pdfDoc){ try{pdfDoc.destroy();}catch(e){} pdfDoc=null; }
+  pdfZ=1; pdfRenderZ=1; pdfBaseW=0; pdfNatH=0;
+  pdfPages.classList.remove('zm');
+  pdfPages.style.transform=''; pdfPages.style.width='';
+  pdfSizer.style.width=''; pdfSizer.style.height='';
+  pdfWrap.scrollLeft=0; pdfWrap.scrollTop=0;
+  pdfPages.innerHTML='';
+}
+
+/* page counter follows the scroll position */
+pdfWrap.addEventListener('scroll',()=>{
+  if(pdfInfoRaf||!pdfDoc||pdfPg.length<2) return;
+  pdfInfoRaf=requestAnimationFrame(()=>{
+    pdfInfoRaf=0;
+    if(!pdfDoc||!pdfPg.length) return;
+    document.getElementById('pdfInfo').textContent=(pdfCenterIdx()+1)+'/'+pdfPg.length+' pages';
+  });
+},{passive:true});
+
+/* rotate / resize: re-fit pages to the new width */
+let pdfResizeT=0;
+window.addEventListener('resize',()=>{
+  clearTimeout(pdfResizeT);
+  pdfResizeT=setTimeout(()=>{
+    if(!pdfDoc||!pdfPg.length||getActiveScreen()!=='pdfScreen') return;
+    const w=pdfWrap.clientWidth;
+    if(!w||Math.abs(w-pdfBaseW)<3) return;
+    const ratio=(pdfWrap.scrollTop+pdfWrap.clientHeight/2)/Math.max(1,pdfNatH*pdfZ);
+    pdfBaseW=w; pdfPages.style.width=w+'px';
+    for(const pg of pdfPg){ pdfRelease(pg); pg.h=Math.round(w*pg.aspect); pg.el.style.width=w+'px'; pg.el.style.height=pg.h+'px'; }
+    pdfNatH=pdfPages.offsetHeight; pdfApplyDims();
+    pdfWrap.scrollTop=ratio*pdfNatH*pdfZ-pdfWrap.clientHeight/2;
+    for(const pg of pdfPg){ if(pg.want) pdfEnqueue(pg.i); }
+  },250);
+});
+
+/* ─────────────────────────────────────────────────────────
+   PDF PINCH + DOUBLE-TAP ZOOM  (zooms exactly where your fingers are)
+───────────────────────────────────────────────────────── */
+let pdfPinch=false,pdfPD=1,pdfZ0=1,pdfAX=0,pdfAY=0,pdfPendZ=1,pdfPendFX=0,pdfPendFY=0,pdfPinchRaf=0;
+let pdfTapT=0,pdfTapX=0,pdfTapY=0,pdfTSX=0,pdfTSY=0,pdfTST=0,pdfTMoved=false;
+
+function pdfPinchFrame(){
+  pdfPinchRaf=0;
+  if(!pdfPinch) return;
+  pdfSetZoom(pdfPendZ,pdfPendFX,pdfPendFY,pdfAX,pdfAY);
+}
+pdfWrap.addEventListener('touchstart',e=>{
+  cancelAnimationFrame(pdfAnimId);
+  if(e.touches.length===2){
+    if(e.cancelable) e.preventDefault();
+    pdfBeginGesture();
+    pdfPinch=true; pdfTMoved=true; pdfTapT=0;
+    const a=e.touches[0],b=e.touches[1];
+    pdfPD=Math.hypot(b.clientX-a.clientX,b.clientY-a.clientY)||1;
+    pdfZ0=pdfZ;
+    const r=pdfWrap.getBoundingClientRect();
+    const fx=(a.clientX+b.clientX)/2-r.left, fy=(a.clientY+b.clientY)/2-r.top;
+    pdfAX=(pdfWrap.scrollLeft+fx)/pdfZ0; pdfAY=(pdfWrap.scrollTop+fy)/pdfZ0;   // content point between the fingers
+    pdfPendZ=pdfZ0; pdfPendFX=fx; pdfPendFY=fy;
+  }else if(e.touches.length===1){
+    pdfTSX=e.touches[0].clientX; pdfTSY=e.touches[0].clientY; pdfTST=performance.now(); pdfTMoved=false;
+  }
+},{passive:false});
+
+pdfWrap.addEventListener('touchmove',e=>{
+  if(pdfPinch&&e.touches.length>=2){
+    e.preventDefault();
+    const a=e.touches[0],b=e.touches[1];
+    const d=Math.hypot(b.clientX-a.clientX,b.clientY-a.clientY);
+    const r=pdfWrap.getBoundingClientRect();
+    pdfPendZ=Math.max(0.6,Math.min(PDF_MAX*1.12,pdfZ0*d/pdfPD));
+    pdfPendFX=(a.clientX+b.clientX)/2-r.left; pdfPendFY=(a.clientY+b.clientY)/2-r.top;
+    if(!pdfPinchRaf) pdfPinchRaf=requestAnimationFrame(pdfPinchFrame);
+  }else if(!pdfTMoved&&e.touches.length===1){
+    if(Math.hypot(e.touches[0].clientX-pdfTSX,e.touches[0].clientY-pdfTSY)>10) pdfTMoved=true;
+  }
+},{passive:false});
+
+pdfWrap.addEventListener('touchend',e=>{
+  if(pdfPinch){
+    if(e.touches.length<2){
+      pdfPinch=false;
+      cancelAnimationFrame(pdfPinchRaf); pdfPinchRaf=0;
+      pdfSetZoom(pdfPendZ,pdfPendFX,pdfPendFY,pdfAX,pdfAY);          // apply the very last position
+      if(pdfZ<1) pdfTween(1,pdfPendFX,pdfPendFY,200);
+      else if(pdfZ>PDF_MAX) pdfTween(PDF_MAX,pdfPendFX,pdfPendFY,200);
+      else pdfEndGesture();
+    }
+    return;
+  }
+  if(e.touches.length) return;
+  const now=performance.now(), c=e.changedTouches[0];
+  if(pdfTMoved||now-pdfTST>300) return;                              // it was a scroll, not a tap
+  if(now-pdfTapT<320&&Math.hypot(c.clientX-pdfTapX,c.clientY-pdfTapY)<45){   // double tap
+    pdfTapT=0;
+    const r=pdfWrap.getBoundingClientRect();
+    pdfTween(pdfZ>1.15?1:2.5,c.clientX-r.left,c.clientY-r.top,230);
+  }else{ pdfTapT=now; pdfTapX=c.clientX; pdfTapY=c.clientY; }
+},{passive:true});
+pdfWrap.addEventListener('touchcancel',()=>{
+  if(pdfPinch){ pdfPinch=false; pdfEndGesture(); }
+},{passive:true});
+
+/* PDF share button */
+document.getElementById('pdfShareBtn').addEventListener('click',async()=>{
+  if(curDocId){const d=await dbGet('documents',curDocId);if(d)shareFile(d);}
+});
+
+/* ═══════════════════════════════
+   IMAGE VIEWER — Redmi Gallery Style
+   Uses CSS transform on centered image.
+   State: iS=scale, iX/iY=translate offset from center
+═══════════════════════════════ */
+const imgVp=document.getElementById('imgVp');
+const vimg=document.getElementById('vimg');
+let iVW=0,iVH=0,iBW=0,iBH=0;           // viewport and displayed-image size (measured once per gesture)
+let iRaf=0,iAnim=0,iGlideId=0;
+let iVX=0,iVY=0,iLX=0,iLY=0,iLT=0;     // pan velocity tracking
+let iSupClick=false,iBarT=0;
+let iTapT=0,iTapX=0,iTapY=0,iTStartX=0,iTStartY=0,iTStartT=0,iMoved=false,iMulti=false;
+
+function iMeasure(){ iVW=imgVp.clientWidth; iVH=imgVp.clientHeight; iBW=vimg.clientWidth; iBH=vimg.clientHeight; }
+function iApply(){ vimg.style.transform='translate3d('+iX+'px,'+iY+'px,0) scale('+iS+')'; }
+function iSched(){ if(!iRaf) iRaf=requestAnimationFrame(()=>{ iRaf=0; iApply(); }); }
+function iLimits(s){ return { mx:Math.max(0,(iBW*s-iVW)/2), my:Math.max(0,(iBH*s-iVH)/2) }; }
+function iClampXY(s,x,y){
+  if(s<=1) return {x:0,y:0};
+  const L=iLimits(s);
+  return { x:Math.max(-L.mx,Math.min(L.mx,x)), y:Math.max(-L.my,Math.min(L.my,y)) };
+}
+function iClamp(){ const c=iClampXY(iS,iX,iY); iX=c.x; iY=c.y; }
+function iStop(){ cancelAnimationFrame(iAnim); cancelAnimationFrame(iGlideId); }
+
+/* Smooth tween (our own, because CSS transitions are switched off app-wide for speed) */
+function iTween(s1,x1,y1,dur){
+  iStop();
+  const s0=iS,x0=iX,y0=iY,t0=performance.now();
+  const step=now=>{
+    const p=Math.min(1,(now-t0)/dur), e=1-Math.pow(1-p,3);
+    iS=s0+(s1-s0)*e; iX=x0+(x1-x0)*e; iY=y0+(y1-y0)*e;
+    iApply();
+    if(p<1) iAnim=requestAnimationFrame(step);
+  };
+  iAnim=requestAnimationFrame(step);
+}
+/* Momentum after a fast pan */
+function iGlide(){
+  cancelAnimationFrame(iGlideId);
+  const step=()=>{
+    iVX*=0.93; iVY*=0.93;
+    if(Math.abs(iVX)<0.12&&Math.abs(iVY)<0.12) return;
+    const c=iClampXY(iS,iX+iVX,iY+iVY);
+    if(c.x!==iX+iVX) iVX=0;
+    if(c.y!==iY+iVY) iVY=0;
+    iX=c.x; iY=c.y; iApply();
+    iGlideId=requestAnimationFrame(step);
+  };
+  iGlideId=requestAnimationFrame(step);
+}
+
+function viewImg(doc){
+  document.getElementById('imgTitle').textContent=doc.name;
+  document.getElementById('imgMeta').textContent=doc.ext.toUpperCase()+' · '+fmtS(doc.size)+' · '+fmtD(doc.ts);
+  if(curBlobUrl){URL.revokeObjectURL(curBlobUrl);curBlobUrl=null;}
+  iStop(); iS=1;iX=0;iY=0;
+  vimg.style.transform='translate3d(0,0,0) scale(1)';
+  vimg.style.visibility='hidden';                 // shown once decoded, so big photos never flash half-drawn
+  vimg.decoding='async';
+  const url=URL.createObjectURL(new Blob([doc.fileData],{type:mimeOf(doc.ext)}));
+  curBlobUrl=url;
+  vimg.src=url;
+  document.getElementById('imgBar').classList.remove('hidden');
+  const h=document.getElementById('imgHint');
+  h.classList.remove('gone');
+  setTimeout(()=>h.classList.add('gone'),3200);
+  goScreen('imgScreen');
+  const ready=()=>{ if(curBlobUrl!==url) return; vimg.style.visibility=''; iMeasure(); };
+  (vimg.decode?vimg.decode():Promise.resolve()).then(ready,ready);
+}
+
+imgVp.addEventListener('touchstart',e=>{
+  iStop();
+  iMeasure();
+  const t=e.touches;
+  if(t.length===2){
+    iMulti=true;
+    iPD=Math.hypot(t[1].clientX-t[0].clientX,t[1].clientY-t[0].clientY)||1;
+    iPS=iS; iPX0=iX; iPY0=iY;
+    const r=imgVp.getBoundingClientRect();
+    iPMX=(t[0].clientX+t[1].clientX)/2-(r.left+r.width/2);
+    iPMY=(t[0].clientY+t[1].clientY)/2-(r.top+r.height/2);
+    iDrag=false;
+  }else if(t.length===1){
+    iMulti=false; iMoved=false;
+    iTStartX=iLX=t[0].clientX; iTStartY=iLY=t[0].clientY; iTStartT=iLT=performance.now();
+    iVX=iVY=0;
+    iDrag=iS>1.01;
+  }
+},{passive:true});
+
+imgVp.addEventListener('touchmove',e=>{
+  e.preventDefault();
+  const t=e.touches;
+  if(t.length===2){
+    iMulti=true; iMoved=true;
+    const d=Math.hypot(t[1].clientX-t[0].clientX,t[1].clientY-t[0].clientY);
+    const ns=Math.max(0.6,Math.min(7,iPS*d/iPD));
+    const ratio=ns/iPS;
+    const r=imgVp.getBoundingClientRect();
+    const mx=(t[0].clientX+t[1].clientX)/2-(r.left+r.width/2);
+    const my=(t[0].clientY+t[1].clientY)/2-(r.top+r.height/2);
+    // keep the point between the fingers fixed on screen, and follow the fingers
+    iX=ratio*(iPX0-iPMX)+mx;
+    iY=ratio*(iPY0-iPMY)+my;
+    iS=ns;
+    if(ns>=1) iClamp();
+    iSched();
+  }else if(t.length===1&&!iMulti){
+    const x=t[0].clientX,y=t[0].clientY;
+    if(!iMoved&&Math.hypot(x-iTStartX,y-iTStartY)>10) iMoved=true;
+    if(iDrag&&iS>1.01){
+      const now=performance.now(), dt=Math.max(1,now-iLT);
+      const dx=x-iLX, dy=y-iLY;
+      iVX=0.7*iVX+0.3*(dx/dt*16); iVY=0.7*iVY+0.3*(dy/dt*16);
+      iX+=dx; iY+=dy; iClamp(); iSched();
+      iLT=now;
+    }
+    iLX=x; iLY=y;
+  }
+},{passive:false});
+
+imgVp.addEventListener('touchend',e=>{
+  const left=e.touches.length;
+  if(left===1){                       // one finger of a pinch lifted: keep panning with the other
+    iLX=e.touches[0].clientX; iLY=e.touches[0].clientY; iLT=performance.now(); iVX=iVY=0;
+    iDrag=iS>1.01; iMoved=true;
+    return;
+  }
+  if(left>0) return;
+  const now=performance.now();
+  if(iS<1){ iTween(1,0,0,200); iMulti=false; return; }
+  if(iMulti){ iMulti=false; iDrag=false; return; }
+  const c=e.changedTouches[0];
+  const isTap=!iMoved && now-iTStartT<300;
+  if(isTap){
+    if(now-iTapT<320&&Math.hypot(c.clientX-iTapX,c.clientY-iTapY)<45){
+      iTapT=0; iSupClick=true; clearTimeout(iBarT); setTimeout(()=>{iSupClick=false;},450);
+      if(iS>1.05){ iTween(1,0,0,220); }
+      else{                                         // zoom in exactly where you tapped
+        const r=imgVp.getBoundingClientRect();
+        const mx=c.clientX-(r.left+r.width/2), my=c.clientY-(r.top+r.height/2);
+        const s1=2.8, p=iClampXY(s1,mx*(1-s1),my*(1-s1));
+        iTween(s1,p.x,p.y,220);
+      }
+    }else{ iTapT=now; iTapX=c.clientX; iTapY=c.clientY; }
+  }else if(iDrag&&iS>1.01&&now-iLT<90&&(Math.abs(iVX)>1||Math.abs(iVY)>1)){
+    iGlide();
+  }
+  iDrag=false;
+},{passive:true});
+
+/* single tap toggles the top bar (waits briefly so a double-tap doesn't flicker it) */
+imgVp.addEventListener('click',()=>{
+  if(iSupClick){ iSupClick=false; return; }
+  clearTimeout(iBarT);
+  iBarT=setTimeout(()=>document.getElementById('imgBar').classList.toggle('hidden'),260);
+});
+
+/* Image share button */
+document.getElementById('imgShareBtn').addEventListener('click',async()=>{
+  if(curDocId){const d=await dbGet('documents',curDocId);if(d)shareFile(d);}
+});
+
+/* ═══════════════════════════════
+   ADD FILE
+═══════════════════════════════ */
+document.getElementById('folderAddBtn').addEventListener('click',()=>document.getElementById('filePick').click());
+document.getElementById('filePick').addEventListener('change',async e=>{
+  const file=e.target.files[0];if(!file)return;e.target.value='';
+  const ext=file.name.split('.').pop().toLowerCase();
+  if(!['pdf','jpg','jpeg','png'].includes(ext)){toast('❌ Only PDF, JPG, PNG allowed');return;}
+  toast('Reading file…');
+  try{
+    const ab=await file.arrayBuffer();
+    pendFile={data:new Uint8Array(ab),ext,size:file.size,orig:file.name.replace(/\.[^/.]+$/,'')};
+    document.getElementById('nameInp').value=pendFile.orig;
+    document.getElementById('rmS').disabled=false;
+    openM('renameModal');
+    setTimeout(()=>document.getElementById('nameInp').focus(),360);
+  }catch(err){toast('❌ Could not read file');}
+});
+
+document.getElementById('nameInp').addEventListener('input',e=>{
+  document.getElementById('rmS').disabled=!e.target.value.trim();
+});
+
+document.getElementById('rmS').addEventListener('click',async()=>{
+  const name=document.getElementById('nameInp').value.trim();
+  if(!name||!pendFile)return;
+  closeM('renameModal');
+  try{
+    const id=await dbAdd('documents',{
+      folderId:curFolId,name,ext:pendFile.ext,
+      fileData:pendFile.data,
+      thumb:null,ts:Date.now(),size:pendFile.size
+    });
+    toast('✓ Saved!');
+    hapticPulse(document.getElementById('folderAddBtn'));
+    const d=pendFile.data,ex=pendFile.ext;
+    pendFile=null;
+    await loadFolderDocs();await loadFolders();
+    bgThumb(id,d,ex);
+  }catch(err){toast('❌ Save failed: '+err.message);}
+});
+document.getElementById('rmC').addEventListener('click',()=>{closeM('renameModal');pendFile=null;});
+
+/* ═══════════════════════════════
+   DELETE
+═══════════════════════════════ */
+document.getElementById('delOk').addEventListener('click',async()=>{
+  if(!toDel)return;closeM('deleteModal');
+  try{
+    if(toDel.type==='doc'){
+      await dbDel('documents',toDel.data.id);
+      await loadFolderDocs();await loadFolders();toast('Document deleted');
+    }else if(toDel.type==='bulk-docs'){
+      for(const id of toDel.ids)await dbDel('documents',id);
+      const cnt=toDel.ids.length;
+      exitBulkMode();
+      await loadFolderDocs();await loadFolders();
+      toast(`✓ ${cnt} document${cnt!==1?'s':''} deleted`);
+    }else if(toDel.type==='bulk-folders'){
+      let totalDocs=0;
+      for(const fid of toDel.ids){
+        const docs=await dbIdx('documents','fid',fid);
+        for(const d of docs){await dbDel('documents',d.id);totalDocs++;}
+        await dbDel('folders',fid);
+      }
+      const fc=toDel.ids.length;
+      exitFolderBulkMode();
+      await loadFolders();
+      toast(`🗑️ ${fc} folder${fc!==1?'s':''} & ${totalDocs} document${totalDocs!==1?'s':''} deleted`);
+    }else{
+      const docs=await dbIdx('documents','fid',toDel.data.id);
+      for(const d of docs)await dbDel('documents',d.id);
+      await dbDel('folders',toDel.data.id);
+      closeM('fCM');await loadFolders();toast('Folder deleted');
+    }
+  }catch(e){toast('Delete failed');}
+  toDel=null;
+});
+document.getElementById('delC').addEventListener('click',()=>{closeM('deleteModal');toDel=null;});
+
+/* ═══════════════════════════════
+   FOLDER MODAL
+═══════════════════════════════ */
+function updPreview(){
+  const pi=document.getElementById('pvI'),pt=document.getElementById('pvT');
+  const f=editFolId?curEditIcon:ICONS[selIcon];
+  pi.style.background=COLORS[selColor]||COLORS[0];
+  pi.innerHTML=icoHTML(selIcon>=0?ICONS[selIcon]:curEditIcon);
+  const v=document.getElementById('fNI').value.trim();
+  pt.textContent=v||'Live preview';pt.className=v?'has':'';
+}
+let curEditIcon='ic:folder';
+function buildFolMod(){
+  const ig=document.getElementById('iconGrid');
+  const cr=document.getElementById('colorRow');
+  ig.innerHTML='';
+  ICONS.forEach((ic,i)=>{
+    const b=document.createElement('button');
+    b.className='ico'+(i===selIcon?' sel':'');b.innerHTML=icoHTML(ic);b.title=ICON_DEFS[i][1];
+    b.addEventListener('click',()=>{selIcon=i;ig.querySelectorAll('.ico').forEach((x,j)=>x.classList.toggle('sel',j===i));updPreview();});
+    ig.appendChild(b);
+  });
+  cr.innerHTML='';
+  COLORS.forEach((c,i)=>{
+    const b=document.createElement('button');
+    b.className='col'+(i===selColor?' sel':'');b.style.background=c;b.innerHTML=i===selColor?ui('x','xk'):'';
+    b.addEventListener('click',()=>{selColor=i;cr.querySelectorAll('.col').forEach((x,j)=>{x.classList.toggle('sel',j===i);x.innerHTML=j===i?ui('x','xk'):'';});updPreview();});
+    cr.appendChild(b);
+  });
+  updPreview();
+}
+
+document.getElementById('newFolderBtn').addEventListener('click',()=>{
+  editFolId=null;selIcon=0;selColor=0;curEditIcon='ic:folder';
+  document.getElementById('fmT').textContent='New Folder';
+  document.getElementById('fmS').textContent='Create';
+  document.getElementById('fNI').value='';
+  document.getElementById('fmS').disabled=true;
+  buildFolMod();openM('folderModal');
+  setTimeout(()=>document.getElementById('fNI').focus(),360);
+});
+document.getElementById('fNI').addEventListener('input',e=>{
+  document.getElementById('fmS').disabled=!e.target.value.trim();updPreview();
+});
+document.getElementById('fmS').addEventListener('click',async()=>{
+  const name=document.getElementById('fNI').value.trim();
+  if(!name)return;closeM('folderModal');
+  try{
+    if(editFolId){
+      const f=await dbGet('folders',editFolId);
+      await dbPut('folders',{...f,name,icon:selIcon>=0?ICONS[selIcon]:f.icon,ci:selColor});
+      toast('Folder updated ✓');
+    }else{
+      await dbAdd('folders',{name,icon:ICONS[selIcon],ci:selColor,ts:Date.now()});
+      toast('Folder created ✓');
+    }
+    await loadFolders();
+  }catch(e){console.error('Folder save error:',e);toast('Could not save folder: '+(e&&e.message?e.message:e));}
+});
+document.getElementById('fmC').addEventListener('click',()=>closeM('folderModal'));
+document.getElementById('miEdit').addEventListener('click',async()=>{
+  closeM('fCM');if(!menuFol)return;
+  editFolId=menuFol.id;
+  selIcon=ICONS.indexOf(menuFol.icon);curEditIcon=menuFol.icon||'ic:folder';
+  selColor=menuFol.ci||0;
+  document.getElementById('fmT').textContent='Edit Folder';
+  document.getElementById('fmS').textContent='Save Changes';
+  document.getElementById('fNI').value=menuFol.name;
+  document.getElementById('fmS').disabled=false;
+  buildFolMod();openM('folderModal');
+});
+document.getElementById('miDel').addEventListener('click',()=>{
+  closeM('fCM');if(!menuFol)return;
+  toDel={type:'folder',data:menuFol};
+  document.getElementById('delMsg').textContent=`Delete "${menuFol.name}" and ALL its documents?`;
+  openM('deleteModal');
+});
+document.getElementById('fCM').addEventListener('click',e=>{
+  if(e.target===document.getElementById('fCM'))document.getElementById('fCM').classList.remove('on');
+});
+document.querySelectorAll('.ov').forEach(ov=>ov.addEventListener('click',e=>{if(e.target===ov)closeM(ov.id);}));
+
+/* ══════════════════════════════════
+   IN-HTML BACK BUTTON NAVIGATION
+   (No device back button needed)
+   folderBack, pdfBack, imgBack buttons in topbar handle navigation.
+   The function below also handles any hardware/browser back events.
+══════════════════════════════════ */
+function closeImgViewer(){
+  iStop();
+  if(curBlobUrl){URL.revokeObjectURL(curBlobUrl);curBlobUrl=null;}
+  vimg.removeAttribute('src');
+}
+
+/* ═══════════════════════════════
+   BACK BUTTON NAVIGATION
+   Works in PWA + browser
+   1. PDF/Image → Folder
+   2. Folder → Home
+   3. Home search → clear search
+   4. Folder search → clear search
+   5. Home → Exit confirm popup
+═══════════════════════════════ */
+document.body.classList.add('nav-on');
+function getActiveScreen(){
+  const s=document.querySelector('.screen.active');
+  return s?s.id:null;
+}
+
+function clearGlobalSearch(){
+  document.getElementById('gSI').value='';document.getElementById('gSI').blur();
+  document.getElementById('gSC').classList.remove('on');
+  document.getElementById('gResults').classList.remove('on');
+  document.getElementById('gResults').innerHTML='';
+  document.getElementById('folderSection').style.display='';
+  document.getElementById('homeBottomBar').style.display='';
+  globalSearchActive=false;
+}
+
+function clearFolderSearch(){
+  document.getElementById('dSI').value='';document.getElementById('dSI').blur();
+  document.getElementById('dSC').classList.remove('on');
+  folderSearchActive=false;
+  sortAndRenderDocs();
+}
+
+// ═══════════════════════════════════════════════════
+//  BACK BUTTON SYSTEM
+//  Every back press (phone button, back gesture, in-app arrow)
+//  runs handleBack(), which undoes only the top-most thing:
+//    1. open sheet / menu / dialog
+//    2. search: close keyboard AND clear the text (Home or folder)
+//    3. selection mode (documents, then folders)
+//    4. PDF / image viewer -> folder (or Home if opened from search)
+//    5. folder -> Home
+//    6. Settings / About -> Home
+//    7. Home: "Press back again to exit"; a 2nd press leaves the app
+//
+//  How the exit works: one history "sentinel" entry keeps back
+//  presses inside the app. On Home, the first press arms exit and
+//  deliberately does NOT restore the sentinel, so a second press
+//  inside 2 seconds is handled by the phone itself and closes the
+//  app. If 2 seconds pass, or you tap anything, the sentinel is
+//  restored and the app is protected again.
+// ═══════════════════════════════════════════════════
+let _backPressedOnce=false;   // true after the first back press on Home (we are then at the very first history entry)
+let _appReady=false;
+let _handlingBack=false;
+let _peel=false,_peelTimer=null;
+
+/* ── History model ─────────────────────────────────────────────────
+   Chrome skips history entries that a page creates WITHOUT a fresh tap
+   (its "history manipulation intervention"). Entries made inside a back-press
+   handler were therefore marked skippable, and the next back press skipped
+   straight out of the app. So now:
+     • sentinel entries are only ever created inside a real tap (fillSentinels)
+     • nothing is ever pushed from a back-press handler or a timer
+     • a stack of HIST_K sentinels gives plenty of spare back presses between taps
+────────────────────────────────────────────────────────────────── */
+const HIST_K=8;
+function histDepth(){ const s=history.state; return (s&&s.paranchi)?(s.d|0):0; }
+function fillSentinels(){
+  let d=histDepth();
+  if(d>=HIST_K) return;
+  try{ for(;d<HIST_K;d++) history.pushState({paranchi:true,d:d+1},'',location.href); }catch(e){}
+}
+function keepSentinel(){}   // kept so older call sites still work; entries are only added in taps
+
+function armExit(){ _backPressedOnce=true; toast('Press back again to exit',2000); }
+function disarmExit(){ _backPressedOnce=false; }
+function bridgeExit(){   // native shells (Kodular): tell the shell to close
+  try{ if(window.AppInventor&&window.AppInventor.setWebViewString) window.AppInventor.setWebViewString('exit-app'); }catch(e){}
+  try{ window.close(); }catch(e){}
+}
+
+function topOverlay(){
+  const list=document.querySelectorAll('.ov.on, .cm.on');
+  return list.length?list[list.length-1]:null;
+}
+function closeTopOverlay(){
+  const m=topOverlay();
+  if(!m) return false;
+  if(m.id==='zipProgress') return true;            // export/import running: ignore back
+  try{ if(document.activeElement&&document.activeElement.blur) document.activeElement.blur(); }catch(e){}
+  closeM(m.id);
+  if(m.id==='exportActionCM') setTimeout(()=>{try{m.remove();}catch(e){}},50);
+  return true;
+}
+// The search box of the screen we are on, if it is focused or holds text
+function activeSearch(){
+  const scr=getActiveScreen();
+  const id=scr==='homeScreen'?'gSI':scr==='folderScreen'?'dSI':null;
+  if(!id) return null;
+  const el=document.getElementById(id);
+  return (document.activeElement===el||el.value.trim())?el:null;
+}
+function wouldExit(){
+  return getActiveScreen()==='homeScreen' && !topOverlay() && !bulkMode && !folderBulkMode && !activeSearch();
+}
+
+function handleBack(){
+  const scr=getActiveScreen();
+
+  // 1. Open sheet / menu / dialog
+  if(closeTopOverlay()){ disarmExit(); return; }
+
+  // 2. Search: close the keyboard and clear the text
+  const se=activeSearch();
+  if(se){
+    const hadText=!!se.value.trim();
+    se.blur();
+    if(hadText){ se.id==='gSI'?clearGlobalSearch():clearFolderSearch(); }
+    disarmExit();
+    return;
+  }
+
+  // 3. Selection modes
+  if(bulkMode){ exitBulkMode(); disarmExit(); return; }
+  if(folderBulkMode){ exitFolderBulkMode(); disarmExit(); return; }
+
+  // 4. PDF / image viewer -> folder (or Home if opened from search)
+  if(scr==='pdfScreen'||scr==='imgScreen'){
+    scr==='pdfScreen'?closePdfViewer():closeImgViewer();
+    if(fromSearch){ fromSearch=false; goScreen('homeScreen',{silent:true}); }
+    else{ goScreen('folderScreen',{silent:true}); }
+    disarmExit();
+    return;
+  }
+
+  // 5. Folder -> Home
+  if(scr==='folderScreen'){
+    curFolId=null;
+    goScreen('homeScreen',{silent:true});
+    disarmExit();
+    return;
+  }
+
+  // 6. Settings / About -> Home
+  if(scr==='settingsScreen'||scr==='aboutScreen'){
+    goScreen('homeScreen',{silent:true});
+    disarmExit();
+    return;
+  }
+
+  // 7. Home: press back twice to exit
+  if(scr==='homeScreen'){
+    if(_backPressedOnce){ bridgeExit(); return; }   // reached only via a native bridge call
+    armExit();
+  }
+}
+
+// ── In-app back arrows ──
+document.getElementById('folderBack').addEventListener('click', handleBack);
+document.getElementById('pdfBack').addEventListener('click', handleBack);
+document.getElementById('imgBack').addEventListener('click', handleBack);
+
+// ── Phone back button / back gesture ──
+function startPeel(d){
+  // Home, first back press: quietly unwind to the first history entry, then arm exit.
+  // The 2nd press is then handled by the phone itself and closes the app.
+  _peel=true;
+  try{ history.go(-d); }catch(e){ _peel=false; armExit(); return; }
+  clearTimeout(_peelTimer);
+  _peelTimer=setTimeout(()=>{ if(_peel){ _peel=false; armExit(); } },700);
+}
+window.addEventListener('popstate',function(){
+  const d=histDepth();
+  if(_peel){
+    if(d>0){ try{ history.go(-d); }catch(e){ _peel=false; } return; }
+    clearTimeout(_peelTimer); _peel=false; armExit(); return;
+  }
+  if(!_appReady||_handlingBack) return;
+  _handlingBack=true;
+  setTimeout(()=>{ _handlingBack=false; },60);
+  if(wouldExit()){
+    if(_backPressedOnce){ bridgeExit(); try{ history.go(-(d+1)); }catch(e){} return; }
+    if(d>0) startPeel(d); else armExit();
+    return;
+  }
+  handleBack();
+});
+
+// Real taps refill the spare history entries (this is the only place entries are created).
+// Edge swipes (the phone's back gesture) are ignored.
+function _tap(e){
+  if(e.type==='touchend'){
+    const t=e.changedTouches&&e.changedTouches[0];
+    if(t&&(t.clientX<24||t.clientX>window.innerWidth-24)) return;
+  }
+  if(_backPressedOnce) disarmExit();
+  fillSentinels();
+}
+document.addEventListener('click',_tap,{capture:true,passive:true});
+document.addEventListener('touchend',_tap,{capture:true,passive:true});
+
+// ── Bridge for native shells (e.g. Kodular BackPressed) ──
+window.paranchiBack=function(){
+  try{ handleBack(); }catch(e){}
+};
+
+/* ═══════════════════════════════
+   SORT BAR LISTENERS
+═══════════════════════════════ */
+document.getElementById('sortBar').addEventListener('click',e=>{
+  const btn=e.target.closest('.sort-chip');
+  if(!btn)return;
+  curDocSort=btn.dataset.sort;
+  document.querySelectorAll('#sortBar .sort-chip').forEach(b=>b.classList.toggle('active',b===btn));
+  sortAndRenderDocs();
+});
+
+document.getElementById('folderSortBar').addEventListener('click',e=>{
+  const btn=e.target.closest('.sort-chip');
+  if(!btn)return;
+  curFolSort=btn.dataset.fsort;
+  document.querySelectorAll('#folderSortBar .sort-chip').forEach(b=>b.classList.toggle('active',b===btn));
+  loadFolders();
+});
+
+/* ═══════════════════════════════
+   DOC CONTEXT MENU LISTENERS
+═══════════════════════════════ */
+document.getElementById('dCM').addEventListener('click',e=>{
+  if(e.target===document.getElementById('dCM'))closeM('dCM');
+});
+
+document.getElementById('miSelect').addEventListener('click',()=>{
+  closeM('dCM');if(!menuDoc)return;
+  const id=menuDoc.id;menuDoc=null;
+  enterBulkMode(id);
+});
+
+document.getElementById('miRename').addEventListener('click',()=>{
+  closeM('dCM');if(!menuDoc)return;
+  document.getElementById('renameDocInp').value=menuDoc.name;
+  document.getElementById('rdS').disabled=false;
+  openM('renameDocModal');
+  setTimeout(()=>document.getElementById('renameDocInp').focus(),360);
+});
+
+document.getElementById('renameDocInp').addEventListener('input',e=>{
+  document.getElementById('rdS').disabled=!e.target.value.trim();
+});
+document.getElementById('rdS').addEventListener('click',async()=>{
+  const name=document.getElementById('renameDocInp').value.trim();
+  if(!name||!menuDoc)return;
+  closeM('renameDocModal');
+  try{
+    const doc=await dbGet('documents',menuDoc.id);
+    await dbPut('documents',{...doc,name});
+    toast('✓ Renamed!');
+    await loadFolderDocs();menuDoc=null;
+  }catch(e){toast('❌ Rename failed');}
+});
+document.getElementById('rdC').addEventListener('click',()=>{closeM('renameDocModal');menuDoc=null;});
+
+document.getElementById('miMove').addEventListener('click',async()=>{
+  closeM('dCM');if(!menuDoc)return;
+  moveTargetFolId=null;
+  document.getElementById('mvS').disabled=true;
+  const list=document.getElementById('folderPickList');
+  list.innerHTML='';
+  allFolders.forEach(f=>{
+    if(f.id===curFolId)return;
+    const item=document.createElement('div');
+    item.className='fp-item';
+    item.innerHTML=`<span class="fp-icon">${icoHTML(f.icon)}</span><span class="fp-name">${esc(f.name)}</span>`;
+    item.addEventListener('click',()=>{
+      moveTargetFolId=f.id;
+      list.querySelectorAll('.fp-item').forEach(i=>i.classList.remove('selected'));
+      item.classList.add('selected');
+      document.getElementById('mvS').disabled=false;
+    });
+    list.appendChild(item);
+  });
+  openM('moveDocModal');
+});
+
+document.getElementById('mvS').addEventListener('click',async()=>{
+  if(!moveTargetFolId)return;
+  closeM('moveDocModal');
+  try{
+    if(isBulkMove){
+      const ids=[...selectedIds];
+      for(const id of ids){
+        const doc=await dbGet('documents',id);
+        if(doc)await dbPut('documents',{...doc,folderId:moveTargetFolId});
+      }
+      const cnt=ids.length;
+      isBulkMove=false;moveTargetFolId=null;
+      // Reset modal titles for next single-doc use
+      document.querySelector('#moveDocModal .mt').textContent='Move to Folder';
+      document.querySelector('#moveDocModal .ms').textContent='Select a folder to move this document to.';
+      exitBulkMode();
+      await loadFolderDocs();await loadFolders();
+      toast(`✓ ${cnt} document${cnt!==1?'s':''} moved!`);
+    }else{
+      if(!menuDoc||!moveTargetFolId)return;
+      const doc=await dbGet('documents',menuDoc.id);
+      await dbPut('documents',{...doc,folderId:moveTargetFolId});
+      toast('✓ Moved!');
+      menuDoc=null;moveTargetFolId=null;
+      await loadFolderDocs();await loadFolders();
+    }
+  }catch(e){toast('❌ Move failed');}
+});
+document.getElementById('mvC').addEventListener('click',()=>{
+  closeM('moveDocModal');menuDoc=null;isBulkMove=false;
+  // Reset modal titles
+  document.querySelector('#moveDocModal .mt').textContent='Move to Folder';
+  document.querySelector('#moveDocModal .ms').textContent='Select a folder to move this document to.';
+});
+
+/* ═══════════════════════════════
+   BULK ACTION LISTENERS
+═══════════════════════════════ */
+document.getElementById('bulkCancel').addEventListener('click',()=>exitBulkMode());
+
+document.getElementById('bulkSelAll').addEventListener('click',()=>{
+  const allIds=curFolDocs.map(d=>d.id);
+  const allSel=allIds.length>0&&allIds.every(id=>selectedIds.has(id));
+  if(allSel){
+    selectedIds.clear();
+  }else{
+    allIds.forEach(id=>selectedIds.add(id));
+  }
+  // Update card visuals
+  document.querySelectorAll('.dc').forEach(card=>{
+    const id=parseInt(card.dataset.id);
+    const sel=selectedIds.has(id);
+    card.classList.toggle('selected',sel);
+    const chk=card.querySelector('.dc-check');
+    if(chk)chk.innerHTML=sel?CHK:'';
+  });
+  updateBulkUI();
+});
+
+document.getElementById('bulkActDel').addEventListener('click',()=>{
+  const n=selectedIds.size;
+  if(n===0)return;
+  toDel={type:'bulk-docs',ids:[...selectedIds]};
+  document.getElementById('delMsg').textContent=
+    `Delete ${n} document${n!==1?'s':''}? This cannot be undone.`;
+  openM('deleteModal');
+});
+
+document.getElementById('bulkActMove').addEventListener('click',async()=>{
+  const n=selectedIds.size;
+  if(n===0)return;
+  isBulkMove=true;
+  moveTargetFolId=null;
+  document.getElementById('mvS').disabled=true;
+  // Update modal titles for bulk
+  document.querySelector('#moveDocModal .mt').textContent=
+    `Move ${n} Document${n!==1?'s':''}`;
+  document.querySelector('#moveDocModal .ms').textContent=
+    `Select a folder to move ${n} document${n!==1?'s':''} to.`;
+  const list=document.getElementById('folderPickList');
+  list.innerHTML='';
+  allFolders.forEach(f=>{
+    if(f.id===curFolId)return;
+    const item=document.createElement('div');
+    item.className='fp-item';
+    item.innerHTML=`<span class="fp-icon">${icoHTML(f.icon)}</span><span class="fp-name">${esc(f.name)}</span>`;
+    item.addEventListener('click',()=>{
+      moveTargetFolId=f.id;
+      list.querySelectorAll('.fp-item').forEach(i=>i.classList.remove('selected'));
+      item.classList.add('selected');
+      document.getElementById('mvS').disabled=false;
+    });
+    list.appendChild(item);
+  });
+  openM('moveDocModal');
+});
+
+document.getElementById('bulkActShare').addEventListener('click',async()=>{
+  const n=selectedIds.size;
+  if(n===0)return;
+  toast('📤 Preparing…',8000);
+  try{
+    const ids=[...selectedIds];
+    const docs=(await Promise.all(ids.map(id=>dbGet('documents',id)))).filter(Boolean);
+    const files=docs.map(doc=>{
+      const raw=doc.fileData;const m=mimeOf(doc.ext);
+      const fn=safeName(doc.name)+'.'+doc.ext;
+      let blob;
+      if(raw instanceof Uint8Array)blob=new Blob([raw.buffer],{type:m});
+      else if(raw instanceof ArrayBuffer)blob=new Blob([raw],{type:m});
+      else blob=new Blob([new Uint8Array(raw).buffer],{type:m});
+      return new File([blob],fn,{type:m});
+    });
+    // Try sharing all at once
+    if(navigator.canShare&&navigator.canShare({files})){
+      await navigator.share({files,title:`${n} documents from Paranchi's Documents`});
+      return;
+    }
+    // Fallback: share one by one
+    for(const doc of docs){
+      await shareFile(doc);
+      await new Promise(r=>setTimeout(r,500));
+    }
+  }catch(e){
+    if(e.name==='AbortError')return;
+    toast('⚠️ Could not share');
+  }
+});
+
+document.getElementById('miDocDel').addEventListener('click',()=>{
+  closeM('dCM');if(!menuDoc)return;
+  toDel={type:'doc',data:menuDoc};
+  document.getElementById('delMsg').textContent=`"${menuDoc.name}" will be permanently deleted.`;
+  openM('deleteModal');
+});
+
+/* ═══════════════════════════════
+   FOLDER BULK ACTION LISTENERS
+═══════════════════════════════ */
+document.getElementById('folderBulkCancel').addEventListener('click',()=>exitFolderBulkMode());
+
+document.getElementById('folderBulkSelAll').addEventListener('click',()=>{
+  const cards=document.querySelectorAll('.fc');
+  const allSel=cards.length>0&&[...cards].every(c=>selectedFolIds.has(parseInt(c.dataset.fid)));
+  if(allSel){
+    selectedFolIds.clear();
+    cards.forEach(c=>{
+      c.classList.remove('fselected');
+      const chk=c.querySelector('.fc-check');
+      if(chk)chk.textContent='';
+    });
+  }else{
+    cards.forEach(c=>{
+      const id=parseInt(c.dataset.fid);
+      selectedFolIds.add(id);
+      c.classList.add('fselected');
+      const chk=c.querySelector('.fc-check');
+      if(chk)chk.innerHTML=CHK;
+    });
+  }
+  updateFolderBulkUI();
+});
+
+document.getElementById('folderBulkActDel').addEventListener('click',()=>{
+  const n=selectedFolIds.size;
+  if(n===0)return;
+  toDel={type:'bulk-folders',ids:[...selectedFolIds]};
+  document.getElementById('delMsg').textContent=
+    `Delete ${n} folder${n!==1?'s':''} and ALL their documents? This cannot be undone.`;
+  openM('deleteModal');
+});
+
+/* ══════════════════════════════════
+   PREVENT multi-touch page zoom
+══════════════════════════════════ */
+document.addEventListener('touchmove',e=>{
+  if(e.touches.length>1)e.preventDefault();
+},{passive:false});
+
+/* ═══════════════════════════════
+   INIT
+═══════════════════════════════ */
+async function init(){
+
+  // Check for recent session (within 5 minutes)
+  let savedSession=null;
+  try{
+    const raw=sessionStorage.getItem(SESSION_KEY);
+    if(raw){
+      const s=JSON.parse(raw);
+      if(s&&(Date.now()-s.ts)<SESSION_TIMEOUT)savedSession=s;
+    }
+  }catch(e){}
+
+  try{
+    DB=await openDB();
+    const ex=await dbAll('folders');
+    const MIG={'🪪':'ic:aadhaar','📄':'ic:document','🖼️':'ic:photo','💳':'ic:card','🎓':'ic:degree','🗂️':'ic:folder'};
+    for(const f of ex){if(MIG[f.icon]){f.icon=MIG[f.icon];await dbPut('folders',f);}}
+    try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist();}catch(e){}
+    if(!ex.length){
+      for(const f of DEFAULTS)
+        await dbAdd('folders',{name:f.name,icon:f.icon,ci:f.ci,ts:Date.now()});
+    }
+    await loadFolders();
+    updateStorage();
+    // Restore session: reopen folder if user was in one within 5 min
+    if(savedSession&&savedSession.screen==='folderScreen'&&savedSession.folId){
+      try{
+        const folder=await dbGet('folders',savedSession.folId);
+        if(folder)openFolder(folder);
+      }catch(e){}
+    }
+  }catch(err){
+    console.error('Init error:',err);
+    toast('⚠️ DB Error: '+(err&&err.message?err.message:String(err)));
+  }
+
+  _appReady=true;
+}
+init();
+
+// Save current state whenever app goes to background
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden){
+    try{
+      const currentScreen=screenStack[screenStack.length-1]||'homeScreen';
+      sessionStorage.setItem(SESSION_KEY,JSON.stringify({
+        screen:currentScreen,
+        folId:curFolId,
+        ts:Date.now()
+      }));
+    }catch(e){}
+  }
+});
+
+/* ═══════════════════════════════
+   ⋮ HOME MENU
+═══════════════════════════════ */
+document.getElementById('setExport').addEventListener('click',openExportModal);
+document.getElementById('setImport').addEventListener('click',openImportModal);
+document.getElementById('bottomNav').addEventListener('click',e=>{
+  const b=e.target.closest('.nv');if(!b)return;
+  goScreen(b.dataset.tab,{silent:true});
+  if(b.dataset.tab==='settingsScreen')updateStorage();
+});
+
+const dbCount=s=>new Promise(ok=>{try{const r=S(s).count();r.onsuccess=()=>ok(r.result);r.onerror=()=>ok(0);}catch(e){ok(0);}});
+async function updateStorage(){
+  const el=document.getElementById('storInfo');if(!el)return;
+  try{
+    const nf=await dbCount('folders'),nd=await dbCount('documents');
+    let used='';
+    if(navigator.storage&&navigator.storage.estimate){const e=await navigator.storage.estimate();used=fmtS(e.usage||0)+' · ';}
+    el.textContent=used+nf+' folder'+(nf!==1?'s':'')+' · '+nd+' document'+(nd!==1?'s':'');
+  }catch(e){el.textContent='Not available';}
+}
+
+/* ═══════════════════════════════
+   ZIP EXPORT
+═══════════════════════════════ */
+let exportSelectedFolIds=new Set();
+
+async function openExportModal(){
+  exportSelectedFolIds=new Set();
+  const folders=await dbAll('folders');
+  if(!folders.length){toast('📂 No folders to export!');return;}
+  // Count docs per folder
+  const countMap={};
+  for(const f of folders)countMap[f.id]=await dbCountFid(f.id);
+  // Build folder cards
+  const list=document.getElementById('exportFolderList');
+  list.innerHTML='';
+  folders.forEach(f=>{
+    const cnt=countMap[f.id]||0;
+    const col=COLORS[f.ci]||COLORS[0];
+    const card=document.createElement('div');
+    card.className='exp-fold-card';
+    card.dataset.id=f.id;
+    card.innerHTML=`
+      <div class="exp-fold-icon" style="background:${col}22;border:1.5px solid ${col}44;">
+        <span style="color:${col};display:flex">${icoHTML(f.icon)}</span>
+      </div>
+      <div class="exp-fold-info">
+        <div class="exp-fold-name">${esc(f.name)}</div>
+        <div class="exp-fold-sub">${cnt} document${cnt!==1?'s':''}</div>
+      </div>
+      <div class="exp-fold-check"></div>
+    `;
+    card.addEventListener('click',()=>toggleExportFolder(f.id,card));
+    list.appendChild(card);
+  });
+  updateExportUI();
+  openM('exportModal');
+}
+
+function toggleExportFolder(fid,card){
+  if(exportSelectedFolIds.has(fid)){
+    exportSelectedFolIds.delete(fid);
+    card.classList.remove('sel');
+    card.querySelector('.exp-fold-check').textContent='';
+  }else{
+    exportSelectedFolIds.add(fid);
+    card.classList.add('sel');
+    card.querySelector('.exp-fold-check').innerHTML=CHK;
+  }
+  updateExportUI();
+}
+
+function updateExportUI(){
+  const n=exportSelectedFolIds.size;
+  const total=document.querySelectorAll('#exportFolderList .exp-fold-card').length;
+  document.getElementById('exportSelCount').textContent=
+    n===0?'None selected':`${n} of ${total} folder${total!==1?'s':''} selected`;
+  document.getElementById('exportGo').disabled=n===0;
+  document.getElementById('exportSelAll').textContent=
+    (n===total&&total>0)?'Deselect All':'Select All';
+}
+
+document.getElementById('exportSelAll').addEventListener('click',()=>{
+  const cards=document.querySelectorAll('#exportFolderList .exp-fold-card');
+  const total=cards.length;
+  const allSel=exportSelectedFolIds.size===total&&total>0;
+  if(allSel){
+    exportSelectedFolIds=new Set();
+    cards.forEach(c=>{c.classList.remove('sel');c.querySelector('.exp-fold-check').textContent='';});
+  }else{
+    cards.forEach(c=>{
+      const id=Number(c.dataset.id);
+      exportSelectedFolIds.add(id);
+      c.classList.add('sel');
+      c.querySelector('.exp-fold-check').innerHTML=CHK;
+    });
+  }
+  updateExportUI();
+});
+
+document.getElementById('exportCancel').addEventListener('click',()=>closeM('exportModal'));
+document.getElementById('exportModal').addEventListener('click',e=>{
+  if(e.target===document.getElementById('exportModal'))closeM('exportModal');
+});
+
+document.getElementById('exportGo').addEventListener('click',async()=>{
+  closeM('exportModal');
+  await doExportZip();
+});
+
+function setZipProgress(icon,title,msg,pct){
+  document.getElementById('zipProgressIcon').innerHTML=emoToSvg(icon);
+  document.getElementById('zipProgressTitle').textContent=title;
+  document.getElementById('zipProgressMsg').textContent=msg;
+  document.getElementById('zipProgressBar').style.width=pct+'%';
+  document.getElementById('zipProgressPct').textContent=pct+'%';
+}
+
+async function doExportZip(){
+  if(typeof JSZip==='undefined'){
+    toast('⚠️ JSZip not loaded. Check internet connection.');return;
+  }
+  openM('zipProgress');
+  setZipProgress('📦','Building ZIP…','Loading your documents…',5);
+  try{
+    const zip=new JSZip();
+    const fids=[...exportSelectedFolIds];
+    const folders=await dbAll('folders');
+    const folderMap={};folders.forEach(f=>folderMap[f.id]=f);
+    // manifest data
+    const manifest={version:1,exported:new Date().toISOString(),folders:[]};
+    let totalDocs=0;
+    // Count total for progress
+    let allSelectedDocs=[];
+    for(const fid of fids){
+      const docs=await dbIdx('documents','fid',fid);
+      allSelectedDocs.push(...docs);
+    }
+    totalDocs=allSelectedDocs.length;
+    let done=0;
+    for(const fid of fids){
+      const f=folderMap[fid];
+      if(!f)continue;
+      const docs=await dbIdx('documents','fid',fid);
+      // sanitize folder name for use as zip folder name
+      const folderSlug=safeName(f.name)||'Folder_'+fid;
+      const folderEntry={id:fid,name:f.name,icon:f.icon,ci:f.ci,ts:f.ts,docs:[]};
+      const zipFolder=zip.folder(folderSlug);
+      for(const doc of docs){
+        done++;
+        const pct=Math.round(5+((done/Math.max(totalDocs,1))*80));
+        setZipProgress('📦','Building ZIP…',
+          `Adding: ${doc.name}.${doc.ext} (${done}/${totalDocs})`,pct);
+        await new Promise(r=>setTimeout(r,10)); // let UI breathe
+        const filename=`${safeName(doc.name)}.${doc.ext}`;
+        let fileData=doc.fileData;
+        if(fileData instanceof Uint8Array)fileData=fileData.buffer;
+        zipFolder.file(filename,fileData,{binary:true});
+        folderEntry.docs.push({
+          id:doc.id,name:doc.name,ext:doc.ext,
+          filename,size:doc.size,ts:doc.ts
+        });
+      }
+      manifest.folders.push(folderEntry);
+    }
+    setZipProgress('⚙️','Compressing…','Almost done…',88);
+    await new Promise(r=>setTimeout(r,30));
+    zip.file('paranchi_manifest.json',JSON.stringify(manifest,null,2));
+    const blob=await zip.generateAsync({type:'blob',compression:'DEFLATE',
+      compressionOptions:{level:6}},meta=>{
+      const p=Math.round(88+(meta.percent*0.1));
+      setZipProgress('⚙️','Compressing…',`Compressing… ${Math.round(meta.percent)}%`,Math.min(p,97));
+    });
+    setZipProgress('✅','ZIP Ready!','Choose how to save your backup…',100);
+    await new Promise(r=>setTimeout(r,400));
+    closeM('zipProgress');
+    // Ask: Share or Download?
+    const dateStr=new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}).replace(/ /g,'-');
+    const zipName=`Paranchi_Backup_${dateStr}.zip`;
+    showExportActionSheet(blob,zipName,totalDocs);
+  }catch(err){
+    closeM('zipProgress');
+    console.error(err);
+    toast('⚠️ Export failed: '+err.message);
+  }
+}
+
+function showExportActionSheet(blob,zipName,docCount){
+  const cm=document.createElement('div');
+  cm.className='cm';cm.id='exportActionCM';
+  cm.innerHTML=`
+    <div class="cmb">
+      <div class="hdl"></div>
+      <div class="mt" style="font-size:15px;margin-bottom:4px;">Backup Ready</div>
+      <div class="ms" style="margin-bottom:14px;">${docCount} document${docCount!==1?'s':''} · ${fmtS(blob.size)}</div>
+      <div class="mi" id="eaDownload"><span class="mii">${ui('download')}</span>Download to Phone</div>
+      <div class="mi" id="eaCancel"><span class="mii">${ui('x')}</span>Cancel</div>
+    </div>
+  `;
+  document.getElementById('app').appendChild(cm);
+  setTimeout(()=>cm.classList.add('on'),10);
+  const close=()=>{cm.classList.remove('on');setTimeout(()=>cm.remove(),300);};
+  cm.addEventListener('click',e=>{if(e.target===cm)close();});
+  document.getElementById('eaCancel').addEventListener('click',close);
+  document.getElementById('eaDownload').addEventListener('click',()=>{
+    close();triggerZipDownload(blob,zipName);
+  });
+}
+
+function triggerZipDownload(blob,name){
+  const u=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=u;a.download=name;
+  document.body.appendChild(a);a.click();
+  setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(u);},5000);
+  toast('💾 ZIP saved to Downloads!');
+}
+
+/* ═══════════════════════════════
+   ZIP IMPORT
+═══════════════════════════════ */
+let importFile=null;
+
+function openImportModal(){
+  importFile=null;
+  document.getElementById('importFileInfo').style.display='none';
+  document.getElementById('importGo').disabled=true;
+  document.getElementById('importDropZone').classList.remove('active');
+  openM('importModal');
+}
+
+document.getElementById('importCancel').addEventListener('click',()=>closeM('importModal'));
+document.getElementById('importModal').addEventListener('click',e=>{
+  if(e.target===document.getElementById('importModal'))closeM('importModal');
+});
+
+document.getElementById('importDropZone').addEventListener('click',()=>{
+  document.getElementById('zipFilePick').value='';
+  document.getElementById('zipFilePick').click();
+});
+
+document.getElementById('zipFilePick').addEventListener('change',e=>{
+  const f=e.target.files[0];
+  if(!f)return;
+  if(!f.name.toLowerCase().endsWith('.zip')){
+    toast('⚠️ Please choose a .zip file');return;
+  }
+  importFile=f;
+  document.getElementById('importFileInfo').style.display='block';
+  document.getElementById('importFileInfo').innerHTML=
+    `${ui('box','sm')} <strong>${esc(f.name)}</strong> · ${fmtS(f.size)}`;
+  document.getElementById('importDropZone').classList.add('active');
+  document.getElementById('importGo').disabled=false;
+});
+
+document.getElementById('importGo').addEventListener('click',async()=>{
+  if(!importFile)return;
+  closeM('importModal');
+  await doImportZip(importFile);
+});
+
+async function doImportZip(file){
+  if(typeof JSZip==='undefined'){
+    toast('⚠️ JSZip not loaded. Check internet connection.');return;
+  }
+  openM('zipProgress');
+  setZipProgress('📥','Reading ZIP…','Opening your backup file…',5);
+  try{
+    const arrayBuf=await file.arrayBuffer();
+    const zip=await JSZip.loadAsync(arrayBuf);
+    setZipProgress('📥','Reading ZIP…','Reading manifest…',15);
+    // Read manifest
+    const manifestFile=zip.file('paranchi_manifest.json');
+    if(!manifestFile){
+      closeM('zipProgress');
+      toast('⚠️ Invalid backup file — no manifest found.');return;
+    }
+    const manifestText=await manifestFile.async('string');
+    const manifest=JSON.parse(manifestText);
+    if(!manifest.folders){
+      closeM('zipProgress');
+      toast('⚠️ Invalid backup format.');return;
+    }
+    // Count total docs
+    const totalDocs=manifest.folders.reduce((s,f)=>s+(f.docs?f.docs.length:0),0);
+    let done=0;
+    // Get existing folder names to detect duplicates
+    const existingFolders=await dbAll('folders');
+    const existingFolderNames=existingFolders.map(f=>f.name.toLowerCase());
+    // Get existing doc names per folder (we'll check after folders are created)
+    // Import folder by folder
+    for(const folEntry of manifest.folders){
+      setZipProgress('📥','Importing…',
+        `Importing folder: ${folEntry.name}`,
+        Math.round(15+((done/Math.max(totalDocs,1))*75)));
+      // Find or create folder
+      let targetFolderId=null;
+      // Check if folder name exists — if yes, create a copy
+      let folderName=folEntry.name;
+      if(existingFolderNames.includes(folderName.toLowerCase())){
+        // Find a unique name
+        let suffix=2;
+        while(existingFolderNames.includes((folderName+' ('+suffix+')').toLowerCase())){suffix++;}
+        folderName=folderName+' ('+suffix+')';
+      }
+      const newFolId=await dbAdd('folders',{
+        name:folderName,
+        icon:folEntry.icon||'ic:folder',
+        ci:folEntry.ci??0,
+        ts:folEntry.ts||Date.now()
+      });
+      existingFolderNames.push(folderName.toLowerCase());
+      targetFolderId=newFolId;
+      // Get existing doc names in this new folder (will be empty but future-proof)
+      const existingDocs=await dbIdx('documents','fid',targetFolderId);
+      const existingDocNames=existingDocs.map(d=>d.name.toLowerCase());
+      // Import documents
+      if(folEntry.docs){
+        for(const docEntry of folEntry.docs){
+          done++;
+          const pct=Math.round(15+((done/Math.max(totalDocs,1))*75));
+          setZipProgress('📥','Importing…',
+            `Adding: ${docEntry.name} (${done}/${totalDocs})`,pct);
+          await new Promise(r=>setTimeout(r,10));
+          // Find the file in zip
+          const folderSlug=safeName(folEntry.name)||'Folder_'+folEntry.id;
+          const zipFilePath=folderSlug+'/'+docEntry.filename;
+          const zipFile=zip.file(zipFilePath);
+          if(!zipFile)continue;
+          const fileData=await zipFile.async('arraybuffer');
+          const uint8=new Uint8Array(fileData);
+          // Handle duplicate name
+          let docName=docEntry.name;
+          if(existingDocNames.includes(docName.toLowerCase())){
+            let suffix=2;
+            while(existingDocNames.includes((docName+' ('+suffix+')').toLowerCase())){suffix++;}
+            docName=docName+' ('+suffix+')';
+          }
+          existingDocNames.push(docName.toLowerCase());
+          // Generate thumb
+          let thumb=null;
+          try{
+            if(docEntry.ext==='pdf')thumb=await thumbPDF(uint8);
+            else thumb=await thumbIMG(uint8,docEntry.ext);
+          }catch(e){}
+          await dbAdd('documents',{
+            name:docName,ext:docEntry.ext,
+            folderId:targetFolderId,
+            fileData:uint8,
+            size:docEntry.size||uint8.length,
+            ts:docEntry.ts||Date.now(),
+            thumb
+          });
+        }
+      }
+    }
+    setZipProgress('✅','Import Complete!',
+      `${totalDocs} document${totalDocs!==1?'s':''} imported successfully!`,100);
+    await new Promise(r=>setTimeout(r,1200));
+    closeM('zipProgress');
+    await loadFolders();
+    toast(`✅ Imported ${totalDocs} document${totalDocs!==1?'s':''}!`,4000);
+  }catch(err){
+    closeM('zipProgress');
+    console.error(err);
+    toast('⚠️ Import failed: '+err.message);
+  }
+}
+
+/* ── Service Worker for offline ── */
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('./sw.js',{scope:'./'})
+    .then(reg=>{
+      reg.update().catch(()=>{});
+    })
+    .catch(()=>{});
+}
+</script>
+
+<script>
+/* Offline support: works on https (GitHub Pages) and localhost, skipped when opened as a plain file */
+if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)){
+  window.addEventListener('load',function(){
+    navigator.serviceWorker.register('sw.js').catch(function(){});
+  });
+}
+</script>
+</body>
+</html>
